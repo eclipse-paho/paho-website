@@ -1,0 +1,195 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: #eee6cb;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+body > .container {
+  /*padding: 60px 15px 0; */
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+.home_banner {
+    background-color: #222;
+    color: #eee6cb;
+}
+.headerText span{
+    color: #eee6cb;
+}
+
+.headerText span a{
+    color: #eee6cb;
+}
+
+
+.navbar-inverse {
+    border-color: #222;
+}
+.navbar .nav>li>a {
+    color: #eee6cb;
+}
+
+/* Styles for Header
+-------------------------------------------------- */
+.brand {
+    padding: 0;
+}
+
+.headerText {
+    color: #eff4f7;
+    font-size:0.8em;
+    padding-top: 15px;
+}
+
+.headerLink {
+    font-size:0.8em;
+    display: inline-block;
+    padding: 0px;
+}
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+/* Styles for footer
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #222;
+
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  /**/
+}
+
+.footer-links {
+    margin: 20px;
+}
+
+.footer-links > li > a{
+    color: #eee6cb;
+}
+
+
+/* Google Code Prettify Bootstrap Hack
+-------------------------------------------------- */
+pre.prettyprint {
+    border: 1px solid #ccc;
+    padding: 9.5px;
+}
+
+.snippet-lang {
+    padding-left: 5px;
+    color: #aaa;
+    font-size: 20px;
+}
+
+.snippet-desc {
+    color: #aaa;
+    font-size: 20px;
+}
+
+.snippet-code {
+    margin-bottom: : 5px;
+}
+
+
+/* Index page specific styles */
+
+.logoandtext  h1 {
+    line-height: 200px;
+    font-weight: 700;
+    font-size: 126px;
+}
+
+.logoandtext h1 img {
+    height: 126px;
+    margin-bottom: 20px;
+}
+
+.mqtt-row {
+    background-color: #d8cfb3;
+}
+.middle-container{
+    margin-bottom: 30px;
+}
+
+.middle-container img
+{
+    display: block;
+    margin-right: auto;
+	margin-left: auto;
+}
+
+.middle-container h2 i
+{
+    display: block;
+    margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+    height: 100px;
+    width: 100px;
+    line-height: 60px;
+
+	margin-bottom: -48px;
+
+    -moz-border-radius: 63px; /* or 50% */
+    border-radius: 63px; /* or 50% */
+    background-color: rgba(255,255,255,.6);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.lead {
+    text-align: center;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
+
+/*  Normal pages */
+.main-content {
+    padding-top: 48px;
+}
