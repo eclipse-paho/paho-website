@@ -113,5 +113,5 @@
 </div>
 <script src="/paho/v2/js/twitterFetcher_min.js" type="text/javascript"></script>
 <script src="/paho/v2/js/twitterFeed.js" type="text/javascript"></script>
-<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
 <?php include '_includes/bare_footer.php' ?>
