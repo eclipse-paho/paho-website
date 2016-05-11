@@ -6,7 +6,7 @@
        <div class="logoandtext">
              <h1 class="title">Eclipse  <img src="/paho/v2/images/paho_logo_400.png" tite="Eclipse Paho Logo" alt="<Logo>"></h1>
         </div>
-       <p>The Eclipse Paho project provides open-source client implementations of MQTT and MQTT-SN messaging protocols aimed at new, existing, and emerging applications for Machine‑to‑Machine (M2M) and Internet of Things (IoT).</p>
+       <p>The Eclipse Paho project provides open-source client implementations of MQTT and MQTT-SN messaging protocols aimed at new, existing, and emerging applications for the Internet of Things (IoT).</p>
        <p><a class="btn btn-primary btn-lg" href="/paho/v2/downloads.php" role="button">Download Now &raquo;</a></p>
      </div>
    </div>
@@ -30,7 +30,7 @@
                        <h2><i><img src="/paho/v2/images/communication.png"></i></h2>
                        <div><h2>&nbsp;</h2></div>
                        <p class="lead">For Constrained Networks</p>
-                       <p>M2M and IoT systems need to deal with frequent network disruption and intermittent, slow, or poor quality networks. Minimal data costs are crucial on networks with millions and billons of connected devices.</p>
+                       <p>IoT systems need to deal with frequent network disruption and intermittent, slow, or poor quality networks. Minimal data costs are crucial on networks with millions and billons of connected devices.</p>
 
                    </div>
                    <div class="col-md-4">
