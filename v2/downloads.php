@@ -1,6 +1,8 @@
 <?php include '_includes/header.php' ?>
 <h1>Eclipse Paho Downloads</h1>
 
+<?php include './comparison.php' ?>
+
 <h2>Stable</h2>
 <div class="panel panel-default">
   <div class="panel-heading">

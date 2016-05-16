@@ -1,5 +1,4 @@
-<?php include '_includes/header.php' ?>
-<h1>Eclipse Paho Client Comparison</h1>
+<h2> Client Comparison</h2>
 
 <div class="panel panel-default">
   <div class="panel-body">
@@ -112,7 +111,7 @@
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center danger"><i class="fa fa-times" aria-hidden="true"></i></td>
              <td class="text-center danger"><i class="fa fa-times" aria-hidden="true"></i></td>
-             <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+             <td class="text-center danger"><i class="fa fa-times" aria-hidden="true"></i></td>
              <td class="text-center danger"><i class="fa fa-times" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
          </tr>
@@ -122,5 +121,3 @@
 
   </div>
 </div>
-
-<?php include '_includes/footer.php' ?>
