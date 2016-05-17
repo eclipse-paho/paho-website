@@ -63,6 +63,88 @@ code {
     padding: 0px;
 }
 
+/* Home Page specific styles
+-------------------------------------------------- */
+.logo_image {
+    display: inline;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+   .logo_image {
+       padding-top: 30px;
+   }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+   .logo_image {
+       padding-top: 30px;
+   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+   .logo_image {
+       padding-top: 30px;
+   }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .logo_image {
+        padding-top: 10px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .logo_image {
+        padding-top: 10px;
+    }
+}
+
+.mqtt-row {
+    background-color: #d8cfb3;
+    padding-top: 20px;
+}
+.middle-container{
+    margin-bottom: 30px;
+}
+
+.middle-container img
+{
+    display: block;
+    margin-right: auto;
+	margin-left: auto;
+}
+
+.middle-container h2 i
+{
+    display: block;
+    margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+    height: 100px;
+    width: 100px;
+    line-height: 60px;
+
+	margin-bottom: -48px;
+
+    -moz-border-radius: 63px; /* or 50% */
+    border-radius: 63px; /* or 50% */
+    background-color: rgba(255,255,255,.6);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.lead {
+    text-align: center;
+}
+
+
+
 /* Styles for footer
 -------------------------------------------------- */
 .footer {
@@ -113,56 +195,7 @@ pre.prettyprint {
 }
 
 
-/* Index page specific styles */
 
-.logoandtext  h1 {
-    line-height: 200px;
-    font-weight: 700;
-    font-size: 126px;
-}
-
-.logoandtext h1 img {
-    height: 126px;
-    margin-bottom: 20px;
-}
-
-.mqtt-row {
-    background-color: #d8cfb3;
-}
-.middle-container{
-    margin-bottom: 30px;
-}
-
-.middle-container img
-{
-    display: block;
-    margin-right: auto;
-	margin-left: auto;
-}
-
-.middle-container h2 i
-{
-    display: block;
-    margin-right: auto;
-	margin-left: auto;
-	padding-top: 20px;
-    height: 100px;
-    width: 100px;
-    line-height: 60px;
-
-	margin-bottom: -48px;
-
-    -moz-border-radius: 63px; /* or 50% */
-    border-radius: 63px; /* or 50% */
-    background-color: rgba(255,255,255,.6);
-    color: white;
-    text-align: center;
-    font-size: 2em;
-}
-
-.lead {
-    text-align: center;
-}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

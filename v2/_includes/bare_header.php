@@ -45,7 +45,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand brand" href="/paho/v2/"><img src='/paho/v2/images/paho-small-logo.png'/></a>
+          <a class="navbar-brand brand" href="/paho/v2/"><span><img src='/paho/v2/images/eclipse_paho_logo.png'/></span></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
