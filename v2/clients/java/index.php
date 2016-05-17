@@ -1,7 +1,66 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Java Client</h1>
 <p>The Paho Java Client is an MQTT client library written in Java for developing applications that run on the JVM or other Java compatible platforms such as Android</p>
+
+<h2>Features</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <table class="table table-bordered table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>MQTT 3.1</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>MQTT 3.1.1</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>LWT</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>SSL / TLS</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Message Persistence</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <table class="table table-bordered  table-condensed">
+                    <tbody>
+                        <tr>
+                            <td>Automatic Reconnect</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Offline Buffering</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>WebSocket Support</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Standart TCP Support</td>
+                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+
+
+
 
 <p>The Paho Java Client provides two APIs: MqttAsyncClient provides a fully asychronous API where completion of activities is notified via registered callbacks. MqttClient is a synchronous wrapper around MqttAsyncClient where functions appear synchronous to the application.</p>
 
@@ -97,5 +156,7 @@ public class MqttPublishSample {
     }
 }
 </pre>
+</div>
+</div>
 
-<?php include '../../_includes/footer.php' ?>t
+<?php include '../../_includes/footer.php' ?>

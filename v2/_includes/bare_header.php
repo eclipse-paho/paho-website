@@ -52,20 +52,11 @@
                           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <b class="caret"></b></a>
                               <ul class="dropdown-menu" role="menu">
                                   <li class="dropdown-header">MQTT</li>
-                                  <li class="dropdown-submenu"><a href="#">C/C++</a>
-                                      <ul class="dropdown-menu">
-                                          <li><a href="/paho/v2/clients/c/">C for Posix and Windows</a></li>
-                                          <li><a href="/paho/v2/clients/cpp/">C++</a></li>
-                                          <li><a href="/paho/v2/clients/c/embedded/">Embedded C/C++</a></li>
-                                      </ul>
-                                  </li>
-                                  <li class="dropdown-submenu"><a href="#">Java</a>
-                                      <ul class="dropdown-menu">
-                                          <li><a href="/paho/v2/clients/java/">J2SE</a></li>
-                                          <!-- <li><a href="/paho/v2/clients/java/">J2ME</a></li> -->
-                                          <li><a href="/paho/v2/clients/android/">Android Service</a></li>
-                                      </ul>
-                                  </li>
+                                  <li><a href="/paho/v2/clients/c/">C for Posix and Windows</a></li>
+                                  <li><a href="/paho/v2/clients/cpp/">C++</a></li>
+                                  <li><a href="/paho/v2/clients/c/embedded/">Embedded C/C++</a></li>
+                                  <li><a href="/paho/v2/clients/java/">Java</a></li>
+                                  <li><a href="/paho/v2/clients/android/">Android Service</a></li>
                                   <li><a href="/paho/v2/clients/js/">JavaScript</a></li>
                                   <li><a href="/paho/v2/clients/python/">Python</a></li>
                                   <li><a href="/paho/v2/clients/golang/">Go</a></li>
@@ -73,11 +64,7 @@
                                   <!-- <li><a href="/paho/v2/clients/lua/">Lua</a></li> -->
                                   <li class="divider"></li>
                                   <li class="dropdown-header">MQTT-SN</li>
-                                  <li class="dropdown-submenu"><a href="#">C/C++</a>
-                                      <ul class="dropdown-menu">
-                                          <li><a href="/paho/v2/clients/c/embedded-sn/">C (Embedded)</a></li>
-                                      </ul>
-                                  </li>
+                                  <li><a href="/paho/v2/clients/c/embedded-sn/">C (Embedded)</a></li>
                                   <li class="divider"></li>
                                   <li class="dropdown-header">Utilities</li>
                                   <li><a href="/paho/v2/clients/tool/">Client Tools</a></li>
@@ -112,7 +99,7 @@
                           </li>
                            <li><a href="/paho/v2/snippets/snippets.php">Examples</a></li>
                         </ul>
-                          <ul class="nav pull-right">
+                          <ul class="nav pull-right hidden-xs hidden-sm">
                               <li class="headerText"><span>Paho is an <a style="display: inline-block; padding-left: 0px; padding-right: 0px;" href="http://iot.eclipse.org">iot.eclipse.org</a> project</span>
                               </li>
                               <li style="line-height: 55px">
