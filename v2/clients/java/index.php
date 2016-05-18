@@ -1,87 +1,131 @@
 <?php include '../../_includes/header.php' ?>
-<div class="panel panel-default">
-<div class="panel-body">
-<h1>Java Client</h1>
-<p>The Paho Java Client is an MQTT client library written in Java for developing applications that run on the JVM or other Java compatible platforms such as Android</p>
-
-<h2>Features</h2>
-
-        <div class="row">
-            <div class="col-md-4">
-                <table class="table table-bordered table-condensed">
-                    <tbody>
-                        <tr>
-                            <td>MQTT 3.1</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>MQTT 3.1.1</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>LWT</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>SSL / TLS</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Message Persistence</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1>Eclipse Paho Java Client</h1>
+            <p>The Paho Java Client is an MQTT client library written in Java
+            for developing applications that run on the JVM or other Java
+            compatible platforms such as Android</p>
+            <p>The Paho Java Client provides two APIs: MqttAsyncClient provides
+            a fully asychronous API where completion of activities is notified
+            via registered callbacks. MqttClient is a synchronous wrapper
+            around MqttAsyncClient where functions appear synchronous to the
+            application.</p>
+            <h2>Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <table class="table table-bordered table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>MQTT 3.1</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>MQTT 3.1.1</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>LWT</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>SSL / TLS</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Message Persistence</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <table class="table table-bordered table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>Automatic Reconnect</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Offline Buffering</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>WebSocket Support</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Standart TCP Support</td>
+                                <td class="text-center success"><i aria-hidden=
+                                "true" class="fa fa-check"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-4"></div>
             </div>
-            <div class="col-md-4">
-                <table class="table table-bordered  table-condensed">
-                    <tbody>
-                        <tr>
-                            <td>Automatic Reconnect</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Offline Buffering</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>WebSocket Support</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Standart TCP Support</td>
-                            <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-4">
-            </div>
-        </div>
-
-
-
-
-<p>The Paho Java Client provides two APIs: MqttAsyncClient provides a fully asychronous API where completion of activities is notified via registered callbacks. MqttClient is a synchronous wrapper around MqttAsyncClient where functions appear synchronous to the application.</p>
-
-<h2 id="source">Source</h2>
-<p><a href="https://github.com/eclipse/paho.mqtt.java">https://github.com/eclipse/paho.mqtt.java</a></p>
-
-<h2 id="building-from-source">Building from source</h2>
-<p>There are two active branches on the Paho Java git repository, "master" which is used to produce stable releases, and "develop" where active development is carried out. By default cloning the git repository will download the "master" branch, to download "develop" add <code>-b develop</code> to the end of the <code>git clone</code> line below</p>
-<pre><code>git clone https://github.com/eclipse/paho.mqtt.java.git
-cd org.eclipse.paho.mqtt.java.git
-mvn package -DskipTests
-</code></pre>
-<p>This will build the client library without running the tests, the jars for the library, source and javadoc can be found in <code>org.eclipse.paho.client.mqttv3/target</code>
-
-<h2 id="download">Download</h2>
-<p>Eclipse hosts a Nexus repository for those who want to use Maven to manage their dependencies.</p>
-
-<p style="color:red"><b>Warning: The Java client library and utility components mqtt-client and mqtt-utility (version 0.4) are old and only kept for reference.  They should not be used and may be removed in the future.  Versions 0.9 or later, org.eclipse.paho.client.mqttv3 and org.eclipse.paho.mqtt.utility should be used instead.</b></p>
-
-<p>The two sections below can be added to your pom.xml to configure it to look on the eclipse Nexus and download the Paho Java library. Replace %REPOURL% with either https://repo.eclipse.org/content/repositories/paho-releases/ for the official releases, or https://repo.eclipse.org/content/repositories/paho-snapshots/ for the nightly snapshots. Replace %VERSION% with the level required</p>
-<pre>
+            <h2>Project description:</h2>
+            <p>The Paho project has been created to provide reliable
+            open-source implementations of open and standard messaging
+            protocols aimed at new, existing, and emerging applications for
+            Machine-to-Machine (M2M) and Internet of Things (IoT). Paho
+            reflects the inherent physical and cost constraints of device
+            connectivity. Its objectives include effective levels of decoupling
+            between devices and applications, designed to keep markets open and
+            encourage the rapid growth of scalable Web and Enterprise
+            middleware and applications.</p>
+            <h2>Links</h2>
+            <ul>
+                <li>Project Website: <a href="https://www.eclipse.org/paho">
+                    https://www.eclipse.org/paho</a>
+                </li>
+                <li>Eclipse Project Information: <a href=
+                "https://projects.eclipse.org/projects/iot.paho">https://projects.eclipse.org/projects/iot.paho</a>
+                </li>
+                <li>Paho Java Client Page: <a href=
+                "https://eclipse.org/paho/clients/java">https://eclipse.org/paho/clients/java/</a>
+                </li>
+                <li>GitHub: <a href=
+                "https://github.com/eclipse/paho.mqtt.java">https://github.com/eclipse/paho.mqtt.java</a>
+                </li>
+                <li>Twitter: <a href=
+                "https://twitter.com/eclipsepaho">@eclipsepaho</a>
+                </li>
+                <li>Issues: <a href=
+                "https://github.com/eclipse/paho.mqtt.java/issues">https://github.com/eclipse/paho.mqtt.java/issues</a>
+                </li>
+                <li>Mailing-list: <a href=
+                "https://dev.eclipse.org/mailman/listinfo/paho-dev">https://dev.eclipse.org/mailman/listinfo/paho-dev</a>
+                </li>
+            </ul>
+            <h2>Using the Paho Java Client</h2>
+            <h3>Downloading</h3>
+            <p>Eclipse hosts a Nexus repository for those who want to use Maven
+            to manage their dependencies. The released libraries are also
+            available in the Maven Central repository.</p>
+            <p>Add the repository definition and the dependency definition
+            shown below to your pom.xml.</p>
+            <p>Replace <code>%REPOURL%</code> with either
+            <code>https://repo.eclipse.org/content/repositories/paho-releases/</code>
+            for the official releases, or
+            <code>https://repo.eclipse.org/content/repositories/paho-snapshots/</code>
+            for the nightly snapshots. Replace %VERSION% with the level
+            required . The latest release version is <code>1.0.2</code> and the
+            current snapshot version is <code>1.0.3</code>.</p>
+            <pre>
 &lt;project ...&gt;
 &lt;repositories&gt;
     &lt;repository&gt;
@@ -98,65 +142,79 @@ mvn package -DskipTests
     &lt;/dependency&gt;
 &lt;/dependencies&gt;
 &lt;/project&gt;
-</pre>
+    </pre>
+            <p>If you find that there is functionality missing or bugs in the
+            release version, you may want to try using the snapshot version to
+            see if this helps before raising a feature request or an issue.</p>
+            <h3>Building from source</h3>
+            <p>There are two active branches on the Paho Java git repository,
+            <code>master</code> which is used to produce stable releases, and
+            <code>develop</code> where active development is carried out. By
+            default cloning the git repository will download the
+            <code>master</code> branch, to build from <code>develop</code> make
+            sure you switch to the remote branch: <code>git checkout -b develop
+            remotes/origin/develop</code></p>
+            <p>To then build the library run the following maven command:
+            <code>mvn package -DskipTests</code></p>
+            <p>This will build the client library without running the tests.
+            The jars for the library, source and javadoc can be found in the
+            <code>org.eclipse.paho.client.mqttv3/target</code> directory.</p>
+            <h2>Documentation</h2>
+            <p>Reference documentation is online at: <a href=
+            "http://www.eclipse.org/paho/files/javadoc/index.html">http://www.eclipse.org/paho/files/javadoc/index.html</a></p>
+            <p>Log and Debug in the Java Client: <a href=
+            "https://wiki.eclipse.org/Paho/Log_and_Debug_in_the_Java_client">https://wiki.eclipse.org/Paho/Log<em>and</em>Debug<em>in</em>the<em>Java</em>client</a></p>
+            <h2>Getting Started</h2>
+            <p>The included code below is a very basic sample that connects to
+            a server and publishes a message using the MqttClient synchronous
+            API. More extensive samples demonstrating the use of the
+            Asynchronous API can be found in the
+            <code>org.eclipse.paho.sample.mqttv3app</code> directory of the
+            source.</p>
+            <pre>
+        import org.eclipse.paho.client.mqttv3.MqttClient;
+        import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+        import org.eclipse.paho.client.mqttv3.MqttException;
+        import org.eclipse.paho.client.mqttv3.MqttMessage;
+        import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-<p>Alternatively the Paho Java library jars can be downloaded directly from the following URLs;</p>
-<p><a href="https://repo.eclipse.org/content/repositories/paho-releases/">https://repo.eclipse.org/content/repositories/paho-releases/</a> - Official Releases</p>
-<p><a href="https://repo.eclipse.org/content/repositories/paho-snapshots/">https://repo.eclipse.org/content/repositories/paho-snapshots/</a> - Nightly Snapshots</p>
+        public class MqttPublishSample {
 
-<h2 id="documentation">Documentation</h2>
-<p>Reference documentation is online at: <a href="http://www.eclipse.org/paho/files/javadoc/index.html">http://www.eclipse.org/paho/files/javadoc/index.html</a>
+        public static void main(String[] args) {
 
-<p><a href="https://wiki.eclipse.org/Paho/Log_and_Debug_in_the_Java_client">Log and Debug in the Java Client</a>.</p>
+            String topic        = &quot;MQTT Examples&quot;;
+            String content      = &quot;Message from MqttPublishSample&quot;;
+            int qos             = 2;
+            String broker       = &quot;tcp://iot.eclipse.org:1883&quot;;
+            String clientId     = &quot;JavaSample&quot;;
+            MemoryPersistence persistence = new MemoryPersistence();
 
-<h3 id="getting-started">Getting Started</h3>
-<p>The included code below is a very basic sample that connects to a server and publishes a message using the MqttClient synchronous API. More extensive samples demonstrating the use of the Asynchronous API can be found in the <code>org.eclipse.paho.sample.mqttv3app</code> directory of the source.</p>
-
-<pre>
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-
-public class MqttPublishSample {
-
-    public static void main(String[] args) {
-
-        String topic        = "MQTT Examples";
-        String content      = "Message from MqttPublishSample";
-        int qos             = 2;
-        String broker       = "tcp://iot.eclipse.org:1883";
-        String clientId     = "JavaSample";
-        MemoryPersistence persistence = new MemoryPersistence();
-
-        try {
-            MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
-            MqttConnectOptions connOpts = new MqttConnectOptions();
-            connOpts.setCleanSession(true);
-            System.out.println("Connecting to broker: "+broker);
-            sampleClient.connect(connOpts);
-            System.out.println("Connected");
-            System.out.println("Publishing message: "+content);
-            MqttMessage message = new MqttMessage(content.getBytes());
-            message.setQos(qos);
-            sampleClient.publish(topic, message);
-            System.out.println("Message published");
-            sampleClient.disconnect();
-            System.out.println("Disconnected");
-            System.exit(0);
-        } catch(MqttException me) {
-            System.out.println("reason "+me.getReasonCode());
-            System.out.println("msg "+me.getMessage());
-            System.out.println("loc "+me.getLocalizedMessage());
-            System.out.println("cause "+me.getCause());
-            System.out.println("excep "+me);
-            me.printStackTrace();
+            try {
+                MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
+                MqttConnectOptions connOpts = new MqttConnectOptions();
+                connOpts.setCleanSession(true);
+                System.out.println(&quot;Connecting to broker: &quot;+broker);
+                sampleClient.connect(connOpts);
+                System.out.println(&quot;Connected&quot;);
+                System.out.println(&quot;Publishing message: &quot;+content);
+                MqttMessage message = new MqttMessage(content.getBytes());
+                message.setQos(qos);
+                sampleClient.publish(topic, message);
+                System.out.println(&quot;Message published&quot;);
+                sampleClient.disconnect();
+                System.out.println(&quot;Disconnected&quot;);
+                System.exit(0);
+            } catch(MqttException me) {
+                System.out.println(&quot;reason &quot;+me.getReasonCode());
+                System.out.println(&quot;msg &quot;+me.getMessage());
+                System.out.println(&quot;loc &quot;+me.getLocalizedMessage());
+                System.out.println(&quot;cause &quot;+me.getCause());
+                System.out.println(&quot;excep &quot;+me);
+                me.printStackTrace();
+            }
         }
-    }
-}
-</pre>
-</div>
-</div>
-
-<?php include '../../_includes/footer.php' ?>
+    }</pre>
+        </div>
+    </div><?php include '../../_includes/footer.php' ?>
+</body>
+</html>

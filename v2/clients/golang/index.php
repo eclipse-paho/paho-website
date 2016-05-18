@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Go Client</h1>
 <p>The Paho Go Client provides an MQTT client library for connection to MQTT brokers via TCP, TLS or WebSockets</p>
 
@@ -86,4 +87,6 @@ func main() {
 }
 
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

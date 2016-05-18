@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>MQTT C Client for Posix and Windows</h1>
 
 <p>The Paho MQTT C Client is a fully fledged MQTT client written in ANSI standard C.  It avoids C++ in order to be
@@ -112,4 +113,6 @@ int main(int argc, char* argv[])
     return rc;
 }
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>MQTT Conformance/Interoperability Testing</h1>
 
 <p>The aim of this project is to create a means by which it is easy to test both MQTT servers and client libraries, to
@@ -68,5 +69,6 @@ python3 client_test.py [hostname:port]
 
 as a first test. If hostname:port are not specified, localhost:1883 is assumed.
 </p>
-
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

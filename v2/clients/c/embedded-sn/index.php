@@ -1,5 +1,6 @@
 <?php include '../../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Embedded MQTT-SN C/C++ Client</h1>
 
 <p>This library is intended to have these characteristics:
@@ -20,7 +21,7 @@
 
 <h2 id="download">Download</h2>
 
-<p>There are no pre-built downloads available. This code is intended to be used in 
+<p>There are no pre-built downloads available. This code is intended to be used in
 the smallest pieces needed for the particular embedded system.</p>
 
 <h2 id="build-from-source">Building from source</h2>
@@ -94,5 +95,6 @@ int main(int argc, char** argv)
 	return 0;
 }
 </pre>
+</div>
+</div>
 <?php include '../../../_includes/footer.php' ?>
-

@@ -1,8 +1,9 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>MQTT C++ Client for Posix and Windows</h1>
 
-<p>This C++ client provides an interface which is intended to mirror the Java API as closely as possible.  It requires  
+<p>This C++ client provides an interface which is intended to mirror the Java API as closely as possible.  It requires
 the <a href="../c">Paho MQTT C client</a> library.</p>
 
 <h2 id="source">Source</h2>
@@ -40,7 +41,7 @@ int main(int argc, char* argv[])
 {
 	sample_mem_persistence persist;
 	mqtt::client client(ADDRESS, CLIENTID, &persist);
-	
+
 	callback cb;
 	client.set_callback(cb);
 
@@ -94,5 +95,6 @@ int main(int argc, char* argv[])
  	return 0;
 }
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>
-

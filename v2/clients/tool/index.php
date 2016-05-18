@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Graphical MQTT Client Tools</h1>
 
 <p>Here are the GUI tools currently available in Paho.
@@ -62,7 +63,7 @@
 
 <p><a href="https://www.eclipse.org/downloads/download.php?file=/paho/1.0/org.eclipse.paho.mqtt.utility-1.0.0.jar">Jar download</a>.
 </p>
+</div>
+</div>
 
- 
 <?php include '../../_includes/footer.php' ?>
-

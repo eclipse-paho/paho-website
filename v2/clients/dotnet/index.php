@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>C# .Net and WinRT Client</h1>
 <p><b>M2Mqtt</b> is a MQTT client available for all .Net platforms (.Net Framework, .Net Compact Framework and .Net Micro Framework) and WinRT platforms (Windows 8.1 and Windows Phone 8.1).</p>
 
@@ -27,35 +28,36 @@ MqttClient client = new MqttClient(IPAddress.Parse(MQTT_BROKER_ADDRESS));
 
 // register to message received
 client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
- 
+
 string clientId = Guid.NewGuid().ToString();
 client.Connect(clientId);
- 
+
 // subscribe to the topic "/home/temperature" with QoS 2
 client.Subscribe(new string[] { "/home/temperature" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
- 
+
 ...
- 
+
 static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
 {
 // handle message received
 }
 
 // PUBLISHER
-... 
- 
+...
+
 // create client instance
-MqttClient client = new MqttClient(IPAddress.Parse(MQTT_BROKER_ADDRESS)); 
- 
+MqttClient client = new MqttClient(IPAddress.Parse(MQTT_BROKER_ADDRESS));
+
 string clientId = Guid.NewGuid().ToString();
-client.Connect(clientId); 
- 
-string strValue = Convert.ToString(value); 
- 
+client.Connect(clientId);
+
+string strValue = Convert.ToString(value);
+
 // publish a message on "/home/temperature" topic with QoS 2
-client.Publish("/home/temperature", Encoding.UTF8.GetBytes(strValue), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE); 
- 
+client.Publish("/home/temperature", Encoding.UTF8.GetBytes(strValue), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE);
+
 ...
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>
-
