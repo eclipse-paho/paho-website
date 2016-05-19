@@ -38,31 +38,42 @@
                                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Automatic Reconnect</td>
+                                    <td class="text-center warning"><i aria-hidden=
+                                    "true" class="fa fa-times"></i></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="col-md-4">
-                        <table class="table table-bordered  table-condensed">
+                        <table class="table table-bordered table-condensed">
                             <tbody>
-                                <tr>
-                                    <td>Automatic Reconnect</td>
-                                    <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i>
-                                    </td>
-                                </tr>
+
                                 <tr>
                                     <td>Offline Buffering</td>
-                                    <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i>
-                                    </td>
+                                    <td class="text-center warning"><i aria-hidden=
+                                    "true" class="fa fa-times"></i></td>
                                 </tr>
                                 <tr>
                                     <td>WebSocket Support</td>
-                                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i>
-                                    </td>
+                                    <td class="text-center success"><i aria-hidden=
+                                    "true" class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Standart TCP Support</td>
-                                    <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i>
-                                    </td>
+                                    <td>Standard TCP Support</td>
+                                    <td class="text-center warning"><i aria-hidden=
+                                    "true" class="fa fa-times"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Non-Blocking API</td>
+                                    <td class="text-center success"><i aria-hidden=
+                                    "true" class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Blocking API</td>
+                                    <td class="text-center warning"><i aria-hidden=
+                                    "true" class="fa fa-times"></i></td>
                                 </tr>
                             </tbody>
                         </table>
