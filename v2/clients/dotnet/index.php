@@ -4,6 +4,79 @@
 <h1>C# .Net and WinRT Client</h1>
 <p><b>M2Mqtt</b> is a MQTT client available for all .Net platforms (.Net Framework, .Net Compact Framework and .Net Micro Framework) and WinRT platforms (Windows 8.1 and Windows Phone 8.1).</p>
 
+<h2>Features</h2>
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-bordered table-condensed">
+            <tbody>
+                <tr>
+                    <td>MQTT 3.1</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>MQTT 3.1.1</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>LWT</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>SSL / TLS</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Message Persistence</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>Automatic Reconnect</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <table class="table table-bordered table-condensed">
+            <tbody>
+
+                <tr>
+                    <td>Offline Buffering</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>WebSocket Support</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>Standard TCP Support</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Non-Blocking API</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Blocking API</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
 <h2 id="source">Source</h2>
 <p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.m2mqtt.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.m2mqtt.git/</a></p>
 

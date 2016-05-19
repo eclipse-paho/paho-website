@@ -14,6 +14,79 @@ Posix or Windows libraries for networking (sockets), threads and memory allocati
 <li>optional higher layer(s) in C and/or C++.</li>
 </ul>
 
+<h2>Features</h2>
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-bordered table-condensed">
+            <tbody>
+                <tr>
+                    <td>MQTT 3.1</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>MQTT 3.1.1</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>LWT</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>SSL / TLS</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Message Persistence</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>Automatic Reconnect</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <table class="table table-bordered table-condensed">
+            <tbody>
+
+                <tr>
+                    <td>Offline Buffering</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>WebSocket Support</td>
+                    <td class="text-center warning"><i aria-hidden=
+                    "true" class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                    <td>Standard TCP Support</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Non-Blocking API</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>Blocking API</td>
+                    <td class="text-center success"><i aria-hidden=
+                    "true" class="fa fa-check"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
 <p>The libraries can be used on desktop operating systems, but are primarily aimed for environments such as <a href="http://mbed.org">mbed</a>, <a href="http://www.arduino.cc/">Arduino</a> and <a href="http://freertos.org">FreeRTOS</a>.
 </p>
 
