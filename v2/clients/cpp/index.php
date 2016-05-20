@@ -7,77 +7,24 @@
 the <a href="../c">Paho MQTT C client</a> library.</p>
 
 <h2>Features</h2>
-<div class="row">
-    <div class="col-md-4">
-        <table class="table table-bordered table-condensed">
-            <tbody>
-                <tr>
-                    <td>MQTT 3.1</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>MQTT 3.1.1</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>LWT</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>SSL / TLS</td>
-					<td class="text-center warning"><i aria-hidden=
-                    "true" class="fa fa-times"></i></td>
-                </tr>
-                <tr>
-                    <td>Message Persistence</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>Automatic Reconnect</td>
-					<td class="text-center warning"><i aria-hidden=
-                    "true" class="fa fa-times"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-4">
-        <table class="table table-bordered table-condensed">
-            <tbody>
+<?php
 
-                <tr>
-                    <td>Offline Buffering</td>
-					<td class="text-center warning"><i aria-hidden=
-                    "true" class="fa fa-times"></i></td>
-                </tr>
-                <tr>
-                    <td>WebSocket Support</td>
-                    <td class="text-center warning"><i aria-hidden=
-                    "true" class="fa fa-times"></i></td>
-                </tr>
-                <tr>
-                    <td>Standard TCP Support</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>Non-Blocking API</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                    <td>Blocking API</td>
-                    <td class="text-center success"><i aria-hidden=
-                    "true" class="fa fa-check"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-4"></div>
-</div>
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => false,
+        "persistence" => true,
+        "reconnect" => false,
+        "buffering" => false,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => true,
+        "sync" => true
+    );
+    include '../../_includes/features_list.php'
+
+?>
 
 <h2 id="source">Source</h2>
 <p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.cpp.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.cpp.git/</a></p>

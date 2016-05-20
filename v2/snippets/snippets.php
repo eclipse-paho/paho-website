@@ -1,4 +1,6 @@
 <?php include '../_includes/header.php' ?>
+<div class="panel panel-default">
+<div class="panel-body">
 <div class="snippet-index">
     <div class="page-header">
         <h1>Eclipse Paho Snippets</h1>
@@ -23,6 +25,8 @@
     <p class="snippet-desc"></p>
     <pre class="snippet-code prettyprint"></pre>
 </div>
-<script src="/paho/v2/js/run_prettify.min.js" type="text/javascript"></script>
+</div>
+</div>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" type="text/javascript"></script>
 <script src="/paho/v2/js/snippets.js" type="text/javascript" defer="defer"></script>
 <?php include '../_includes/footer.php' ?>

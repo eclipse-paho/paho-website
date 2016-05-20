@@ -6,17 +6,17 @@
            <thead>
                 <tr>
                      <th>Client</th>
-                     <th>MQTT 3.1</th>
-                     <th>MQTT 3.1.1</th>
-                     <th>LWT</th>
-                     <th>SSL / TLS</th>
-                     <th>Automatic Reconnect</th>
-                     <th>Offline Buffering</th>
-                     <th>Message Persistence</th>
-                     <th>WebSocket Support</th>
-                     <th>Standard MQTT Support</th>
-                     <th>Blocking API</th>
-                     <th>Non-Blocking API</th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="MQTT version 3.1 specification.">MQTT 3.1</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="MQTT version 3.1.1 specification.">MQTT 3.1.1</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Last Will and Testament messages.">LWT</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Transport Layer Security or SSL.">SSL / TLS</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Can automatically reconnect to the server if the connection is lost.">Automatic Reconnect</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Will buffer messages whilst offline to send when the connection is re-established.">Offline Buffering</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Supports persisting messages incase of an application crash.">Message Persistence</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Can communicate to MQTT servers that support WebSockets.">WebSocket Support</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Can communicate to MQTT servers with support TCP.">Standard MQTT Support</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Supports Asynchronous APIs.">Blocking API</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="Supports a blocking or 'single threaded' API.">Non-Blocking API</a></th>
 
                  </tr>
              </thead>
@@ -136,6 +136,13 @@
 
              </tbody>
          </table>
+         <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+         <script type="text/javascript">
+             $(function () {
+               $('[data-toggle="tooltip"]').tooltip()
+             })
+         </script>
 
   </div>
 </div>
