@@ -9,9 +9,10 @@ if(empty($markDownPath)){
     $Parsedown = new Parsedown();
 
     $url = "https://jpwsutton.github.io/paho-examples/$markDownPath";
+    echo ($url);
 
     $proxy = 'tcp://proxy.eclipse.org:9898';
-
+    echo($proxy);
     $context = array(
        'http' => array(
            'proxy' => $proxy,
@@ -19,9 +20,11 @@ if(empty($markDownPath)){
            ),
        );
 
-    $context = stream_context_create($context);
 
+    $context = stream_context_create($context);
+    echo($context);
     $markdown = file_get_contents($url, False, $context);
+    echo($markdown);
     $html =  $Parsedown->text($markdown);
     ?>
     <div class="panel panel-default">
