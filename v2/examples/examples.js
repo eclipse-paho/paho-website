@@ -46,32 +46,7 @@ function updatePage(snippet_name){
 }
 
 
-function loadSnippet(snippet_name){
-    // Set the title of the page
-    setTitle(snippet_name);
-    document.title = "Paho Examples: " + snippet_name;
-    // Hide/Show divs
-    $('.snippet-index').hide();
-    $('.snippet').show();
-    var snippet = snippets[snippet_name];
-    var language = snippet['language'];
-    $('.snippet-desc').text(snippet['description']);
-    $('.snippet-lang').html(language + ' - <a href="' + languages[language] + '" target="_blank">' + languages[language] + '</a>');
-    //$('.snippet-json').text(JSON.stringify(snippet,null,'\t'));
 
-    $('.prettyprinted').removeClass('prettyprinted');
-    $('.snippet-code').load('snippets/' + snippet['file'], function(){
-        // Re-run Pretty Print
-        PR.prettyPrint()
-    });
-    //var tagString = snippet['tags'].join(", ");
-    //$('.snippet-tags').text(tagString);
-
-}
-
-function setTitle(new_title){
-    $('snippet-title-text').text(new_title);
-}
 
 function getIndex(){
     $.getJSON("https://jpwsutton.github.io/paho-examples/index.json", function(data) {
@@ -82,7 +57,7 @@ function getIndex(){
             items.push("<div class=\"item col-xs-4 col-lg-4 snippet-" + index + "\">\
                             <div class=\"panel panel-default\">\
                                 <div class=\"panel-heading\">\
-                                    <a href='#" + key + "'><h3 class=\"panel-title\">" + key + "</h3></a>\
+                                    <a href='examples.php?path=" + val['file'] + "'><h3 class=\"panel-title\">" + key + "</h3></a>\
                                 </div>\
                                 <div class=\"panel-body\">\
                                     " + val["description"]+ "\
@@ -92,10 +67,6 @@ function getIndex(){
                         snippets[key]['classIndex'] = index;
                         ++index;
         });
-
-        // $.each(data, function(key, val){
-        //     items.push( "<li id='" + key + "'><a href='#" + key + "'>" + key + "</a></li>" );
-        // });
         $( ".snippet-list" ).html(items.join( "" ));
 
        // If we are currently on a specific snippet, load it
