@@ -28,7 +28,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
 ?>
 
 <h2 id="source">Source</h2>
-<p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.cpp.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.cpp.git/</a></p>
+<p><a href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></p>
 
 <h2 id="download">Download</h2>
 
