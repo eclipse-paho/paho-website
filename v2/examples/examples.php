@@ -8,7 +8,20 @@ if(empty($markDownPath)){
     include './Parsedown.php';
     $Parsedown = new Parsedown();
 
-    $markdown = file_get_contents("https://jpwsutton.github.io/paho-examples/$markDownPath");
+    $url = "https://jpwsutton.github.io/paho-examples/$markDownPath";
+
+    $proxy = 'tcp://proxy.eclipse.org:9898';
+
+    $context = array(
+       'http' => array(
+           'proxy' => $proxy,
+           'request_fulluri' => True,
+           ),
+       );
+
+    $context = stream_context_create($context);
+
+    $markdown = file_get_contents($url, False, $context);
     $html =  $Parsedown->text($markdown);
     ?>
     <div class="panel panel-default">
