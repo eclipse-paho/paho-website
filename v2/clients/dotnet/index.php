@@ -18,7 +18,8 @@
         "websocket" => false,
         "tcp" => true,
         "async" => true,
-        "sync" => false
+        "sync" => false,
+        "ha" => false
     );
     include '../../_includes/features_list.php'
 

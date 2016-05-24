@@ -20,7 +20,8 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
         "websocket" => false,
         "tcp" => true,
         "async" => true,
-        "sync" => true
+        "sync" => true,
+        "ha" => false
     );
     include '../../_includes/features_list.php'
 

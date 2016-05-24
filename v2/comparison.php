@@ -17,12 +17,14 @@
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Can communicate to MQTT servers with support TCP.">Standard MQTT Support</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Supports Asynchronous APIs.">Blocking API</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Supports a blocking or 'single threaded' API.">Non-Blocking API</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="If the client cannot connect to a server, fails over to an alternative(s).">High Availability</a></th>
 
                  </tr>
              </thead>
              <tbody>
                  <tr>
                     <th scope="row"><a href="./clients/java/">Java</a></th>
+                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -48,6 +50,7 @@
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                   <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                </tr>
                <tr>
                   <th scope="row"><a href="./clients/js/">JavaScript</a></th>
@@ -61,6 +64,7 @@
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                   <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
@@ -76,6 +80,7 @@
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              </tr>
              <tr>
                 <th scope="row"><a href="./clients/c/">C</a></th>
@@ -87,6 +92,7 @@
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -104,6 +110,7 @@
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
            </tr>
            <tr>
               <th scope="row"><a href="./clients/android/">Android Service</a></th>
@@ -117,6 +124,7 @@
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
           </tr>
           <tr>
@@ -132,6 +140,7 @@
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+             <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
          </tr>
 
              </tbody>

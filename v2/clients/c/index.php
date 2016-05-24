@@ -25,7 +25,8 @@ the operation has completed, which makes programming easier.  In contrast, no ca
         "websocket" => false,
         "tcp" => true,
         "async" => true,
-        "sync" => true
+        "sync" => true,
+        "ha" => true
     );
     include '../../_includes/features_list.php'
 

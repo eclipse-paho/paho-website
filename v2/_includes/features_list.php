@@ -45,6 +45,10 @@ $featuresList = array(
     "sync" => array(
         "name" => "Blocking API",
         "tooltip" => "Supports a blocking or 'single threaded' API."
+    ),
+    "ha" => array(
+        "name" => "High Availability",
+        "tooltip" => "If the client cannot connect to a server, fails over to an alternative(s)."
     )
 );
 
@@ -88,6 +92,7 @@ function getHtml($id, $features){
                 <?php print(getHtml("tcp", $features)); ?>
                 <?php print(getHtml("async", $features)); ?>
                 <?php print(getHtml("sync", $features)); ?>
+                <?php print(getHtml("ha", $features)); ?>
 
             </tbody>
         </table>
