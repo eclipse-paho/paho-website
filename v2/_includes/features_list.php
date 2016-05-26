@@ -70,39 +70,45 @@ function getHtml($id, $features){
             </tr>";
     return $html;
 };
+
+
+function getFeatures($myFeatureList){
+    ?>
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table table-bordered table-condensed">
+                <tbody>
+                    <?php print(getHtml("mqtt-31", $myFeatureList)); ?>
+                    <?php print(getHtml("mqtt-311", $myFeatureList)); ?>
+                    <?php print(getHtml("lwt", $myFeatureList)); ?>
+                    <?php print(getHtml("tls", $myFeatureList)); ?>
+                    <?php print(getHtml("persistence", $myFeatureList)); ?>
+                    <?php print(getHtml("reconnect", $myFeatureList)); ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table class="table table-bordered table-condensed">
+                <tbody>
+                    <?php print(getHtml("buffering", $myFeatureList)); ?>
+                    <?php print(getHtml("websocket", $myFeatureList)); ?>
+                    <?php print(getHtml("tcp", $myFeatureList)); ?>
+                    <?php print(getHtml("async", $myFeatureList)); ?>
+                    <?php print(getHtml("sync", $myFeatureList)); ?>
+                    <?php print(getHtml("ha", $myFeatureList)); ?>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </div>
+    <?php
+}
  ?>
-<div class="row">
-    <div class="col-md-4">
-        <table class="table table-bordered table-condensed">
-            <tbody>
-                <?php print(getHtml("mqtt-31", $features)); ?>
-                <?php print(getHtml("mqtt-311", $features)); ?>
-                <?php print(getHtml("lwt", $features)); ?>
-                <?php print(getHtml("tls", $features)); ?>
-                <?php print(getHtml("persistence", $features)); ?>
-                <?php print(getHtml("reconnect", $features)); ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-4">
-        <table class="table table-bordered table-condensed">
-            <tbody>
-                <?php print(getHtml("buffering", $features)); ?>
-                <?php print(getHtml("websocket", $features)); ?>
-                <?php print(getHtml("tcp", $features)); ?>
-                <?php print(getHtml("async", $features)); ?>
-                <?php print(getHtml("sync", $features)); ?>
-                <?php print(getHtml("ha", $features)); ?>
-
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-4"></div>
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-</div>
