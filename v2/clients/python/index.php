@@ -21,7 +21,9 @@
         "sync" => true,
         "ha" => false
     );
-    include '../../_includes/features_list.php'
+    include '../../_includes/features_list.php';
+    getFeatures($features);
+
 
 ?>
 
