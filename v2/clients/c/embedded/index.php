@@ -53,7 +53,7 @@ Posix or Windows libraries for networking (sockets), threads and memory allocati
 </p>
 
 <h2 id="source">Source</h2>
-<p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git/</a></p>
+<p><a href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></p>
 
 <h2 id="download">Downloads</h2>
 

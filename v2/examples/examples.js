@@ -49,7 +49,7 @@ function updatePage(snippet_name){
 
 
 function getIndex(){
-    $.getJSON("https://jpwsutton.github.io/paho-examples/index.json", function(data) {
+    $.getJSON("paho-examples/index.json", function(data) {
         var items = []
         snippets = data;
         var index = 0;

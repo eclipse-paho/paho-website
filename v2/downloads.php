@@ -27,7 +27,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Python</th>
-                    <td>1.1 - <a target="_blank" target="https://pypi.python.org/pypi/paho-mqtt/1.1">Pipy (Pip)</a></td>
+                    <td>1.1 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.1">Pipy (Pip)</a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from Develop branch Source</i></a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
@@ -45,9 +45,9 @@
                </tr>
                <tr>
                    <th scope="row">C</th>
-                   <td>1.0.3 - <a target="_blank" target="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-windows-1.0.3.zip">Windows</a> /
-                   <a target="_blank" target="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-unix-1.0.3.tar.gz">Unix</a> /
-                   <a target="_blank" target="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-mac-1.0.3.tar.gz">Mac</a></td>
+                   <td>1.0.3 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-windows-1.0.3.zip">Windows</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-unix-1.0.3.tar.gz">Unix</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-mac-1.0.3.tar.gz">Mac</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/develop"><i>Build from Develop branch Source</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
@@ -65,7 +65,7 @@
              </tr>
              <tr>
                  <th scope="row">Embedded C/C++</th>
-                 <td>1.0.0 - <a target="_blank" target="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a> / <i>Build from Source</i></td>
+                 <td>1.0.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a> / <i>Build from Source</i></td>
                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/tree/develop"><i>Build from Develop branch Source</i></a></td>
                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></td>
              </tr>
