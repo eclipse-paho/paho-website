@@ -1,9 +1,33 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>MQTT C++ Client for Posix and Windows</h1>
 
 <p>This C++ client provides an interface which is intended to mirror the Java API as closely as possible.  It requires
 the <a href="../c">Paho MQTT C client</a> library.</p>
+
+<h2>Features</h2>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => false,
+        "persistence" => true,
+        "reconnect" => false,
+        "buffering" => false,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => true,
+        "sync" => true,
+        "ha" => false
+    );
+    include '../../_includes/features_list.php';
+    getFeatures($features);
+
+
+?>
 
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></p>
@@ -20,7 +44,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
 requires gcc 4.8.1 or later.  To build:</p>
 
 <pre>
-git clone https://github.com/eclipse/paho.mqtt.cpp.git
+git clone http://git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.cpp.git
 cd org.eclipse.paho.mqtt.cpp.git
 make
 </pre>
@@ -94,4 +118,6 @@ int main(int argc, char* argv[])
  	return 0;
 }
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

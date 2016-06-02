@@ -1,7 +1,31 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Python Client</h1>
 <p>The Paho Python Client provides a client class with support for both MQTT v3.1 and v3.1.1 on Python 2.7 or 3.x. It also provides some helper functions to make publishing one off messages to an MQTT server very straightforward. </p>
+
+<h2>Features</h2>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => false,
+        "reconnect" => true,
+        "buffering" => true,
+        "websocket" => true,
+        "tcp" => true,
+        "async" => true,
+        "sync" => true,
+        "ha" => false
+    );
+    include '../../_includes/features_list.php';
+    getFeatures($features);
+
+
+?>
 
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></p>
@@ -50,4 +74,6 @@ client.connect("iot.eclipse.org", 1883, 60)
 # manual interface.
 client.loop_forever()
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

@@ -1,5 +1,6 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>MQTT C Client for Posix and Windows</h1>
 
 <p>The Paho MQTT C Client is a fully fledged MQTT client written in ANSI standard C.  It avoids C++ in order to be
@@ -9,6 +10,29 @@ as portable as possible.  A <a href="../cpp">C++ layer</a> over this library is 
 respectively.  The synchronous API is intended to be simpler and more helpful.  To this end, some of the calls will block until
 the operation has completed, which makes programming easier.  In contrast, no calls ever block in the asynchronous API.  All notifications of API call results are made by callbacks.  This makes the API suitable for use in windowed environments like iOS for instance, where the application is not the main thread of control.
 </p>
+
+<h2>Features</h2>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => true,
+        "reconnect" => true,
+        "buffering" => true,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => true,
+        "sync" => true,
+        "ha" => true
+    );
+    include '../../_includes/features_list.php';
+    getFeatures($features);
+
+
+?>
 
 <h2 id="source">Source</h2>
 
@@ -112,4 +136,6 @@ int main(int argc, char* argv[])
     return rc;
 }
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

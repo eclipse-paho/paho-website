@@ -1,7 +1,31 @@
 <?php include '../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Go Client</h1>
 <p>The Paho Go Client provides an MQTT client library for connection to MQTT brokers via TCP, TLS or WebSockets</p>
+
+<h2>Features</h2>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => true,
+        "reconnect" => true,
+        "buffering" => true,
+        "websocket" => true,
+        "tcp" => true,
+        "async" => true,
+        "sync" => false,
+        "ha" => true
+    );
+    include '../../_includes/features_list.php';
+    getFeatures($features);
+
+
+?>
 
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/eclipse/paho.mqtt.golang">https://github.com/eclipse/paho.mqtt.golang</a></p>
@@ -86,4 +110,6 @@ func main() {
 }
 
 </pre>
+</div>
+</div>
 <?php include '../../_includes/footer.php' ?>

@@ -1,5 +1,6 @@
 <?php include '../../../_includes/header.php' ?>
-
+<div class="panel panel-default">
+<div class="panel-body">
 <h1>Embedded MQTT C/C++ Client Libraries</h1>
 
 <p>The "full" Paho MQTT C client library was written with Linux and Windows in mind.  It assumes the existence of
@@ -13,25 +14,80 @@ Posix or Windows libraries for networking (sockets), threads and memory allocati
 <li>optional higher layer(s) in C and/or C++.</li>
 </ul>
 
-<p>The libraries can be used on desktop operating systems, but are primarily aimed for environments such as <a href="http://mbed.org">mbed</a>, <a href="http://www.arduino.cc/">Arduino</a> and <a href="http://freertos.org">FreeRTOS</a>.
-</p>
+<h2>Features</h2>
 
-<p>Currently, the libraries that exist are:
-<dl>
-<dt>MQTTPacket</dt>  
-<dd>This is the lowest level library, the simplest and smallest, but hardest to use.  It simply deals with serialization and deserialization of MQTT packets.  Serialization means taking application data and converting it to a form ready for sending across the network.  Deserialization means taking the data read from the network and extracting the data.
-</dd>
-<dt>MQTTClient</dt>
-<dd>This is a C++ library first written for mbed, but now ported to other platforms.  Although it uses C++, it still avoids dynamic memory allocations, and has replaceable classes for OS and network dependent functions.  Use of the STL is also avoided.  It is based on, and requires, MQTTPacket.
-</dd>
-<dt>MQTTClient-C</dt>
-<dd>A C version of MQTTClient, for environments where C++ is not the norm, such as FreeRTOS.  Also built on top of MQTTPacket.
-</dd>
-</dl>
-</p>
+<p>The libraries can be used on desktop operating systems, but are primarily aimed for environments such as <a href="http://mbed.org">mbed</a>, <a href="http://www.arduino.cc/">Arduino</a> and <a href="http://freertos.org">FreeRTOS</a>.</p>
+
+<h3>MQTTPacket</h3>
+<p>This is the lowest level library, the simplest and smallest, but hardest to use.  It simply deals with serialization and deserialization of MQTT packets.  Serialization means taking application data and converting it to a form ready for sending across the network.  Deserialization means taking the data read from the network and extracting the data.</p>
+<?php
+include '../../../_includes/features_list.php';
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => false,
+        "reconnect" => false,
+        "buffering" => false,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => false,
+        "sync" => false,
+        "ha" => false
+    );
+    getFeatures($features);
+
+
+?>
+
+<h3>MQTTClient</h3>
+<p>This is a C++ library first written for mbed, but now ported to other platforms.  Although it uses C++, it still avoids dynamic memory allocations, and has replaceable classes for OS and network dependent functions.  Use of the STL is also avoided.  It is based on, and requires, MQTTPacket.</p>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => false,
+        "reconnect" => false,
+        "buffering" => false,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => false,
+        "sync" => true,
+        "ha" => true
+    );
+    getFeatures($features);
+
+?>
+
+<h3>MQTTClient-c</h3>
+<p>A C version of MQTTClient, for environments where C++ is not the norm, such as FreeRTOS. Also built on top of MQTTPacket.</p>
+<?php
+
+    $features = array(
+        "mqtt-31" => true,
+        "mqtt-311" => true,
+        "lwt" => true,
+        "tls" => true,
+        "persistence" => false,
+        "reconnect" => false,
+        "buffering" => false,
+        "websocket" => false,
+        "tcp" => true,
+        "async" => false,
+        "sync" => true,
+        "ha" => true
+    );
+    getFeatures($features);
+
+?>
+
 
 <h2 id="source">Source</h2>
-<p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.embedded-c.git/</a></p>
+<p><a href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></p>
 
 <h2 id="download">Downloads</h2>
 
@@ -85,39 +141,39 @@ void messageArrived(MQTT::MessageData& md)
 {
     MQTT::Message &message = md.message;
 
-	printf("Message %d arrived: qos %d, retained %d, dup %d, packetid %d\n", 
+	printf("Message %d arrived: qos %d, retained %d, dup %d, packetid %d\n",
 		++arrivedcount, message.qos, message.retained, message.dup, message.id);
     printf("Payload %.*s\n", (int)message.payloadlen, (char*)message.payload);
 }
 
 
 int main(int argc, char* argv[])
-{   
+{
     IPStack ipstack = IPStack();
     float version = 0.3;
     const char* topic = "mbed-sample";
-    
+
     printf("Version is %f\n", version);
-              
+
     MQTT::Client<IPStack, Countdown> client = MQTT::Client<IPStack, Countdown>(ipstack);
-    
+
     const char* hostname = "iot.eclipse.org";
     int port = 1883;
     printf("Connecting to %s:%d\n", hostname, port);
     int rc = ipstack.connect(hostname, port);
 	if (rc != 0)
 	    printf("rc from TCP connect is %d\n", rc);
- 
+
 	printf("MQTT connecting\n");
-    MQTTPacket_connectData data = MQTTPacket_connectData_initializer;       
+    MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
     data.MQTTVersion = 3;
     data.clientID.cstring = (char*)"mbed-icraggs";
     rc = client.connect(data);
 	if (rc != 0)
 	    printf("rc from MQTT connect is %d\n", rc);
 	printf("MQTT connected\n");
-    
-    rc = client.subscribe(topic, MQTT::QOS2, messageArrived);   
+
+    rc = client.subscribe(topic, MQTT::QOS2, messageArrived);
     if (rc != 0)
         printf("rc from MQTT subscribe is %d\n", rc);
 
@@ -136,17 +192,17 @@ int main(int argc, char* argv[])
 		printf("Error %d from sending QoS 0 message\n", rc);
     else while (arrivedcount == 0)
         client.yield(100);
-        
+
     rc = client.unsubscribe(topic);
     if (rc != 0)
         printf("rc from unsubscribe was %d\n", rc);
-    
+
     rc = client.disconnect();
     if (rc != 0)
         printf("rc from disconnect was %d\n", rc);
-    
+
     ipstack.disconnect();
-    
+
     return 0;
 }
 </pre>
@@ -177,5 +233,6 @@ rc = Socket_new("127.0.0.1", 1883, &mysock);
 rc = write(mysock, buf, len);
 rc = close(mysock);
 </pre>
+</div>
+</div>
 <?php include '../../../_includes/footer.php' ?>
-
