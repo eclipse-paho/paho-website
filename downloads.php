@@ -27,7 +27,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Python</th>
-                    <td>1.1 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.1">Pipy (Pip)</a></td>
+                    <td>1.2 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.2">Pypi (Pip)</a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from Develop branch Source</i></a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
