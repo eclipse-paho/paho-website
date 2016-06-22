@@ -39,7 +39,7 @@
                </tr>
                <tr>
                    <th scope="row">Golang</th>
-                   <td>N/A</td>
+                   <td>1.1.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang/releases/tag/v1.0.0">Github repo tag v1.1.0</a></td>
                    <td><code>go get github.com/eclipse/paho.mqtt.golang</code></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang">https://github.com/eclipse/paho.mqtt.golang</a></td>
                </tr>
