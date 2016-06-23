@@ -39,7 +39,7 @@
 <p></p> -->
 
 <h2 id="documentation">Documentation</h2>
-<p>API documentation for the Paho Go client is available at <a href="https://godoc.org/git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.golang.git"https://godoc.org/git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.golang.git></a>
+<p>API documentation for the Paho Go client is available at <a href="https://godoc.org/github.com/eclipse/paho.mqtt.golang"https://godoc.org/github.com/eclipse/paho.mqtt.golang></a>
 Alternatively, once you have downloaded the src via <code>go get</code> you can run <code>godoc -http=":6060"</code> and navigate to http://localhost:6060 to browse the documentation locally</p>
 
 <h3 id="getting-started">Getting Started</h3>
@@ -65,7 +65,7 @@ import (
 )
 
 //define a function for the default message handler
-var f MQTT.MessageHandler = func(client *MQTT.Client, msg MQTT.Message) {
+var f MQTT.MessageHandler = func(client MQTT.Client, msg MQTT.Message) {
   fmt.Printf("TOPIC: %s\n", msg.Topic())
   fmt.Printf("MSG: %s\n", msg.Payload())
 }

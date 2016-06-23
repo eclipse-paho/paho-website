@@ -28,6 +28,8 @@
                 <tr>
                     <th scope="row">Python</th>
                     <td>1.1 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.1">Pypi (Pip)</a></td>
+		                <td>1.2 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.2">Pypi (Pip)</a></td>
+
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from Develop branch Source</i></a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
@@ -39,15 +41,15 @@
                </tr>
                <tr>
                    <th scope="row">Golang</th>
-                   <td>N/A</td>
+                   <td>1.0.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang/releases/tag/v1.0.0">Github repo tag v1.0.0</a></td>
                    <td><code>go get github.com/eclipse/paho.mqtt.golang</code></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang">https://github.com/eclipse/paho.mqtt.golang</a></td>
                </tr>
                <tr>
                    <th scope="row">C</th>
-                   <td>1.0.3 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-windows-1.0.3.zip">Windows</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-unix-1.0.3.tar.gz">Unix</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.1/eclipse-paho-mqtt-c-mac-1.0.3.tar.gz">Mac</a></td>
+                   <td>1.1.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.2/eclipse-paho-mqtt-c-windows-1.1.0.zip">Windows</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.2/eclipse-paho-mqtt-c-unix-1.1.0.tar.gz">Unix</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.2/eclipse-paho-mqtt-c-mac-1.1.0.tar.gz">Mac</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/develop"><i>Build from Develop branch Source</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
