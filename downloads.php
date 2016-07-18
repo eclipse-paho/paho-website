@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                    <th scope="row">JavaScript</th>
-                   <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/Java/plugins/org.eclipse.paho.client.mqttv3_1.0.2.jar">Eclipse</a></td>
+                   <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/paho.javascript-1.0.2.zip">Eclipse</a></td>
                    <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from Develop branch Source</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></td>
                </tr>
