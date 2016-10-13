@@ -93,7 +93,7 @@
 
 
                 <h2>Getting Started</h4>
-                <p>The included code below is a very basic sample that connects to a server using WebSockets and subscribes to the topic <code>/World</code>, once subscribed,
+                <p>The included code below is a very basic sample that connects to a server using WebSockets and subscribes to the topic <code>World</code>, once subscribed,
                      it then publishes the message <code>Hello</code> to that topic. Any messages that come into the subscribed topic will be printed to the Javascript console.<p>
 
                 <p>This requires the use of a broker that supports WebSockets natively, or the use of a gateway that can forward between WebSockets and TCP.</p>
