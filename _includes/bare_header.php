@@ -77,10 +77,6 @@
                           <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
                               <ul class="dropdown-menu">
-                                <li><a href="/paho/#getting-started">Getting Started</a></li>
-                                <li><a href="/paho/#contributing">Contributing</a></li>
-                                <li><a href="/paho/#mqtt">About MQTT</a></li>
-                                <li><a href="/paho/#articles">Featured Articles</a></li>
                                 <li><a href="http://wiki.eclipse.org/Paho">Project Wiki</a></li>
                                 <li><a href="/paho/branding">Branding</a></li>
                                 <li><a href="https://projects.eclipse.org/projects/iot.paho">Project Details & Plans</a></li>
