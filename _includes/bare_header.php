@@ -87,6 +87,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li><a href="https://projects.eclipse.org/projects/technology.paho/who">Development Team</a></li>
+                              <li><a href="https://mattermost.eclipse.org/eclipse/channels/paho">Mattermost Channel</a></li>
                               <li><a href="https://twitter.com/eclipsepaho">Twitter</a></li>
                               <li><a href="/paho/whoisusing/">Stories</a></li>
                               <li><a href="https://dev.eclipse.org/mailman/listinfo/paho-dev">Mailing List</a></li>

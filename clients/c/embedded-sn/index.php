@@ -17,7 +17,7 @@
 </p>
 
 <h2 id="source">Source</h2>
-<p><a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/">http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt-sn.embedded-c.git/</a></p>
+<p><a href="https://github.com/eclipse/paho.mqtt-sn.embedded-c">https://github.com/eclipse/paho.mqtt-sn.embedded-c/</a></p>
 
 <h2 id="download">Download</h2>
 
