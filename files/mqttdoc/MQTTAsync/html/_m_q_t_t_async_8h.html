@@ -941,7 +941,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">handle</td><td>A pointer to an <a class="el" href="_m_q_t_t_async_8h.html#a0db1d736cdc0c864fe41abb3afd605bd">MQTTAsync</a> handle. The handle is populated with a valid client reference following a successful return from this function. </td></tr>
     <tr><td class="paramname">serverURI</td><td>A null-terminated string specifying the server to which the client will connect. It takes the form <em>protocol://host:port</em>. <em>protocol</em> must be <em>tcp</em> or <em>ssl</em>. For <em>host</em>, you can specify either an IP address or a host name. For instance, to connect to a server running on the local machines with the default MQTT port, specify <em>tcp://localhost:1883</em>. </td></tr>
-    <tr><td class="paramname">clientId</td><td>The client identifier passed to the server when the client connects to it. It is a null-terminated UTF-8 encoded string. ClientIDs must be no longer than 23 characters according to the MQTT specification. </td></tr>
+    <tr><td class="paramname">clientId</td><td>The client identifier passed to the server when the client connects to it. It is a null-terminated UTF-8 encoded string. </td></tr>
     <tr><td class="paramname">persistence_type</td><td>The type of persistence to be used by the client: <br />
  <a class="el" href="_m_q_t_t_client_persistence_8h.html#ae01e089313a65ac4661ed216b6ac00fa">MQTTCLIENT_PERSISTENCE_NONE</a>: Use in-memory persistence. If the device or system on which the client is running fails or is switched off, the current state of any in-flight messages is lost and some messages may not be delivered even at QoS1 and QoS2. <br />
  <a class="el" href="_m_q_t_t_client_persistence_8h.html#aaa948291718a9c06369b854b0f64bc32">MQTTCLIENT_PERSISTENCE_DEFAULT</a>: Use the default (file system-based) persistence mechanism. Status about in-flight messages is held in persistent storage and provides some protection against message loss in the case of unexpected failure. <br />
@@ -1645,7 +1645,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 3 2017 15:47:16 for Paho Asynchronous MQTT C Client Library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 3 2017 16:08:56 for Paho Asynchronous MQTT C Client Library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
