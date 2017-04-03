@@ -82,7 +82,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
 
 <h2 id="documentation">Documentation</h2>
 
-<p>Reference documentation is online <a href="http://www.eclipse.org/paho/files/mqttdoc/Cclient/index.html">here</a>.</p>
+<p>Reference documentation is online <a href="http://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/index.html">here</a>.</p>
 
 <h3 id="getting-started">Getting Started</h3>
 
