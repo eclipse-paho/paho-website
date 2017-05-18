@@ -3,7 +3,7 @@
 <div class="panel-body">
 <h1>MQTT C++ Client for Posix and Windows</h1>
 
-<p>This C++ client provides an interface which is intended to mirror the Java API as closely as possible.  It requires
+<p>This C++ client provides an interface which is intended to mirror the Paho Java API as closely as possible.  It requires
 the <a href="../c">Paho MQTT C client</a> library.</p>
 
 <h2>Features</h2>
@@ -13,15 +13,15 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
         "mqtt-31" => true,
         "mqtt-311" => true,
         "lwt" => true,
-        "tls" => false,
+        "tls" => true,
         "persistence" => true,
-        "reconnect" => false,
-        "buffering" => false,
+        "reconnect" => true,
+        "buffering" => true,
         "websocket" => false,
         "tcp" => true,
         "async" => true,
         "sync" => true,
-        "ha" => false
+        "ha" => true
     );
     include '../../_includes/features_list.php';
     getFeatures($features);
@@ -30,7 +30,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
 ?>
 
 <h2 id="source">Source</h2>
-<p><a href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></p>
+<p>Source is available from the <a href="https://github.com/eclipse/paho.mqtt.cpp">GitHub repository</a>.
 
 <h2 id="download">Download</h2>
 
@@ -40,14 +40,15 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
 
 <h3>Linux</h3>
 
-<p>The C++ client is built for Linux/Unix/Mac with make and gcc. Because it uses the latest C++ constructs, it
-requires gcc 4.8.1 or later.  To build:</p>
+<p>The C++ client is built for Linux/Unix/Mac with CMake, autotools, or GNU Make, and use g++ or clang++ as the compiler. Because it requires a compliant C++11 compiler, only GCC 4.8.1 or clang 3.6 or later are supported.
 
-<pre>
-git clone http://git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.cpp.git
-cd org.eclipse.paho.mqtt.cpp.git
-make
-</pre>
+See the <a href="https://github.com/eclipse/paho.mqtt.cpp">GitHub page</a> for complete build instructions.
+
+<h3>Windows</h3>
+
+<p>For Windows, CMake is used to generate a solution file for Visual Studio. Due to the C++11 requirement, the earliest version that can be used with the library is Visual Studio 2015.
+
+See the <a href="https://github.com/eclipse/paho.mqtt.cpp">GitHub page</a> for complete build instructions.
 
 <h2 id="documentation">Documentation</h2>
 
@@ -62,60 +63,46 @@ make
 <pre>
 int main(int argc, char* argv[])
 {
-	sample_mem_persistence persist;
-	mqtt::client client(ADDRESS, CLIENTID, &persist);
+    const std::string TOPIC { "hello" };
+    const std::string PAYLOAD1 { "Hello World!" };
 
-	callback cb;
-	client.set_callback(cb);
+    const char* PAYLOAD2 = "Hi there!";
 
-	mqtt::connect_options connOpts;
-	connOpts.set_keep_alive_interval(20);
-	connOpts.set_clean_session(true);
+    // Create a client
 
-	try {
-		std::cout << "Connecting..." << std::flush;
-		client.connect(connOpts);
-		std::cout << "OK" << std::endl;
+    mqtt::client cli(ADDRESS, CLIENT_ID);
 
-		// First use a message pointer.
+    mqtt::connect_options connOpts;
+    connOpts.set_keep_alive_interval(20);
+    connOpts.set_clean_session(true);
 
-		std::cout << "Sending message..." << std::flush;
-		mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD1);
-		pubmsg->set_qos(QOS);
-		client.publish(TOPIC, pubmsg);
-		std::cout << "OK" << std::endl;
+    try {
+        // Connect to the client
 
-		// Now try with itemized publish.
+        cli.connect(connOpts);
 
-		std::cout << "Sending next message..." << std::flush;
-		client.publish(TOPIC, PAYLOAD2, strlen(PAYLOAD2)+1, 0, false);
-		std::cout << "OK" << std::endl;
+        // Publish using a message pointer.
 
-		// Now try with a listener, but no token
+        auto msg = mqtt::make_message(TOPIC, PAYLOAD1);
+        msg->set_qos(QOS);
 
-		std::cout << "Sending final message..." << std::flush;
-		pubmsg = std::make_shared<mqtt::message>(PAYLOAD3);
-		pubmsg->set_qos(QOS);
-		client.publish(TOPIC, pubmsg);
-		std::cout << "OK" << std::endl;
+        cli.publish(msg);
 
-		// Disconnect
-		std::cout << "Disconnecting..." << std::flush;
-		client.disconnect();
-		std::cout << "OK" << std::endl;
-	}
-	catch (const mqtt::persistence_exception& exc) {
-		std::cerr << "Persistence Error: " << exc.what() << " ["
-			<< exc.get_reason_code() << "]" << std::endl;
-		return 1;
-	}
-	catch (const mqtt::exception& exc) {
-		std::cerr << "Error: " << exc.what() << " ["
-			<< exc.get_reason_code() << "]" << std::endl;
-		return 1;
-	}
+        // Now try with itemized publish.
 
- 	return 0;
+        cli.publish(TOPIC, PAYLOAD2, strlen(PAYLOAD2), 0, false);
+
+        // Disconnect
+
+        cli.disconnect();
+    }
+    catch (const mqtt::exception& exc) {
+        std::cerr << "Error: " << exc.what() << " ["
+            << exc.get_reason_code() << "]" << std::endl;
+        return 1;
+    }
+
+    return 0;
 }
 </pre>
 </div>
