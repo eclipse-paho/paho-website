@@ -91,7 +91,7 @@
                               <li><a href="https://twitter.com/eclipsepaho">Twitter</a></li>
                               <li><a href="/paho/whoisusing/">Stories</a></li>
                               <li><a href="https://dev.eclipse.org/mailman/listinfo/paho-dev">Mailing List</a></li>
-                              <li><a href="https://bugs.eclipse.org/bugs/describecomponents.cgi?product=Paho">Bug Tracker</a></li>
+                              <li><a href="https://eclipse.org/security/">Eclipse Security</a></li>
                             </ul>
                           </li>
                            <!--<li><a href="/paho/examples/examples.php">Examples</a></li>-->
