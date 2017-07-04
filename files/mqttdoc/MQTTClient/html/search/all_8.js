@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qos',['qos',['../struct_m_q_t_t_client__message.html#a35738099155a0e4f54050da474bab2e7',1,'MQTTClient_message::qos()'],['../struct_m_q_t_t_client__will_options.html#a35738099155a0e4f54050da474bab2e7',1,'MQTTClient_willOptions::qos()'],['../qos.html',1,'(Global Namespace)']]]
+  ['name',['name',['../struct_m_q_t_t_client__name_value.html#a8f8f80d37794cde9472343e4487ba3eb',1,'MQTTClient_nameValue']]]
 ];

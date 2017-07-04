@@ -8,6 +8,7 @@ var searchData=
   ['mqttclient_5ffreemessage',['MQTTClient_freeMessage',['../_m_q_t_t_client_8h.html#a8ce72761f1b720344d5f268a75c6d0ed',1,'MQTTClient.h']]],
   ['mqttclient_5fgetpendingdeliverytokens',['MQTTClient_getPendingDeliveryTokens',['../_m_q_t_t_client_8h.html#a7801f72272ba1bf7069dcee5f68d4eb1',1,'MQTTClient.h']]],
   ['mqttclient_5fgetversioninfo',['MQTTClient_getVersionInfo',['../_m_q_t_t_client_8h.html#a732a048fc296c78f096daebd092b8cfd',1,'MQTTClient.h']]],
+  ['mqttclient_5fglobal_5finit',['MQTTClient_global_init',['../_m_q_t_t_client_8h.html#a21804ede1a506d1d69a472bc30acc8ba',1,'MQTTClient.h']]],
   ['mqttclient_5fisconnected',['MQTTClient_isConnected',['../_m_q_t_t_client_8h.html#ad9e40bdb7149ee3e5d075db7f51a735f',1,'MQTTClient.h']]],
   ['mqttclient_5fpublish',['MQTTClient_publish',['../_m_q_t_t_client_8h.html#a4ba831564fda110a340bf68502e631bf',1,'MQTTClient.h']]],
   ['mqttclient_5fpublishmessage',['MQTTClient_publishMessage',['../_m_q_t_t_client_8h.html#a83c3ee2a8491b6f07caab05abad44b39',1,'MQTTClient.h']]],

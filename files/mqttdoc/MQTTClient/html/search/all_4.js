@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keepaliveinterval',['keepAliveInterval',['../struct_m_q_t_t_client__connect_options.html#ac8dd0930672a9c7d71fc645aa1f0521d',1,'MQTTClient_connectOptions']]],
-  ['keystore',['keyStore',['../struct_m_q_t_t_client___s_s_l_options.html#a32b476382955289ce427112b59f21c3e',1,'MQTTClient_SSLOptions']]]
+  ['enabledciphersuites',['enabledCipherSuites',['../struct_m_q_t_t_client___s_s_l_options.html#aa683926d52134077f27d6dc67bda13ab',1,'MQTTClient_SSLOptions']]],
+  ['enableservercertauth',['enableServerCertAuth',['../struct_m_q_t_t_client___s_s_l_options.html#a75f6c13b7634e15f96dd9f17db6cf0be',1,'MQTTClient_SSLOptions']]]
 ];

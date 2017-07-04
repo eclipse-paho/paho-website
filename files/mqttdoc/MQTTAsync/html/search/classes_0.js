@@ -4,6 +4,7 @@ var searchData=
   ['mqttasync_5fcreateoptions',['MQTTAsync_createOptions',['../struct_m_q_t_t_async__create_options.html',1,'']]],
   ['mqttasync_5fdisconnectoptions',['MQTTAsync_disconnectOptions',['../struct_m_q_t_t_async__disconnect_options.html',1,'']]],
   ['mqttasync_5ffailuredata',['MQTTAsync_failureData',['../struct_m_q_t_t_async__failure_data.html',1,'']]],
+  ['mqttasync_5finit_5foptions',['MQTTAsync_init_options',['../struct_m_q_t_t_async__init__options.html',1,'']]],
   ['mqttasync_5fmessage',['MQTTAsync_message',['../struct_m_q_t_t_async__message.html',1,'']]],
   ['mqttasync_5fnamevalue',['MQTTAsync_nameValue',['../struct_m_q_t_t_async__name_value.html',1,'']]],
   ['mqttasync_5fresponseoptions',['MQTTAsync_responseOptions',['../struct_m_q_t_t_async__response_options.html',1,'']]],

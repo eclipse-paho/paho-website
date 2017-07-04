@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../struct_m_q_t_t_async__name_value.html#a8f8f80d37794cde9472343e4487ba3eb',1,'MQTTAsync_nameValue']]]
+  ['len',['len',['../struct_m_q_t_t_async__will_options.html#afed088663f8704004425cdae2120b9b3',1,'MQTTAsync_willOptions::len()'],['../struct_m_q_t_t_async__connect_options.html#afed088663f8704004425cdae2120b9b3',1,'MQTTAsync_connectOptions::len()']]]
 ];

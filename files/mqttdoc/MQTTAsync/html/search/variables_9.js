@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['qos',['qos',['../struct_m_q_t_t_async__message.html#a35738099155a0e4f54050da474bab2e7',1,'MQTTAsync_message::qos()'],['../struct_m_q_t_t_async__success_data.html#a35738099155a0e4f54050da474bab2e7',1,'MQTTAsync_successData::qos()'],['../struct_m_q_t_t_async__will_options.html#a35738099155a0e4f54050da474bab2e7',1,'MQTTAsync_willOptions::qos()']]],
-  ['qoslist',['qosList',['../struct_m_q_t_t_async__success_data.html#a82786d9ba5cae39873f378a48b36c23b',1,'MQTTAsync_successData']]]
+  ['onfailure',['onFailure',['../struct_m_q_t_t_async__response_options.html#a09ce26d7cff24e14a6844eaae7b15290',1,'MQTTAsync_responseOptions::onFailure()'],['../struct_m_q_t_t_async__connect_options.html#a09ce26d7cff24e14a6844eaae7b15290',1,'MQTTAsync_connectOptions::onFailure()'],['../struct_m_q_t_t_async__disconnect_options.html#a09ce26d7cff24e14a6844eaae7b15290',1,'MQTTAsync_disconnectOptions::onFailure()']]],
+  ['onsuccess',['onSuccess',['../struct_m_q_t_t_async__response_options.html#ac13fb68f736854fcab131b34756bfceb',1,'MQTTAsync_responseOptions::onSuccess()'],['../struct_m_q_t_t_async__connect_options.html#ac13fb68f736854fcab131b34756bfceb',1,'MQTTAsync_connectOptions::onSuccess()'],['../struct_m_q_t_t_async__disconnect_options.html#ac13fb68f736854fcab131b34756bfceb',1,'MQTTAsync_disconnectOptions::onSuccess()']]]
 ];
