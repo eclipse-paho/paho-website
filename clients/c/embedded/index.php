@@ -57,7 +57,7 @@ include '../../../_includes/features_list.php';
         "tcp" => true,
         "async" => false,
         "sync" => true,
-        "ha" => true
+        "ha" => false
     );
     getFeatures($features);
 
@@ -79,7 +79,7 @@ include '../../../_includes/features_list.php';
         "tcp" => true,
         "async" => false,
         "sync" => true,
-        "ha" => true
+        "ha" => false
     );
     getFeatures($features);
 
