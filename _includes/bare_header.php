@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            Paho - Open Source messaging for M2M
+            Eclipse Paho - MQTT and MQTT-SN software
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Eclipse Paho is a set of scalable open-source implementations of open and standard messaging protocols aimed at new, existing, and emerging applications for Machine-to-Machine (M2M) and Internet of Things (IoT)">
@@ -62,16 +62,18 @@
                                   <li><a href="/paho/clients/golang/">Go</a></li>
                                   <li><a href="/paho/clients/dotnet/">C# .Net and WinRT</a></li>
                                   <!-- <li><a href="/paho/clients/lua/">Lua</a></li> -->
+                                  <li><a href="/paho/components/mqtt-spy">MQTT Spy</a></li>
                                   <li class="divider"></li>
                                   <li class="dropdown-header">MQTT-SN</li>
                                   <li><a href="/paho/clients/c/embedded-sn/">C (Embedded)</a></li>
+                                  <li><a href="/paho/components/mqtt-sn-transparent-gateway/">Transparent Gateway</a></li>
                                   <li class="divider"></li>
                                   <li class="dropdown-header">Utilities</li>
-                                  <li><a href="/paho/clients/tool/">Client Tools</a></li>
+                                  <li><a href="/paho/componentss/tool/">Client Tools</a></li>
                                   <li><a href="/paho/clients/android/sample">Android Sample</a></li>
                                   <!-- <li><a href="/paho/utilities/client-view/">MQTT Eclipse Client View (IDE plugin)</a></li> -->
                                   <!-- <li><a href="/paho/utilities/client-utility/">MQTT Client Utility (java)</a></li> -->
-                                  <li><a href="/paho/clients/testing/">Interop Tests</a></li>
+                                  <li><a href="/paho/components/testing/">Testing</a></li>
                               </ul>
                           </li>
                           <li class="dropdown">
