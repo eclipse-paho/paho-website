@@ -61,7 +61,7 @@
                 </tr>
                 <tr>
                     <th scope="row"><a href="https://www.eclipse.org/paho/clients/python/">Python</a></th>
-		                <td>1.3 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.3.0">Pypi (Pip)</a></td>
+		                <td>1.3.0 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.3.0">Pypi (Pip)</a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from develop branch</i></a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
