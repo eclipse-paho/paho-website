@@ -106,8 +106,8 @@
                <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/embedded/">Embedded C/C++</a></th>
                   <td>1.1.0 -
-                    <a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.1.0"><i>Build from Source</i></a></td> /
-                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a>
+                    <a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.1.0"><i>Build from Source</i></a>/
+                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a></td> 
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/tree/master"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></td>
                </tr>
