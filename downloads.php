@@ -1,7 +1,7 @@
 <?php include '_includes/header.php' ?>
 <h1>Eclipse Paho Downloads</h1>
 
-<h4>Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.3.0-oxygen">1.3 (Oxygen)</a></h4>
+<h4>Latest Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.3.0-oxygen">1.3 (Oxygen)</a></h4>
 
 <?php include './comparison.php' ?>
 
@@ -22,13 +22,13 @@
              </thead>
              <tbody>
             <tr>
-               <th scope="row">mqtt-spy</th>
+               <th scope="row"><a href="https://github.com/eclipse/paho.mqtt-spy/wiki">mqtt-spy</a></th>
                <td>1.0.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt-spy/releases/download/1.0.0/mqtt-spy-1.0.0.jar">Eclipse Github</a></td>
                <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-spy"><i>Build from master branch</i></a></td>
                <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-spy">https://github.com/eclipse/paho.mqtt-spy</a></td>
            </tr>
            <tr>
-               <th scope="row">MQTT-SN Transparent Gateway</th>
+               <th scope="row"><a href="https://github.com/eclipse/paho.mqtt-sn.embedded-c/tree/master/MQTTSNGateway">MQTT-SN Transparent Gateway</a></th>
                <td>1.0.0 - <a href="https://github.com/eclipse/paho.mqtt-sn.embedded-c/tree/v1.0.0/MQTTSNGateway"><i>Build from Source</i></a></td>
                <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c/tree/master/MQTTSNGateway"><i>Build from master branch</i></a></td>
                <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c/tree/master/MQTTSNGateway">https://github.com/eclipse/paho.mqtt-sn.embedded-c/tree/master/MQTTSNGateway</a></td>
@@ -62,13 +62,13 @@
                 <tr>
                     <th scope="row">Python</th>
 		                <td>1.3 - <a target="_blank" href="https://pypi.python.org/pypi/paho-mqtt/1.3.0">Pypi (Pip)</a></td>
-                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from Develop branch Source</i></a></td>
+                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python/tree/develop"><i>Build from develop branch</i></a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
                 <tr>
                    <th scope="row">JavaScript</th>
                    <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/paho.javascript-1.0.2.zip">Eclipse</a></td>
-                   <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from Develop branch Source</i></a></td>
+                   <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from Develop branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></td>
                </tr>
                <tr>
@@ -82,12 +82,12 @@
                    <td>1.2.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-windows-1.2.0.zip">Windows</a> /
                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-unix-1.2.0.tar.gz">Unix</a> /
                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-mac-1.2.0.tar.gz">Mac</a></td>
-                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch source</i></a></td>
+                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
                <tr>
-                  <th scope="row">C++ Client</th>
-                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/releases/tag/v1.0.0"><i>Build from Source</i></a></td>
+                  <th scope="row">C++</th>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/releases/tag/v1.0.0"><i>Build from source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/tree/master"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></td>
                </tr>
@@ -131,7 +131,7 @@
              </thead>
              <tbody>
                <tr>
-                  <th scope="row">Embedded C Client</th>
+                  <th scope="row">Embedded C</th>
                   <td>1.0.0 - <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.0.0"><i>Build from Source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c">https://github.com/eclipse/paho.mqtt-sn.embedded-c</a></td>

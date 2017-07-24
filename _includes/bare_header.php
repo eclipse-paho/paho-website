@@ -62,7 +62,7 @@
                                   <li><a href="/paho/clients/golang/">Go</a></li>
                                   <li><a href="/paho/clients/dotnet/">C# .Net and WinRT</a></li>
                                   <!-- <li><a href="/paho/clients/lua/">Lua</a></li> -->
-                                  <li><a href="/paho/components/mqtt-spy">MQTT Spy</a></li>
+                                  <li><a href="https://github.com/eclipse/paho.mqtt-spy/wiki">MQTT Spy</a></li>
                                   <li class="divider"></li>
                                   <li class="dropdown-header">MQTT-SN</li>
                                   <li><a href="/paho/clients/c/embedded-sn/">C (Embedded)</a></li>
