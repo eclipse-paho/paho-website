@@ -98,7 +98,7 @@
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
             </tr>
             <tr>
-               <th scope="row"><a href="./clients/cpp/"C++</a></th>
+               <th scope="row"><a href="./clients/cpp/">C++</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
