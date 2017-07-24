@@ -68,7 +68,7 @@
                 <tr>
                    <th scope="row"><a href="https://www.eclipse.org/paho/clients/js/">JavaScript</a></th>
                    <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/paho.javascript-1.0.2.zip">Eclipse</a></td>
-                   <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from Develop branch</i></a></td>
+                   <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from develop branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></td>
                </tr>
                <tr>
@@ -87,14 +87,14 @@
                </tr>
                <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/cpp/">C++</a></th>
-                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/releases/tag/v1.0.0"><i>Build from source</i></a></td>
+                  <td>1.0.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/releases/tag/v1.0.0"><i>Build from source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp/tree/master"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></td>
                </tr>
                <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/dotnet/">.Net (C#)</a></th>
-                  <td>4.0.0 - <a target="_blank" href="https://www.nuget.org/packages/M2Mqtt/4.0.0">NuGet</a></td>
                   <td>4.3.0 - <a target="_blank" href="https://www.nuget.org/packages/M2Mqtt/4.3.0">NuGet</a></td>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.m2mqtt/tree/master"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.m2mqtt">https://github.com/eclipse/paho.mqtt.m2mqtt</a></td>
                </tr>
                <tr>
@@ -105,9 +105,10 @@
                </tr>
                <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/embedded/">Embedded C/C++</a></th>
-                  <td>1.1.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a> /
-                    <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.1.0"><i>Build from Source</i></a></td>
-                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/tree/master"><i>Build from master branch Source</i></a></td>
+                  <td>1.1.0 -
+                    <a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.1.0"><i>Build from Source</i></a></td> /
+                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/tree/master"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></td>
                </tr>
              </tbody>
