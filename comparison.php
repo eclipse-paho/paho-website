@@ -1,4 +1,4 @@
-<h2> Client Comparison</h2>
+<h2>MQTT Client Comparison</h2>
 
 <div class="panel panel-default">
   <div class="panel-body">

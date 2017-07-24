@@ -1,7 +1,7 @@
 <?php include '_includes/header.php' ?>
 <h1>Eclipse Paho Downloads</h1>
 
-<h3>Paho Project Release Version: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.3.0-oxygen">1.3 (Oxygen)</a></h3>
+<h4>Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.3.0-oxygen">1.3 (Oxygen)</a></h4>
 
 <?php include './comparison.php' ?>
 
@@ -104,17 +104,11 @@
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.android">https://github.com/eclipse/paho.mqtt.android</a></td>
                </tr>
                <tr>
-                  <th scope="row">Embedded C/C++</th>
+                  <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/embedded/">Embedded C/C++</a></th>
                   <td>1.1.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/arduino_1.0.0.zip">Arduino</a> /
                     <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.1.0"><i>Build from Source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c/tree/master"><i>Build from master branch Source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.embedded-c">https://github.com/eclipse/paho.mqtt.embedded-c</a></td>
-               </tr>
-               <tr>
-                  <th scope="row">MQTT-SN Embedded C Client</th>
-                  <td>1.0.0 - <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.0.0"><i>Build from Source</i></a></td>
-                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c"><i>Build from master branch</i></a></td>
-                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c">https://github.com/eclipse/paho.mqtt-sn.embedded-c</a></td>
                </tr>
              </tbody>
          </table>
