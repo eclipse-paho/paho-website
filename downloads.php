@@ -38,11 +38,9 @@
   </div>
 </div>
 
-
-<h2>Stable</h2>
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h2 class="panel-title">Mqtt Clients</h2>
+    <h2 class="panel-title">MQTT Clients</h2>
   </div>
   <div class="panel-body">
       <table class="table table-hover table-bordered">
@@ -114,6 +112,32 @@
                </tr>
                <tr>
                   <th scope="row">MQTT-SN Embedded C Client</th>
+                  <td>1.0.0 - <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.0.0"><i>Build from Source</i></a></td>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c"><i>Build from master branch</i></a></td>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c">https://github.com/eclipse/paho.mqtt-sn.embedded-c</a></td>
+               </tr>
+             </tbody>
+         </table>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">MQTT-SN Clients</h2>
+  </div>
+  <div class="panel-body">
+      <table class="table table-hover table-bordered">
+           <thead>
+                <tr>
+                     <th>Client</th>
+                     <th>Official Release</th>
+                     <th>Unstable</th>
+                     <th>GitHub</th>
+                 </tr>
+             </thead>
+             <tbody>
+               <tr>
+                  <th scope="row">Embedded C Client</th>
                   <td>1.0.0 - <a href="https://github.com/eclipse/paho.mqtt.embedded-c/releases/tag/v1.0.0"><i>Build from Source</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c"><i>Build from master branch</i></a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt-sn.embedded-c">https://github.com/eclipse/paho.mqtt-sn.embedded-c</a></td>
