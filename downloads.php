@@ -66,7 +66,7 @@
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.python">https://github.com/eclipse/paho.mqtt.python</a></td>
                 </tr>
                 <tr>
-                   <th scope="row">< href="https://www.eclipse.org/paho/clients/js/">JavaScript</a></th>
+                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/js/">JavaScript</a></th>
                    <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/paho.javascript-1.0.2.zip">Eclipse</a></td>
                    <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from Develop branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></td>
