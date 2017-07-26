@@ -55,8 +55,8 @@
              <tbody>
                  <tr>
                     <th scope="row"><a href="https://www.eclipse.org/paho/clients/java/">Java</a></th>
-                    <td>1.1.0 - <a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22org.eclipse.paho.client.mqttv3%22">Maven Central</a></td>
-                    <td>1.1.1-SNAPSHOT - <a target="_blank" href="https://repo.eclipse.org/content/repositories/paho-snapshots/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.1.1-SNAPSHOT/">Eclipse</a></td>
+                    <td>1.1.1 - <a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22org.eclipse.paho.client.mqttv3%22">Maven Central</a></td>
+                    <td>1.1.2-SNAPSHOT - <a target="_blank" href="https://repo.eclipse.org/content/repositories/paho-snapshots/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.1.2-SNAPSHOT/">Eclipse</a></td>
                     <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.java">https://github.com/eclipse/paho.mqtt.java</a></td>
                 </tr>
                 <tr>
@@ -67,7 +67,7 @@
                 </tr>
                 <tr>
                    <th scope="row"><a href="https://www.eclipse.org/paho/clients/js/">JavaScript</a></th>
-                   <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.2/paho.javascript-1.0.2.zip">Eclipse</a></td>
+                   <td>1.0.2 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/releases/1.0.3/paho.javascript-1.0.3.zip">Eclipse</a></td>
                    <td>1.0.3-SNAPSHOT - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript/tree/develop"><i>Build from develop branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.javascript">https://github.com/eclipse/paho.mqtt.javascript</a></td>
                </tr>
@@ -99,8 +99,8 @@
                </tr>
                <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/android/">Android Service</a></th>
-                  <td>1.1.0 - <a target="_blank" href="https://repo.eclipse.org/content/repositories/paho-releases/org/eclipse/paho/org.eclipse.paho.android.service/1.1.0/">Eclipse</a></td>
-                  <td>1.1.1-SNAPSHOT - <a target="_blank" href="https://repo.eclipse.org/content/repositories/paho-snapshots/org/eclipse/paho/org.eclipse.paho.android.service/1.1.1-SNAPSHOT/">Eclipse</a></td>
+                  <td>1.1.1 - <a target="_blank" href="https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22org.eclipse.paho.android.service%22">Eclipse</a></td>
+                  <td>1.1.2-SNAPSHOT - <a target="_blank" href="https://repo.eclipse.org/content/repositories/paho-snapshots/org/eclipse/paho/org.eclipse.paho.android.service/1.1.2-SNAPSHOT/">Eclipse</a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.android">https://github.com/eclipse/paho.mqtt.android</a></td>
                </tr>
                <tr>
