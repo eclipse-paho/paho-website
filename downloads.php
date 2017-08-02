@@ -73,7 +73,7 @@
                </tr>
                <tr>
                    <th scope="row"><a href="https://www.eclipse.org/paho/clients/golang/">Golang</a></th>
-                   <td>1.0.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang/releases/tag/v1.0.0">Github repo tag v1.0.0</a></td>
+                   <td>1.1.0 - <a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang/releases/tag/v1.1.0">Github repo tag v1.1.0</a></td>
                    <td><code>go get github.com/eclipse/paho.mqtt.golang</code></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang">https://github.com/eclipse/paho.mqtt.golang</a></td>
                </tr>
