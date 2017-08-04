@@ -17,7 +17,7 @@
                         "lwt" => true,
                         "tls" => true,
                         "persistence" => true,
-                        "reconnect" => false,
+                        "reconnect" => true,
                         "buffering" => false,
                         "websocket" => true,
                         "tcp" => false,
