@@ -39,7 +39,7 @@
 <h2 id="build-from-source">Building from source</h2>
 <p>The project can be installed from the repository as well. To do this:</p>
 <pre>git clone https://github.com/eclipse/paho.mqtt.python.git
-cd org.eclipse.paho.mqtt.python.git
+cd paho.mqtt.python
 python setup.py install
 </pre>
 <p>The final step may need to be run with <code>sudo</code> if you are using Linux or similar system.</p>
@@ -47,7 +47,7 @@ python setup.py install
 <h2 id="documentation">Documentation</h2>
 <p> Full client documentation is available <a href="docs/">here</a>.</p>
 <h3 id="getting-started">Getting Started</h3>
-<p>There are example clients in the <a href="http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.python.git/tree/examples">examples</a> directory of the repository.</p>
+<p>There are example clients in the <a href="https://github.com/eclipse/paho.mqtt.python/tree/master/examples">examples</a> directory of the repository.</p>
 <p>Here is a very simple example that subscribes to the broker $SYS topic tree and prints out the resulting messages:</p>
 <pre>import paho.mqtt.client as mqtt
 
