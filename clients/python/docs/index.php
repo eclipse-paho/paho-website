@@ -2,7 +2,6 @@
 <h1 class="title">Python Client - documentation</h1>
 
 <!-- The following is a copy/paste of rst2html output -->
-
 <div class="section" id="contents">
 <h1>Contents</h1>
 <ul class="simple">
@@ -453,6 +452,9 @@ disconnect()
 </pre>
 <p>Disconnect from the broker cleanly. Using <tt class="docutils literal">disconnect()</tt> will not result in a
 will message being sent by the broker.</p>
+<p>Disconnect will not wait for all queued message to be sent, to ensure all messages
+are delivered, <tt class="docutils literal">wait_for_publish()</tt> from <tt class="docutils literal">MQTTMessageInfo</tt> should be used.
+See <tt class="docutils literal">publish()</tt> for details.</p>
 <div class="section" id="callback-disconnect">
 <h5>Callback (disconnect)</h5>
 <p>When the client has sent the disconnect message it generates an
@@ -551,11 +553,21 @@ true int/float, use <tt class="docutils literal">struct.pack()</tt> to create th
 <dd>if set to <tt class="docutils literal">True</tt>, the message will be set as the &quot;last known
 good&quot;/retained message for the topic.</dd>
 </dl>
-<p>Returns a tuple <tt class="docutils literal">(result, mid)</tt>, where result is <tt class="docutils literal">MQTT_ERR_SUCCESS</tt> to
-indicate success or <tt class="docutils literal">MQTT_ERR_NO_CONN</tt> if the client is not currently
-connected. <tt class="docutils literal">mid</tt> is the message ID for the publish request. The mid value can
-be used to track the publish request by checking against the mid argument in
-the <tt class="docutils literal">on_publish()</tt> callback if it is defined.</p>
+<p>Returns a MQTTMessageInfo which expose the following attributes and methods:</p>
+<ul class="simple">
+<li><tt class="docutils literal">rc</tt>, the result of the publishing. It could be <tt class="docutils literal">MQTT_ERR_SUCCESS</tt> to
+indicate success, <tt class="docutils literal">MQTT_ERR_NO_CONN</tt> if the client is not currently connected,
+or <tt class="docutils literal">MQTT_ERR_QUEUE_SIZE</tt> when <tt class="docutils literal">max_queued_messages_set</tt> is used to indicate
+that message is neither queued nor sent.</li>
+<li><tt class="docutils literal">mid</tt> is the message ID for the publish request. The mid value can be used to
+track the publish request by checking against the mid argument in the
+<tt class="docutils literal">on_publish()</tt> callback if it is defined. <tt class="docutils literal">wait_for_publish</tt> may be easier
+depending on your use-case.</li>
+<li><tt class="docutils literal">wait_for_publish()</tt> will block until the message is published. It will
+raise ValueError if the message is not queued (rc == <tt class="docutils literal">MQTT_ERR_QUEUE_SIZE</tt>).</li>
+<li><tt class="docutils literal">is_published</tt> returns True if the message has been published. It will
+raise ValueError if the message is not queued (rc == <tt class="docutils literal">MQTT_ERR_QUEUE_SIZE</tt>).</li>
+</ul>
 <p>A <tt class="docutils literal">ValueError</tt> will be raised if topic is <tt class="docutils literal">None</tt>, has zero length or is
 invalid (contains a wildcard), if <tt class="docutils literal">qos</tt> is not one of 0, 1 or 2, or if the
 length of the payload is greater than 268435455 bytes.</p>
@@ -658,7 +670,7 @@ on_connect(client, userdata, flags, rc)
 <dt>client</dt>
 <dd>the client instance for this callback</dd>
 <dt>userdata</dt>
-<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">userdata_set()</tt></dd>
+<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">user_data_set()</tt></dd>
 <dt>flags</dt>
 <dd>response flags sent by the broker</dd>
 <dt>rc</dt>
@@ -703,7 +715,7 @@ on_disconnect(client, userdata, rc)
 <dt>client</dt>
 <dd>the client instance for this callback</dd>
 <dt>userdata</dt>
-<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">userdata_set()</tt></dd>
+<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">user_data_set()</tt></dd>
 <dt>rc</dt>
 <dd>the disconnection result</dd>
 </dl>
@@ -729,14 +741,14 @@ mqttc.on_disconnect = on_disconnect
 on_message(client, userdata, message)
 </pre>
 <p>Called when a message has been received on a topic that the client subscribes
-to. This callback will be called for every message received. Use
-<tt class="docutils literal">message_callback_add()</tt> to define multiple callbacks that will be called for
-specific topic filters.</p>
+to and the message does not match an existing topic filter callback.
+Use <tt class="docutils literal">message_callback_add()</tt> to define a callback that will be called for
+specific topic filters. <tt class="docutils literal">on_message</tt> will serve as fallback when none matched.</p>
 <dl class="docutils">
 <dt>client</dt>
 <dd>the client instance for this callback</dd>
 <dt>userdata</dt>
-<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">userdata_set()</tt></dd>
+<dd>the private user data as set in <tt class="docutils literal">Client()</tt> or <tt class="docutils literal">user_data_set()</tt></dd>
 <dt>message</dt>
 <dd>an instance of MQTTMessage. This is a class with members <tt class="docutils literal">topic</tt>, <tt class="docutils literal">payload</tt>, <tt class="docutils literal">qos</tt>, <tt class="docutils literal">retain</tt>.</dd>
 </dl>
@@ -772,6 +784,9 @@ callback.</dd>
 <p>If using <tt class="docutils literal">message_callback_add()</tt> and <tt class="docutils literal">on_message</tt>, only messages that do
 not match a subscription specific filter will be passed to the <tt class="docutils literal">on_message</tt>
 callback.</p>
+<p>If multiple sub match a topic, each callback will be called (e.g. sub <tt class="docutils literal">sensors/#</tt>
+and sub <tt class="docutils literal">+/humidity</tt> both match a message with a topic <tt class="docutils literal">sensors/humidity</tt>, so both
+callbacks will handle this message).</p>
 </div>
 <div class="section" id="message-callback-remove">
 <h4>message_callback_remove()</h4>
