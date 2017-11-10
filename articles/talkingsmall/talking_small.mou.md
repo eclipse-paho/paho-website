@@ -11,9 +11,9 @@ This is where [MQTT](http://m2m.eclipse.org/protocols.html#mqtt) comes in to tak
 
 <img alt=""BeagleBone Black with temperature sensor" src="BeagleBoneWithTempSensor.png" title="BeagleBone Black with temperature sensor" width=320 align="right" border=5/>
 
-In practice, MQTT lets developers write applications which publish their data as messages to the MQTT network without worrying themselves with how other applications will receive that data. The messages are published to topics, strings which can resemble filesystem paths, like “/rooms/a1/environment/temperature” or “/raspberrypi/status” or “/beaglebone/running/process”. This message data – the payload – is most typically small packets, but MQTT is flexible enough to allow it to be as much as 256MB. The MQTT overhead itself is as little as two bytes over the payload and topic and the load on clients is small as the broker takes over the heavier lifting of redistributing messages. 
+In practice, MQTT lets developers write applications which publish their data as messages to the MQTT network without worrying themselves with how other applications will receive that data. The messages are published to topics, strings which can resemble filesystem paths, like “/rooms/a1/environment/temperature” or “/raspberrypi/status” or “/beaglebone/running/process”. This message data – the payload – is most typically small packets, but MQTT is flexible enough to allow it to be as much as 256MB. The MQTT overhead itself is as little as two bytes over the payload and topic and the load on clients is small as the broker takes over the heavier lifting of redistributing messages.
 
-Other developers can write applications that select which topics, or wildcard-based ranges of topics they will then receive messages for. These are the subscribers. There’s nothing to stop a client being both a publisher and a subscriber though. Bringing the two sides together and providing the glue of an MQTT network are the MQTT brokers. These are applications built to route, or retain, messages between publishing and subscribing clients. 
+Other developers can write applications that select which topics, or wildcard-based ranges of topics they will then receive messages for. These are the subscribers. There’s nothing to stop a client being both a publisher and a subscriber though. Bringing the two sides together and providing the glue of an MQTT network are the MQTT brokers. These are applications built to route, or retain, messages between publishing and subscribing clients.
 Getting building – a publishing sensor
 
 These concepts are best demonstrated so let’s start building our temperature sensor. We’re doing this on the BeagleBone Black. It’s a pretty self-contained device so you just need to add power and network and ssh to “root@beaglebone.local” to log into one fresh out of the box. You can, of course, attach a monitor and use a GUI on the BeagleBone Black - or the Raspberry Pi, which we will come to later - but here we are keeping hardware and software tooling requirements to a minimum so we can focus on MQTT.
@@ -22,11 +22,11 @@ To attach a temperature sensor to a BeagleBone Black, we have followed the [tuto
 
     import Adafruit_BBIO.ADC as ADC
     import time
-      
+
     sensor_pin = 'P9_40'
- 
+
     ADC.setup()
-     
+
     while True:
        reading = ADC.read(sensor_pin)
        millivolts = reading * 1800  # 1.8V reference = 1800 mV
@@ -36,7 +36,7 @@ To attach a temperature sensor to a BeagleBone Black, we have followed the [tuto
 
 So now we have a source of temperature data. Now we can MQTT enable this program. Our first stop is the Eclipse Paho project where MQTT client libraries for various languages have been assembled. There you can find the Paho Python library, but as it is yet to be formally packaged and released, we will need to build it. To build it for the BeagleBone Black’s Angstrom Linux distribution we first need to download the source code using git:
 
-    git clone git://git.eclipse.org/gitroot/paho/ org.eclipse.paho.mqtt.python.git
+    git clone https://github.com/eclipse/paho.mqtt.python.git org.eclipse.paho.mqtt.python.git
 
 This will create a copy of the repository in the directory “org.eclipse.paho.mqtt.python”. If we now move into that directory we can get on with building the code:
 
@@ -56,9 +56,9 @@ Now we can set up the client connection to the broker:
 	mqttc.connect("m2m.eclipse.org", 1883, 60)
 	mqttc.loop_start()
 
-Here we create our client and tell it to connect to m2m.eclipse.org. That’s the Eclipse public sandbox for M2M developers which has been created to let people experiment with M2M without setting up their own broker. That said, you can easily set up a broker with Mosquitto (http://mosquitto.org/), the open source dedicated MQTT broker, if you wish. Other brokers are available, but it’s worth noting that Mosquitto is also becoming an Eclipse M2M project. 
+Here we create our client and tell it to connect to m2m.eclipse.org. That’s the Eclipse public sandbox for M2M developers which has been created to let people experiment with M2M without setting up their own broker. That said, you can easily set up a broker with Mosquitto (http://mosquitto.org/), the open source dedicated MQTT broker, if you wish. Other brokers are available, but it’s worth noting that Mosquitto is also becoming an Eclipse M2M project.
 
-The connection to the broker is made over port 1883 and the connection will be kept alive with a 60 second ping in the absence of any other activity. The code also starts up a thread to handle incoming messages from the broker with the loop_start method. We are now almost ready to send messages to the broker, but before we do that, we need come up with a topic. We shall start with a root name of “bbbexample” for our topics, then have a subtopic “tmp36” to represent the temperature sensor and two sub-subtopics “mv” and “c” to represent the milli-volt and centigrade readings from that sensor. This will give us two absolute topics “bbbexample/tmp36/mv” and “bbbexample/tmp36/c”. Remember though, that if you are working in a shared sandbox like m2m.eclipse.org, you will want to change “bbbexample” to something unique to you (and the broker) or risk having your readings overwritten by another person. 
+The connection to the broker is made over port 1883 and the connection will be kept alive with a 60 second ping in the absence of any other activity. The code also starts up a thread to handle incoming messages from the broker with the loop_start method. We are now almost ready to send messages to the broker, but before we do that, we need come up with a topic. We shall start with a root name of “bbbexample” for our topics, then have a subtopic “tmp36” to represent the temperature sensor and two sub-subtopics “mv” and “c” to represent the milli-volt and centigrade readings from that sensor. This will give us two absolute topics “bbbexample/tmp36/mv” and “bbbexample/tmp36/c”. Remember though, that if you are working in a shared sandbox like m2m.eclipse.org, you will want to change “bbbexample” to something unique to you (and the broker) or risk having your readings overwritten by another person.
 
 With topics selected, once we’ve printed the millivolt and centigrade temperature readings we can add:
 
@@ -70,14 +70,14 @@ Formatting the values to two decimal places for tidiness. This gives us our comp
 	import time
 	import Adafruit_BBIO.ADC as ADC
 	import paho.mqtt.client as mqtt
-	
+
 	sensor_pin = 'P9_40'
 	ADC.setup()
-	
+
 	mqttc = mqtt.Client()
 	mqttc.connect("m2m.eclipse.org", 1883, 60)
 	mqttc.loop_start()
-	
+
 	while True:
 	  reading = ADC.read(sensor_pin)
 	  millivolts = reading * 1800  # 1.8V reference = 1800 mV
@@ -86,7 +86,7 @@ Formatting the values to two decimal places for tidiness. This gives us our comp
 	  mqttc.publish("bbbexample/tmp36/mv","%.2f" % millivolts);
 	  mqttc.publish("bbbexample/tmp36/c","%.2f" % temp_c);
 	  time.sleep(1)
-  
+
 And running that should publish values to the Eclipse sandbox every second. To check this is happening without writing a client, we can make use of one feature of the Eclipse M2M sandbox, the [Eclipse MQTT Bridge](http://eclipse.mqttbridge.com) (at eclipse.mqttbridge.com), which presents the contents of a sandbox in easily consumable web formats. By using the curl utility, it is possible to obtain the value from the last message passed through the broker like so:
 
 	# curl http://eclipse.mqttbridge.com/bbbexample/tmp36/c
@@ -103,15 +103,15 @@ Moving on to the Raspberry Pi, we are going to use Java rather than Python, but 
 	public class PahoMqttSubscribe implements MqttCallback
 	{
 	  MqttClient client;
-	
+
 	  public PahoMqttSubscribe() {}
-	
+
 	  public static void main (String[] args) {
 	    new PahoMqttSubscribe().doDemo();
 	  }
 
 
-We’ve also declared an MqttClient variable, an empty constructor and a main method for our PahoMqttSubscribe class. The doDemo method will contain most of the code. In that method we need to create a connection to the Eclipse sandbox. 
+We’ve also declared an MqttClient variable, an empty constructor and a main method for our PahoMqttSubscribe class. The doDemo method will contain most of the code. In that method we need to create a connection to the Eclipse sandbox.
 
 	public void doDemo() {
 	    try {
@@ -146,31 +146,31 @@ We now have our complete code:
 
 	public class PahoMqttSubscribe implements MqttCallback
 	{
-	
+
 	  MqttClient client;
-	
+
 	  public PahoMqttSubscribe() {}
-	
+
 	  public void messageArrived(String topic, MqttMessage message) throws Exception
 	  {
 	    System.out.println (topic + " " + new String (message.getPayload()));
 	  }
-	
+
 	  public void connectionLost (Throwable cause) {}
 	  public void deliveryComplete(IMqttDeliveryToken token) {}
-	
+
 	  public static void main (String[] args) {
 	    new PahoMqttSubscribe().doDemo();
 	  }
-	
+
 	  public void doDemo() {
 	    try {
 	      client = new MqttClient("tcp://m2m.eclipse.org:1883", MqttClient.generateClientId());
 	      client.connect();
 	      client.setCallback(this);
-	
+
 	      client.subscribe("bbbexample/tmp36/c");
-	
+
 	      // We’ll now idle here sleeping, but your app can be busy
 	      // working here instead
 	      while (true) {
@@ -188,7 +188,7 @@ All we have to do is compile and run it and for that we’ll need a JDK. It used
 With the library downloaded and in the same directory, we can compile and run our application like so:
 
     javac -cp mqtt-client-0.4.0.jar PahoMqttSubscribe.java
-    java -cp mqtt-client-0.4.0.jar:. PahoMqttSubscribe 
+    java -cp mqtt-client-0.4.0.jar:. PahoMqttSubscribe
 
 If the BeagleBone sensor is still running, the program should start printing the temperature data as it is received.
 
@@ -239,7 +239,7 @@ Now, the temperature sensor on the BeagleBone Black will be reflected in the LED
 
 So far, we’ve used MQTT at its very basic level. Despite this, we have already built a system that can handle multiple displays without modification as each display client just subscribes to the temperature updates. And by changing the topic for each sensor, we can publish data from any number of sensors and come up with more complex, rich displays.
 
-But there are some things you may notice with our basic setup. We’ll look at some of them now and how MQTT already has solutions for them. 
+But there are some things you may notice with our basic setup. We’ll look at some of them now and how MQTT already has solutions for them.
 
 __More topics__: Our Raspberry Pi display only subscribes to a single topic for its data. When publishing, you have to use “absolute” topics, but when subscribing it is possible to use wildcard characters to define a range of topics we want the code to listen to. The wildcard characters for MQTT topics are “#” and “+”. A “#” in the topic means, in the implied topic hierarchy, all topics at this level and their children, while a “+” limits it to the single immediate level. So, if we wanted to subscribe to all the messages from the temperature sensor, we could change
 
@@ -256,11 +256,11 @@ __Retention__: If you have built this project and started the display client bef
 	  mqttc.publish("bbbexample/tmp36/mv","%.2f" % millivolts, retain=1);
 	  mqttc.publish("bbbexample/tmp36/c","%.2f" % temp_c, retain=1);
 
-__Getting the message through__: Because there are different levels of assurance needed for different kinds of messages, MQTT supports three levels of quality of service. These QoS settings can be set when publishing a message or when subscribing to a topic. The lowest and quickest level, 0, is the “fire and forget” mode where messages are sent and no attempt is made to acknowledge their reception. QoS 1 is the usual default setting where messages are sent, and re-sent, until there’s at least one acknowledgement. It’s slower than “fire and forget” but gives some assurance the message has got through, though the downside is that multiple copies of the message may be received. QoS 2 is the slowest of the settings as it goes through a complete two-stage process of acknowledgement, which ensures that one, and only one, copy of a message is delivered. 
+__Getting the message through__: Because there are different levels of assurance needed for different kinds of messages, MQTT supports three levels of quality of service. These QoS settings can be set when publishing a message or when subscribing to a topic. The lowest and quickest level, 0, is the “fire and forget” mode where messages are sent and no attempt is made to acknowledge their reception. QoS 1 is the usual default setting where messages are sent, and re-sent, until there’s at least one acknowledgement. It’s slower than “fire and forget” but gives some assurance the message has got through, though the downside is that multiple copies of the message may be received. QoS 2 is the slowest of the settings as it goes through a complete two-stage process of acknowledgement, which ensures that one, and only one, copy of a message is delivered.
 
 __Losing the connection__: When a client goes “off air” abnormally, it is normally hard for other clients to detect that anomaly. With MQTT, this is easier thanks to what are called wills. A will is a topic and a message payload that a client can lodge with the broker with the implicit instruction “in the event that you can’t get in touch with me and I haven’t cleanly disconnected, deliver this message for me”. The various Paho MQTT APIs have different ways of setting this; in Python, a setWill method on the MQTT connection is used, while in the Java API, the will is part of a collection of options the developer can set in MqttConnectionOptions, an instance of which can be passed to the connect method.
 
-__Recovering the connection__: With those quality of service settings, the client has to be able to pick up the pieces when it’s been disconnected and is reconnecting. There’s a pair of elements to this in MQTT.  Firstly there is a clean flag that is usually set by default. This tells the client and server to start afresh every time they connect. If the clean flag is set to false, it is then the second element comes into play. This is the client ID, which we mentioned previously while setting to a different value each time, can also be set to a fixed (or deterministically generated) string. This changes how the broker and client connect. When a client with the same client ID as its previous connection connects to the server and the clean flag is false, the broker and client will work to ensure the new session starts from where the old one left off. To help in this, client libraries implement various forms of persistence for their connections so they can figure out what they were in the process of sending. Depending on the use case, this means that you can create anything from a “fire and forget” stateless stats-gathering network to a network-resilient, assured-delivery platform with MQTT. 
+__Recovering the connection__: With those quality of service settings, the client has to be able to pick up the pieces when it’s been disconnected and is reconnecting. There’s a pair of elements to this in MQTT.  Firstly there is a clean flag that is usually set by default. This tells the client and server to start afresh every time they connect. If the clean flag is set to false, it is then the second element comes into play. This is the client ID, which we mentioned previously while setting to a different value each time, can also be set to a fixed (or deterministically generated) string. This changes how the broker and client connect. When a client with the same client ID as its previous connection connects to the server and the clean flag is false, the broker and client will work to ensure the new session starts from where the old one left off. To help in this, client libraries implement various forms of persistence for their connections so they can figure out what they were in the process of sending. Depending on the use case, this means that you can create anything from a “fire and forget” stateless stats-gathering network to a network-resilient, assured-delivery platform with MQTT.
 
 Securing the connection: For simplicity, we’ve been using un-authenticated and un-encrypted connections to the MQTT broker so anyone could have found out what the temperature was. MQTT does, though, support both authentication and SSL-encrypted connections for when the data is more mission critical than the temperature of your office (or fingers).
 
