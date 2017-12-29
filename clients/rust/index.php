@@ -45,7 +45,7 @@
 
 <h2 id="documentation">Documentation</h2>
 
-<p>Reference documentation is <a href="http://www.eclipse.org/paho/files/rustdoc/index.html">online</a>.</p>
+<p>Reference documentation is <a href="http://www.eclipse.org/paho/files/rustdoc/paho_mqtt/index.html">online</a>.</p>
 
 <h3 id="getting-started">Getting Started</h3>
 
