@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["StringCollection","A collection of C-compatible (NUL-terminated) strings that is useful with C API's that require an array of strings, normally specified as: `const char* arr[]` or  `const char** arr`"]]});

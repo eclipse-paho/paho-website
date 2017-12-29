@@ -113,6 +113,21 @@
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
            </tr>
             <tr>
+               <th scope="row"><a href="./clients/rust/">Rust</a></th>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+           </tr>
+            <tr>
                <th scope="row"><a href="./clients/dotnet/">.Net (C#)</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>

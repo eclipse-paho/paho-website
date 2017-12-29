@@ -60,6 +60,7 @@
                                   <li><a href="/paho/clients/js/">JavaScript</a></li>
                                   <li><a href="/paho/clients/python/">Python</a></li>
                                   <li><a href="/paho/clients/golang/">Go</a></li>
+                                  <li><a href="/paho/clients/rust/">Rust</a></li>
                                   <li><a href="/paho/clients/dotnet/">C# .Net and WinRT</a></li>
                                   <!-- <li><a href="/paho/clients/lua/">Lua</a></li> -->
                                   <li><a href="https://github.com/eclipse/paho.mqtt-spy/wiki">MQTT Spy</a></li>

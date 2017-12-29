@@ -92,6 +92,12 @@
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.cpp">https://github.com/eclipse/paho.mqtt.cpp</a></td>
                </tr>
                <tr>
+                  <th scope="row"><a href="https://www.eclipse.org/paho/clients/rust/">Rust</a></th>
+                  <td><i>Comming soon</i></td>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.rust/tree/develop"><i>Build from develop branch</i></a></td>
+                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.rust">https://github.com/eclipse/paho.mqtt.rust</a></td>
+               </tr>
+               <tr>
                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/dotnet/">.Net (C#)</a></th>
                   <td>4.3.0 - <a target="_blank" href="https://www.nuget.org/packages/M2Mqtt/4.3.0">NuGet</a></td>
                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.m2mqtt/tree/master"><i>Build from master branch</i></a></td>
