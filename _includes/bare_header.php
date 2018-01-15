@@ -70,7 +70,7 @@
                                   <li><a href="/paho/components/mqtt-sn-transparent-gateway/">Transparent Gateway</a></li>
                                   <li class="divider"></li>
                                   <li class="dropdown-header">Utilities</li>
-                                  <li><a href="/paho/componentss/tool/">Client Tools</a></li>
+                                  <li><a href="/paho/components/tool/">Client Tools</a></li>
                                   <li><a href="/paho/clients/android/sample">Android Sample</a></li>
                                   <!-- <li><a href="/paho/utilities/client-view/">MQTT Eclipse Client View (IDE plugin)</a></li> -->
                                   <!-- <li><a href="/paho/utilities/client-utility/">MQTT Client Utility (java)</a></li> -->
