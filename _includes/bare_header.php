@@ -75,6 +75,7 @@
                                   <!-- <li><a href="/paho/utilities/client-view/">MQTT Eclipse Client View (IDE plugin)</a></li> -->
                                   <!-- <li><a href="/paho/utilities/client-utility/">MQTT Client Utility (java)</a></li> -->
                                   <li><a href="/paho/components/testing/">Testing</a></li>
+                                  <li><a href="/paho/clients/js/utility/">JavaScript Utility</a></li>
                               </ul>
                           </li>
                           <li class="dropdown">
