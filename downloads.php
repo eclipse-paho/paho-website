@@ -79,9 +79,10 @@
                </tr>
                <tr>
                    <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/">C</a></th>
-                   <td>1.2.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-windows-1.2.0.zip">Windows</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-unix-1.2.0.tar.gz">Unix</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.3/eclipse-paho-mqtt-c-mac-1.2.0.tar.gz">Mac</a></td>
+                   <td>1.3.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-win32-1.3.0.zip">Win32</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-win64-1.3.0.zip">Win64</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-unix-1.3.0.tar.gz">Unix</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-mac-1.3.0.tar.gz">Mac</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
