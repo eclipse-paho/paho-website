@@ -1,7 +1,7 @@
 <?php include '_includes/header.php' ?>
 <h1>Eclipse Paho Downloads</h1>
 
-<h4>Latest Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.3.0-oxygen">1.3 (Oxygen)</a></h4>
+<h4>Latest Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.4.0-photon">1.4 (Photon)</a></h4>
 
 <?php include './comparison.php' ?>
 
@@ -81,8 +81,8 @@
                    <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/">C</a></th>
                    <td>1.3.0 - <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-win32-1.3.0.zip">Win32</a> /
                    <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-win64-1.3.0.zip">Win64</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-unix-1.3.0.tar.gz">Unix</a> /
-                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/eclipse-paho-mqtt-c-mac-1.3.0.tar.gz">Mac</a></td>
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/Eclipse-Paho-MQTT-C-1.3.0-Linux.tar.gz">Unix</a> /
+                   <a target="_blank" href="https://www.eclipse.org/downloads/download.php?file=/paho/1.4/Eclipse-Paho-MQTT-C-1.3.0-Darwin.tar.gz">Mac</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
