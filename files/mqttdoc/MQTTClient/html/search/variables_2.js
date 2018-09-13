@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['data',['data',['../struct_m_q_t_t_client__will_options.html#a0d49d74db4c035719c3867723cf7e779',1,'MQTTClient_willOptions::data()'],['../struct_m_q_t_t_client__connect_options.html#a0d49d74db4c035719c3867723cf7e779',1,'MQTTClient_connectOptions::data()']]],
-  ['do_5fopenssl_5finit',['do_openssl_init',['../struct_m_q_t_t_client__init__options.html#a5929146596391e2838ef95feb89776da',1,'MQTTClient_init_options']]],
-  ['dup',['dup',['../struct_m_q_t_t_client__message.html#adc4cf3f551bb367858644559d69cfdf5',1,'MQTTClient_message']]]
+  ['capath',['CApath',['../struct_m_q_t_t_client___s_s_l_options.html#a3078b3c824cc9753a57898072445c34d',1,'MQTTClient_SSLOptions']]],
+  ['cleansession',['cleansession',['../struct_m_q_t_t_client__connect_options.html#a036c36a2a4d3a3ffae9ab4dd8b3e7f7b',1,'MQTTClient_connectOptions']]],
+  ['cleanstart',['cleanstart',['../struct_m_q_t_t_client__connect_options.html#acdcb75a5d5981da027bce83849140f7b',1,'MQTTClient_connectOptions']]],
+  ['connecttimeout',['connectTimeout',['../struct_m_q_t_t_client__connect_options.html#a38c6aa24b36d981c49405db425c24db0',1,'MQTTClient_connectOptions']]],
+  ['context',['context',['../struct_m_q_t_t_client__persistence.html#ae376f130b17d169ee51be68077a89ed0',1,'MQTTClient_persistence']]],
+  ['count',['count',['../struct_m_q_t_t_properties.html#ad43c3812e6d13e0518d9f8b8f463ffcf',1,'MQTTProperties']]]
 ];

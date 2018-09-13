@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['synchronous_20publication_20example',['Synchronous publication example',['../pubsync.html',1,'']]],
-  ['serveruri',['serverURI',['../struct_m_q_t_t_client__connect_options.html#a313446ca7679b36652722ffe53d05228',1,'MQTTClient_connectOptions']]],
-  ['serveruricount',['serverURIcount',['../struct_m_q_t_t_client__connect_options.html#aa82629005937abd92e97084a428cd61f',1,'MQTTClient_connectOptions']]],
-  ['serveruris',['serverURIs',['../struct_m_q_t_t_client__connect_options.html#aba22d81c407fb2ba590dba476240d3e9',1,'MQTTClient_connectOptions']]],
-  ['sessionpresent',['sessionPresent',['../struct_m_q_t_t_client__connect_options.html#a44baf2cb9a0bbcec3ed2eace43f832d1',1,'MQTTClient_connectOptions']]],
-  ['ssl',['ssl',['../struct_m_q_t_t_client__connect_options.html#a8a0b0f0fc7c675312dc232e2458078c7',1,'MQTTClient_connectOptions']]],
-  ['struct_5fid',['struct_id',['../struct_m_q_t_t_client__init__options.html#aa5326df180cb23c59afbcab711a06479',1,'MQTTClient_init_options::struct_id()'],['../struct_m_q_t_t_client__message.html#aa5326df180cb23c59afbcab711a06479',1,'MQTTClient_message::struct_id()'],['../struct_m_q_t_t_client__will_options.html#aa5326df180cb23c59afbcab711a06479',1,'MQTTClient_willOptions::struct_id()'],['../struct_m_q_t_t_client___s_s_l_options.html#aa5326df180cb23c59afbcab711a06479',1,'MQTTClient_SSLOptions::struct_id()'],['../struct_m_q_t_t_client__connect_options.html#aa5326df180cb23c59afbcab711a06479',1,'MQTTClient_connectOptions::struct_id()']]],
-  ['struct_5fversion',['struct_version',['../struct_m_q_t_t_client__init__options.html#a0761a5e5be0383882e42924de8e51f82',1,'MQTTClient_init_options::struct_version()'],['../struct_m_q_t_t_client__message.html#a0761a5e5be0383882e42924de8e51f82',1,'MQTTClient_message::struct_version()'],['../struct_m_q_t_t_client__will_options.html#a0761a5e5be0383882e42924de8e51f82',1,'MQTTClient_willOptions::struct_version()'],['../struct_m_q_t_t_client___s_s_l_options.html#a0761a5e5be0383882e42924de8e51f82',1,'MQTTClient_SSLOptions::struct_version()'],['../struct_m_q_t_t_client__connect_options.html#a0761a5e5be0383882e42924de8e51f82',1,'MQTTClient_connectOptions::struct_version()']]],
-  ['subscription_20wildcards',['Subscription wildcards',['../wildcard.html',1,'']]]
+  ['reasoncode',['reasonCode',['../struct_m_q_t_t_response.html#a580d8a8ecb285f5a86c2a3865438f8ee',1,'MQTTResponse']]],
+  ['reasoncodecount',['reasonCodeCount',['../struct_m_q_t_t_response.html#ac97316626bd4faa6b71277c221275f4b',1,'MQTTResponse']]],
+  ['reasoncodes',['reasonCodes',['../struct_m_q_t_t_response.html#a2199c9d905dbfa279895cf8123c10f4f',1,'MQTTResponse']]],
+  ['reliable',['reliable',['../struct_m_q_t_t_client__connect_options.html#a9f1cdffc99659fd4e2d20e6de3c64df0',1,'MQTTClient_connectOptions']]],
+  ['retainaspublished',['retainAsPublished',['../struct_m_q_t_t_subscribe__options.html#a8ba074ad218224ee4a8ca802c5e36944',1,'MQTTSubscribe_options']]],
+  ['retained',['retained',['../struct_m_q_t_t_client__message.html#a6a4904c112507a43e7dc8495b62cc0fc',1,'MQTTClient_message::retained()'],['../struct_m_q_t_t_client__will_options.html#a6a4904c112507a43e7dc8495b62cc0fc',1,'MQTTClient_willOptions::retained()']]],
+  ['retainhandling',['retainHandling',['../struct_m_q_t_t_subscribe__options.html#a11f17b62e40ecdfe107101ae164367a3',1,'MQTTSubscribe_options']]],
+  ['retryinterval',['retryInterval',['../struct_m_q_t_t_client__connect_options.html#ac73f57846c42bcaa9a47e6721a957748',1,'MQTTClient_connectOptions']]],
+  ['returned',['returned',['../struct_m_q_t_t_client__connect_options.html#afe18aeffdebc9758344bb2dfe5ed0c62',1,'MQTTClient_connectOptions']]]
 ];

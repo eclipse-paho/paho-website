@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['binarypwd',['binarypwd',['../struct_m_q_t_t_client__connect_options.html#a6193b7bd6e95bae322b059575b6c61d3',1,'MQTTClient_connectOptions']]]
+  ['array',['array',['../struct_m_q_t_t_properties.html#a3ac4c38b423393c1553dcf8b71e7dd58',1,'MQTTProperties']]]
 ];
