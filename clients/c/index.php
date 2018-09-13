@@ -3,12 +3,15 @@
 <div class="panel-body">
 <h1>MQTT C Client for Posix and Windows</h1>
 
-<p>The Paho MQTT C Client is a fully fledged MQTT client written in ANSI standard C.  It avoids C++ in order to be
-as portable as possible.  A <a href="../cpp">C++ layer</a> over this library is also available in Paho.</p>
+<p>The Paho MQTT C Client is a fully featured MQTT client written in ANSI standard C.  
+C was chosen rather than C++ to maximize portability.  
+A <a href="../cpp">C++ APIr</a> over this library is also available in Paho.</p>
 
 <p>In fact there are two C APIs.  "Synchronous" and "asynchronous" for which the API calls start with MQTTClient and MQTTAsync
 respectively.  The synchronous API is intended to be simpler and more helpful.  To this end, some of the calls will block until
-the operation has completed, which makes programming easier.  In contrast, no calls ever block in the asynchronous API.  All notifications of API call results are made by callbacks.  This makes the API suitable for use in windowed environments like iOS for instance, where the application is not the main thread of control.
+the operation has completed, which makes programming easier.  
+In contrast, only one call blocks in the asynchronous API - waitForCompletion.  
+Notifications of results are made by callbacks which makes the API suitable for use in environments where the application is not the main thread of control.
 </p>
 
 <h2>Features</h2>
@@ -37,21 +40,26 @@ the operation has completed, which makes programming easier.  In contrast, no ca
 
 <h2 id="source">Source</h2>
 
-<p>Source tarballs are available from the <a href="https://github.com/eclipse/paho.mqtt.c">Git repository</a>, as is the source, of course.
+<p>Source archives for releases are available from the <a href="https://github.com/eclipse/paho.mqtt.c">Git repository</a>, as is the current source.
 
 <h2 id="download">Download</h2>
 
 <p>Pre-built binaries for Windows, Linux and Mac are available from the <a href="https://projects.eclipse.org/projects/technology.paho/downloads">downloads page</a>.
 
-<p>The Windows binaries are built with Visual Studio 2013.  If you do not have this installed, you will need to install the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ Redistributable Packages for Visual Studio 2013</a>.</p>
-
-<p>Development builds can also be downloaded <a href="http://build.eclipse.org/technology/paho/C/">here</a>.</p>
+<p>The Windows binaries are built with Visual Studio 2013 and 2015.  
+If you don't have the correct version installed already, you will need to install the 
+appropriate Visual C++ Redistributable Package for Visual Studio.</p>
 
 <h2 id="build-from-source">Building from source</h2>
 
-<h3>Linux</h3>
+<p>The continuous integration builds can be found on 
+<a href="https://travis-ci.org/eclipse/paho.mqtt.c/branches">Travis-CI</a> for Linux and Mac, 
+and 
+<a href="https://ci.appveyor.com/project/eclipsewebmaster/paho-mqtt-c/history">AppVeyor</a> for Windows.
 
-<p>The C client is built for Linux/Unix/Mac with make and gcc. To build:</p>
+<h3>Linux/Mac</h3>
+
+<p>The C client can be built for Linux/Unix/Mac with make and gcc. To build:</p>
 
 <pre>
 git clone https://github.com/eclipse/paho.mqtt.c.git
@@ -65,17 +73,26 @@ make
 sudo make install
 </pre>
 
+<p>CMake can also be used - see the readme for details.</p>
+
 <h3>Windows</h3>
 
-<p>The Windows build uses Visual Studio or Visual C++.  Free Express versions are available.  To build:</p>
+<p>The Windows build uses Visual Studio or Visual C++ and CMake.  
+A batch file, cbuild.bat, shows how to use CMake to build:</p>
 
 <pre>
-git clone https://github.com/eclipse/paho.mqtt.c.git
-cd org.eclipse.paho.mqtt.c.git
-msbuild "Windows Build\Paho C MQTT APIs.sln" /p:Configuration=Release
+mkdir build.paho
+
+cd build.paho
+
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64
+
+cmake -G "NMake Makefiles" -DPAHO_WITH_SSL=TRUE -DPAHO_BUILD_DOCUMENTATION=FALSE -DPAHO_BUILD_SAMPLES=TRUE -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=TRUE ..
+
+nmake
 </pre>
 
-<p>To set the path to find msbuild, you can run utility program vcvars32.bat, which is found in a location something like:</p>
+<p>To set the path to find the compiler, you can run utility program vcvars32.bat, which is found in a location something like:</p>
 
 <pre>
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
@@ -87,7 +104,24 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
 
 <h3 id="getting-started">Getting Started</h3>
 
-<p>These C clients connect to a broker using a TCP/IP connection using Posix or Windows networking, threading and memory allocation calls. They cannot be used with other networking APIs.  For that, look at the Embdedded C client.</p>
+<p>Command line utilities are included, paho_c_pub and paho_c_sub for publishing and subscribing respectively.  
+To start the publishing program, connecting to the Eclipse IoT sandbox:
+</p>
+
+<pre>
+paho_c_pub -t my_topic --connection iot.eclipse.org:1883
+</pre>
+
+<p>Then each line you type will be sent as a message.  To receive messages, in a similar way:
+</p>
+
+<pre>
+paho_c_sub -t my_topic --connection iot.eclipse.org:1883
+</pre>
+
+<p>To see the full list of options, type the utility name without any options.</p>
+
+<p>These C clients connect to a broker over a TCP/IP connection . They cannot be used with other networking APIs.  For that, look at the Embdedded C client.</p>
 
 <p>Here is a simple example of publishing with the C client synchronous API:<p>
 
