@@ -84,6 +84,7 @@ function getFeatures($myFeatureList){
                 <tbody>
                     <?php print(getHtml("mqtt-31", $myFeatureList)); ?>
                     <?php print(getHtml("mqtt-311", $myFeatureList)); ?>
+                    <?php print(getHtml("mqtt-50", $myFeatureList)); ?>
                     <?php print(getHtml("lwt", $myFeatureList)); ?>
                     <?php print(getHtml("tls", $myFeatureList)); ?>
                     <?php print(getHtml("persistence", $myFeatureList)); ?>
