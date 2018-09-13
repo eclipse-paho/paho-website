@@ -97,7 +97,7 @@
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                <td class="text-center success"><i class="fa fa-times" aria-hidden="true"></i></td>
+                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
