@@ -5,7 +5,7 @@
 
 <p>The Paho MQTT C Client is a fully featured MQTT client written in ANSI standard C.  
 C was chosen rather than C++ to maximize portability.  
-A <a href="../cpp">C++ APIr</a> over this library is also available in Paho.</p>
+A <a href="../cpp">C++ API</a> over this library is also available in Paho.</p>
 
 <p>In fact there are two C APIs.  "Synchronous" and "asynchronous" for which the API calls start with MQTTClient and MQTTAsync
 respectively.  The synchronous API is intended to be simpler and more helpful.  To this end, some of the calls will block until
