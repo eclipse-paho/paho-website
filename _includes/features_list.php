@@ -10,6 +10,10 @@ $featuresList = array(
         "name" => "MQTT 3.1.1",
         "tooltip" => "MQTT version 3.1.1 specification."
     ),
+    "mqtt-50" => array(
+        "name" => "MQTT 5.0",
+        "tooltip" => "MQTT version 5.0 specification."
+    ),
     "lwt" => array(
         "name" => "LWT",
         "tooltip" => "Last Will and Testament messages."
