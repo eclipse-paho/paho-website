@@ -8,6 +8,7 @@
                      <th>Client</th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="MQTT version 3.1 specification.">MQTT 3.1</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="MQTT version 3.1.1 specification.">MQTT 3.1.1</a></th>
+                     <th><a href="#" data-toggle="tooltip" data-placement="right" title="MQTT version 5.0 specification.">MQTT 5.0</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Last Will and Testament messages.">LWT</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Transport Layer Security or SSL.">SSL / TLS</a></th>
                      <th><a href="#" data-toggle="tooltip" data-placement="right" title="Can automatically reconnect to the server if the connection is lost.">Automatic Reconnect</a></th>
@@ -26,6 +27,7 @@
                     <th scope="row"><a href="./clients/java/">Java</a></th>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                    <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -41,6 +43,7 @@
                    <th scope="row"><a href="./clients/python/">Python</a></th>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                   <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -56,6 +59,7 @@
                   <th scope="row"><a href="./clients/js/">JavaScript</a></th>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                  <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -71,6 +75,7 @@
                  <th scope="row"><a href="./clients/golang/">GoLang</a></th>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                 <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -91,7 +96,8 @@
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="text-center success"><i class="fa fa-times" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -101,6 +107,7 @@
                <th scope="row"><a href="./clients/cpp/">C++</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -116,6 +123,7 @@
                <th scope="row"><a href="./clients/rust/">Rust</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -131,6 +139,7 @@
                <th scope="row"><a href="./clients/dotnet/">.Net (C#)</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -146,6 +155,7 @@
               <th scope="row"><a href="./clients/android/">Android Service</a></th>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+              <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -161,6 +171,7 @@
              <th scope="row"><a href="./clients/c/embedded">Embedded C/C++</a></th>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
+             <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
