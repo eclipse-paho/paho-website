@@ -84,8 +84,8 @@
             for the official releases, or
             <code>https://repo.eclipse.org/content/repositories/paho-snapshots/</code>
             for the nightly snapshots. Replace %VERSION% with the level
-            required . The latest release version is <code>1.0.2</code> and the
-            current snapshot version is <code>1.0.3</code>.</p>
+            required. The latest release version is <code>1.2.0</code> and the
+            current snapshot version is <code>1.2.1</code>.</p>
             <pre>
 &lt;project ...&gt;
 &lt;repositories&gt;
