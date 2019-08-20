@@ -112,7 +112,7 @@
                     More information about the protocol can be found on the <a href="http://mqtt.org">MQTT.org community site</a>.
                 </p>
                 <p class="lead">
-                    There is a publically accessible sandbox server for the Eclipse IoT projects available at <code>iot.eclipse.org</code>, port <code>1883</code>.
+                    There is a publically accessible sandbox server for the Eclipse IoT projects available at <code>mqtt.eclipse.org</code>, port <code>1883</code>.
                 </p>
             </div>
             <div class="col-md-4">
