@@ -12,12 +12,13 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
     $features = array(
         "mqtt-31" => true,
         "mqtt-311" => true,
+        "mqtt-50" => false,
         "lwt" => true,
         "tls" => true,
         "persistence" => true,
         "reconnect" => true,
         "buffering" => true,
-        "websocket" => false,
+        "websocket" => true,
         "tcp" => true,
         "async" => true,
         "sync" => true,
@@ -40,7 +41,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
 
 <h3>Linux</h3>
 
-<p>The C++ client is built for Linux/Unix/Mac with CMake, autotools, or GNU Make, and use g++ or clang++ as the compiler. Because it requires a compliant C++11 compiler, only GCC 4.8.1 or clang 3.6 or later are supported.
+<p>The C++ client is built for Linux/Unix/Mac with CMake, and uses g++ or clang++ as the compiler. Because it requires a compliant C++11 compiler, only GCC 4.8.1 or clang 3.6 or later are supported.
 
 See the <a href="https://github.com/eclipse/paho.mqtt.cpp">GitHub page</a> for complete build instructions.
 

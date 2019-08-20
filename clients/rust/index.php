@@ -13,12 +13,13 @@
     $features = array(
         "mqtt-31" => true,
         "mqtt-311" => true,
+        "mqtt-50" => true,
         "lwt" => true,
         "tls" => true,
         "persistence" => true,
         "reconnect" => true,
         "buffering" => true,
-        "websocket" => false,
+        "websocket" => true,
         "tcp" => true,
         "async" => true,
         "sync" => true,
@@ -35,7 +36,12 @@
 
 <h2 id="download">Download</h2>
 
-<p>When the project is formally released, it will be made availble on the Rust crates.io site.</p>
+<p>The project is availble on the Rust crates.io site as <a href="https://crates.io/crates/paho-mqtt">paho-mqtt</a>. Include it in a client application simply by adding a depency to the project's <i>Cargo.toml</i> file, like:</p>
+
+<pre>
+[dependencies]
+paho-mqtt = "0.5"
+</pre>
 
 <h2 id="build-from-source">Building from source</h2>
 
@@ -45,11 +51,13 @@
 
 <h2 id="documentation">Documentation</h2>
 
-<p>Reference documentation is <a href="http://www.eclipse.org/paho/files/rustdoc/paho_mqtt/index.html">online</a>.</p>
+<p>Reference documentation is on <a href="https://docs.rs/paho-mqtt/0.5.0/paho_mqtt">Rust DOCS.RS</a>, and also here on <a href="http://www.eclipse.org/paho/files/rustdoc/paho_mqtt/index.html">eclipse.org</a>.</p>
 
 <h3 id="getting-started">Getting Started</h3>
 
-<p>There are a number of small sample applications in the <i>examples</i> directory of the repository. These can all be built with the command: <i>cargo build --examples</i></p>
+<p>There are a number of small sample applications in the <i>examples</i> directory of the repository. These can all be built with the command:</p>
+
+<p><i>cargo build --examples</i></p>
 
 <p>Here is a simple example of publishing with the Rust asynchronous API:<p>
 
