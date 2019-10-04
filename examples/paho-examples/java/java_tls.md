@@ -31,9 +31,9 @@ public class App
         String topic        = "MQTT Examples";
         String content      = "Message from MqttPublishSample";
         int qos             = 2;
-        String broker       = "ssl://iot.eclipse.org:8883";
+        String broker       = "ssl://mqtt.eclipse.org:8883";
         String clientId     = "JavaSample";
-        String certificateName = "iot.eclipse.org.crt";
+        String certificateName = "mqtt.eclipse.org.crt";
         MemoryPersistence persistence = new MemoryPersistence();
 
 

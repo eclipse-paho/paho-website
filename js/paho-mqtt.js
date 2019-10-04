@@ -1900,7 +1900,7 @@ function onMessageArrived(message) {
 		 * <li>errorMessage text describing the error.
 		 * </ol>
 	 * @param {array} connectOptions.hosts - If present this contains either a set of hostnames or fully qualified
-		 * WebSocket URIs (ws://iot.eclipse.org:80/ws), that are tried in order in place
+		 * WebSocket URIs (ws://mqtt.eclipse.org:80/mqtt), that are tried in order in place
 		 * of the host and port paramater on the construtor. The hosts are tried one at at time in order until
 		 * one of then succeeds.
 	 * @param {array} connectOptions.ports - If present the set of ports matching the hosts. If hosts contains URIs, this property
@@ -1922,7 +1922,7 @@ function onMessageArrived(message) {
 	 * @param {boolean} connectOptions.mqttVersionExplicit - If set to true, will force the connection to use the
 	 * selected MQTT Version or will fail to connect.
 	 * @param {array} connectOptions.uris - If present, should contain a list of fully qualified WebSocket uris
-	 * (e.g. ws://iot.eclipse.org:80/ws), that are tried in order in place of the host and port parameter of the construtor.
+	 * (e.g. ws://mqtt.eclipse.org:80/mqtt), that are tried in order in place of the host and port parameter of the construtor.
 	 * The uris are tried one at a time in order until one of them succeeds. Do not use this in conjunction with hosts as
 	 * the hosts array will be converted to uris and will overwrite this property.
 		 * @throws {InvalidState} If the client is not in disconnected state. The client must have received connectionLost

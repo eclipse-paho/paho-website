@@ -99,7 +99,7 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect(&quot;iot.eclipse.org&quot;, 1883, 60)
+client.connect(&quot;mqtt.eclipse.org&quot;, 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
@@ -389,7 +389,7 @@ connect it generates an <tt class="docutils literal">on_connect()</tt> callback.
 <div class="section" id="connect-example">
 <h5>Connect Example</h5>
 <pre class="literal-block">
-mqttc.connect(&quot;iot.eclipse.org&quot;)
+mqttc.connect(&quot;mqtt.eclipse.org&quot;)
 </pre>
 </div>
 </div>
@@ -504,7 +504,7 @@ argument is currently ignored.</p>
 <div class="section" id="loop-start-stop-example">
 <h5>Loop Start/Stop Example</h5>
 <pre class="literal-block">
-mqttc.connect(&quot;iot.eclipse.org&quot;)
+mqttc.connect(&quot;mqtt.eclipse.org&quot;)
 mqttc.loop_start()
 
 while True:
@@ -973,7 +973,7 @@ None, 0 and False respectively.</p>
 <pre class="literal-block">
 import paho.mqtt.publish as publish
 
-publish.single(&quot;paho/test/single&quot;, &quot;payload&quot;, hostname=&quot;iot.eclipse.org&quot;)
+publish.single(&quot;paho/test/single&quot;, &quot;payload&quot;, hostname=&quot;mqtt.eclipse.org&quot;)
 </pre>
 </div>
 </div>
@@ -1007,7 +1007,7 @@ import paho.mqtt.publish as publish
 
 msgs = [{'topic':&quot;paho/test/multiple&quot;, 'payload':&quot;multiple 1&quot;},
     (&quot;paho/test/multiple&quot;, &quot;multiple 2&quot;, 0, False)]
-publish.multiple(msgs, hostname=&quot;iot.eclipse.org&quot;)
+publish.multiple(msgs, hostname=&quot;mqtt.eclipse.org&quot;)
 </pre>
 </div>
 </div>
@@ -1082,7 +1082,7 @@ behaviour - see the paho.mqtt.client documentation.</p>
 <pre class="literal-block">
 import paho.mqtt.subscribe as subscribe
 
-msg = subscribe.simple(&quot;paho/test/simple&quot;, hostname=&quot;iot.eclipse.org&quot;)
+msg = subscribe.simple(&quot;paho/test/simple&quot;, hostname=&quot;mqtt.eclipse.org&quot;)
 print(&quot;%s %s&quot; % (msg.topic, msg.payload))
 </pre>
 </div>
@@ -1124,7 +1124,7 @@ import paho.mqtt.subscribe as subscribe
 def on_message_print(client, userdata, message):
     print(&quot;%s %s&quot; % (message.topic, message.payload))
 
-subscribe.callback(on_message_print, &quot;paho/test/callback&quot;, hostname=&quot;iot.eclipse.org&quot;)
+subscribe.callback(on_message_print, &quot;paho/test/callback&quot;, hostname=&quot;mqtt.eclipse.org&quot;)
 </pre>
 </div>
 </div>

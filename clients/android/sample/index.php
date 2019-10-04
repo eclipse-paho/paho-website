@@ -44,7 +44,7 @@
     	  	<ul>
     	      	<li>Click the plus sign (+) to open a new MQTT connection </li>
     	      	<li>Enter any unique identifier into the client ID field. Be patient, the keystrokes can be slow.</li>
-				<li>Enter the Server field into the IP address of your MQTT server. E.g. iot.eclipse.org</li>
+				<li>Enter the Server field into the IP address of your MQTT server. E.g. mqtt.eclipse.org</li>
 				<li>Enter the port of the MQTT connection. The default port number for a normal MQTT connection is 1883.</li>
 				<li>Click Connect. If the connection is successful, you see a Connecting message.</li>
     	   </ul>

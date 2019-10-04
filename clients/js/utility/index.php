@@ -44,7 +44,7 @@
               <div class="col-lg-5">
                 <div class="form-group">
                   <label for="hostInput">Host</label>
-                  <input type="text" class="form-control" id="hostInput" value="iot.eclipse.org">
+                  <input type="text" class="form-control" id="hostInput" value="mqtt.eclipse.org">
                 </div>
               </div>
               <div class="col-lg-1">
@@ -72,7 +72,7 @@
               <div class="col-lg-2">
                 <div class="form-group">
                   <label for="pathInput">Path</label>
-                  <input type="text" class="form-control" id="pathInput" value="/ws">
+                  <input type="text" class="form-control" id="pathInput" value="/mqtt">
                 </div>
               </div>
               <div class="col-lg-2">
