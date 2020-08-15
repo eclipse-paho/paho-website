@@ -173,4 +173,3 @@ int main(int argc, char* argv[])
 </pre>
 </div>
 </div>
-<?php include '../../_includes/footer.php' ?>

@@ -173,5 +173,3 @@
   </div>
 </div>
 
-
-<?php include '_includes/footer.php' ?>
