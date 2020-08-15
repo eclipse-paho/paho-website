@@ -32,7 +32,7 @@ Notifications of results are made by callbacks which makes the API suitable for 
         "sync" => true,
         "ha" => true
     );
-    include '../../_includes/features_list.php';
+    include 'paho/_includes/features_list.php';
     getFeatures($features);
 
 
