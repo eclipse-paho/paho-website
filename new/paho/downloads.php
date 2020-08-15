@@ -78,8 +78,8 @@
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.golang">https://github.com/eclipse/paho.mqtt.golang</a></td>
                </tr>
                <tr>
-                   <th scope="row"><a href="https://www.eclipse.org/paho/clients/c/">C</a></th>
-                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/releases/tag/v1.3.2">1.3.2</a></td>
+                   <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/c/index.php">C</a></th>
+                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/releases/tag/v1.3.5">1.3.5</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
