@@ -120,7 +120,7 @@ if ($page === null) {
 
 // Place your html content in a file called content/en_pagename.php
 ob_start();
-include ("paho/en_" . $page);
+include ("paho/" . $page);
 $html = ob_get_clean();
 $Theme->setHtml($html);
 
