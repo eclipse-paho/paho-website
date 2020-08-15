@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["PERSISTENCE_ERROR",""]],"enum":[["ErrorKind","The possible errors"]],"struct":[["MqttError","An MQTT Error"]],"type":[["MqttResult","Generic result for the entire public API"]]});
