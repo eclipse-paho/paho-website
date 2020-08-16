@@ -1,4 +1,3 @@
-<?php include '../../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>Embedded MQTT C/C++ Client Libraries</h1>
@@ -21,7 +20,7 @@ Posix or Windows libraries for networking (sockets), threads and memory allocati
 <h3>MQTTPacket</h3>
 <p>This is the lowest level library, the simplest and smallest, but hardest to use.  It simply deals with serialization and deserialization of MQTT packets.  Serialization means taking application data and converting it to a form ready for sending across the network.  Deserialization means taking the data read from the network and extracting the data.</p>
 <?php
-include '../../../_includes/features_list.php';
+include 'paho/_includes/features_list.php';
     $features = array(
         "mqtt-31" => true,
         "mqtt-311" => true,
@@ -37,8 +36,6 @@ include '../../../_includes/features_list.php';
         "ha" => false
     );
     getFeatures($features);
-
-
 ?>
 
 <h3>MQTTClient</h3>
@@ -235,4 +232,4 @@ rc = close(mysock);
 </pre>
 </div>
 </div>
-<?php include '../../../_includes/footer.php' ?>
+
