@@ -8,8 +8,7 @@
   </style>
 
   <!-- Local Storage GDPR Warning -->
-  <div class="row">
-    <div class="col-md-12">
+ 
       <div class="panel panel-default">
         <div class="panel-heading">Local Storage Warning</div>
         <div class="panel-body">
@@ -25,13 +24,10 @@
             <a href="https://www.eclipse.org/legal/privacy.php">Here</a>.</p>
         </div>
       </div>
-    </div>
-  </div>
+  
   <!-- End of Local Storage GDPR Warning -->
 
   <!-- Connection panel -->
-  <div class="row">
-    <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
           <span id="connectionStatus">Connection - Disconnected.</span>
@@ -328,8 +324,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 <!-- Source Paho MQTT Client-->
 <script src="/paho/js/paho-mqtt.js"></script>
