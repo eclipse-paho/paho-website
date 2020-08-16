@@ -1,10 +1,3 @@
-<?php include '../../_includes/header.php' ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
     <div class="panel panel-default">
         <div class="panel-body">
             <h1>Eclipse Paho Android Service</h1>
@@ -35,7 +28,7 @@
                     "sync" => false,
                     "ha" => true
                 );
-                include '../../_includes/features_list.php';
+                include 'paho/_includes/features_list.php';
                 getFeatures($features);
 
             ?>
@@ -166,4 +159,4 @@ dependencies {
             <p>Reference documentation is online at: <a href=
             "http://www.eclipse.org/paho/files/android-javadoc/index.html">http://www.eclipse.org/paho/files/android-javadoc/index.html</a></p>
         </div>
-    </div><?php include '../../_includes/footer.php' ?>
+

@@ -1,10 +1,4 @@
-<?php include '../../_includes/header.php' ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+
     <div class="panel panel-default">
         <div class="panel-body">
             <h1>Eclipse Paho Java Client</h1>
@@ -33,7 +27,7 @@
                     "sync" => true,
                     "ha" => true
                 );
-                include '../../_includes/features_list.php';
+                include 'paho/_includes/features_list.php';
                 getFeatures($features);
 
 
@@ -175,7 +169,7 @@
             }
         }
     }</pre>
-        </div>
-    </div><?php include '../../_includes/footer.php' ?>
-</body>
-</html>
+        
+    </div>
+    </div>
+

@@ -1,4 +1,3 @@
-<?php include '../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>Go Client</h1>
@@ -21,7 +20,7 @@
         "sync" => false,
         "ha" => true
     );
-    include '../../_includes/features_list.php';
+    include 'paho/_includes/features_list.php';
     getFeatures($features);
 
 
@@ -112,4 +111,3 @@ func main() {
 </pre>
 </div>
 </div>
-<?php include '../../_includes/footer.php' ?>

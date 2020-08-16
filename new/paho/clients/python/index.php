@@ -1,4 +1,3 @@
-<?php include '../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>Python Client</h1>
@@ -21,7 +20,7 @@
         "sync" => true,
         "ha" => false
     );
-    include '../../_includes/features_list.php';
+    include 'paho/_includes/features_list.php';
     getFeatures($features);
 
 
@@ -76,4 +75,3 @@ client.loop_forever()
 </pre>
 </div>
 </div>
-<?php include '../../_includes/footer.php' ?>

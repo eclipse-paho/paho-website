@@ -1,4 +1,3 @@
-<?php include '../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>MQTT C++ Client for Posix and Windows</h1>
@@ -24,7 +23,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
         "sync" => true,
         "ha" => true
     );
-    include '../../_includes/features_list.php';
+    include 'paho/_includes/features_list.php';
     getFeatures($features);
 
 
@@ -108,4 +107,3 @@ int main(int argc, char* argv[])
 </pre>
 </div>
 </div>
-<?php include '../../_includes/footer.php' ?>

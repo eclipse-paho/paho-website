@@ -1,4 +1,3 @@
-<?php include '../../../_includes/header.php' ?>
 <div class="content" style="margin-top:30px;">
   <style type="text/css" scoped>
     .special-checkbox {
@@ -337,4 +336,3 @@
 
 <!-- Utility Javascript -->
 <script src="utility.js"></script>
-<?php include '../../../_includes/footer.php' ?>

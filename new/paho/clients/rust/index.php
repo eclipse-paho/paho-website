@@ -1,4 +1,3 @@
-<?php include '../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>MQTT Rust Client</h1>
@@ -25,7 +24,7 @@
         "sync" => true,
         "ha" => true
     );
-    include '../../_includes/features_list.php';
+    include 'paho/_includes/features_list.php';
     getFeatures($features);
 
 
@@ -97,4 +96,3 @@ fn main() {
 </pre>
 </div>
 </div>
-<?php include '../../_includes/footer.php' ?>

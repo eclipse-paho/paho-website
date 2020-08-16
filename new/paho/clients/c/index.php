@@ -1,4 +1,3 @@
-<?php include '../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>MQTT C Client for Posix and Windows</h1>
@@ -173,3 +172,4 @@ int main(int argc, char* argv[])
 </pre>
 </div>
 </div>
+
