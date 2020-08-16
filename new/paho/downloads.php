@@ -3,7 +3,7 @@
 
 <h4>Latest Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.4.0-photon">1.4 (Photon)</a></h4>
 
-<?php include './comparison.php' ?>
+<?php include 'paho/comparison.php' ?>
 
 <h2>Stable</h2>
 <div class="panel panel-default">
@@ -173,3 +173,5 @@
   </div>
 </div>
 
+<script src="/paho/js/jquery.min.js" type="text/javascript"></script>
+<script src="/paho/js/bootstrap.min.js" type="text/javascript"></script>

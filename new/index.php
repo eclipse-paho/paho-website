@@ -95,11 +95,10 @@ $variables['header_nav'] = array(
   'logo' => array( // Required
     'src' => '/paho/images/paho_logo_400.png', // Required
     'alt' => 'The Eclipse Paho Project', // Optional
-    'url' => 'http://www.eclipse.org' // Optional
+    'url' => 'http://www.eclipse.org/paho/new' // Optional
     // 'target' => '_blank' // Optional
   )
 );
-
 
 // CFA Link - Big orange button in header
 $variables['btn_cfa'] = array(
