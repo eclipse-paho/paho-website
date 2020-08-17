@@ -68,15 +68,15 @@ $links[] = array(
 
 $links[] = array(
   'icon' => 'fa-users', // Required
-  'url' => '/users/', // Required
-  'title' => 'Geting Involved', // Required
+  'url' => 'index.php?page=users.php', // Required
+  'title' => 'Getting Involved', // Required
   // 'target' => '_blank', // Optional
-  'text' => 'CVS, Workspace Setup, Wiki, Committers' // Optional
+  'text' => 'Github, Contributions, Committers' // Optional
 );
 
 $links[] = array(
   'icon' => 'fa-book', // Required
-  'url' => 'http://help.eclipse.org/luna/index.jsp', // Required
+  'url' => 'index.php?page=documentation.php', // Required
   'title' => 'Documentation', // Required
   // 'target' => '_blank', // Optional
   'text' => 'Tutorials, Examples, Videos, Online Reference' // Optional
@@ -84,10 +84,10 @@ $links[] = array(
 
 $links[] = array(
   'icon' => 'fa-support', // Required
-  'url' => '/forums/', // Required
+  'url' => 'index.php?page=support.php', // Required
   'title' => 'Support', // Required
   // 'target' => '_blank', // Optional
-  'text' => 'Bug Tracker, Newsgroup Professional Support' // Optional
+  'text' => 'Issues, Chat, Mailing List, Team' // Optional
 );
 
 $variables['header_nav'] = array(
@@ -95,7 +95,7 @@ $variables['header_nav'] = array(
   'logo' => array( // Required
     'src' => '/paho/images/paho_logo_400.png', // Required
     'alt' => 'The Eclipse Paho Project', // Optional
-    'url' => 'http://www.eclipse.org/paho/new' // Optional
+    'url' => 'https://www.eclipse.org/paho/new' // Optional
     // 'target' => '_blank' // Optional
   )
 );
