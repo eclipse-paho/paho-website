@@ -1,4 +1,10 @@
 
+<?php
+  if ($Theme->hasCookieConsent()) {
+    //Insert widgets from a 3rd party
+ print '<a href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @eclipsepaho</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+}
+?>
 
 <div class="jumbotron jumbotron-fluid">
     <div class="text-center">
@@ -9,6 +15,8 @@
     </div>
 </div>
 
+
+  
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
