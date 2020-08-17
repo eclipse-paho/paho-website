@@ -43,7 +43,7 @@
                    <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/python/index.php">Python</a></th>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                   <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+                   <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
