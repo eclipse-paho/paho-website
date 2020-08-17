@@ -1,22 +1,14 @@
-
-<?php
-  if ($Theme->hasCookieConsent()) {
-    //Insert widgets from a 3rd party
- print '<a href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @eclipsepaho</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
-}
-?>
-
 <div class="jumbotron jumbotron-fluid">
     <div class="text-center">
-        <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports, for TCP/IP and connectionless protocols (such as UDP) respectively.</p>
+        <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports, 
+          for TCP/IP and connectionless protocols (such as UDP) respectively.</p>
 
-        <p class="lead" style="color:black">The Eclipse Paho project provides open source implementations of the 
-        MQTT and MQTT-SN messaging protocols in a variety of programming languages</p>
+        <p class="lead" style="color:black">The Eclipse Paho project provides open source, mainly client side, implementations of the 
+        MQTT and MQTT-SN messaging protocols in a variety of programming languages.</p>
     </div>
 </div>
 
-
-  
+ 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -87,7 +79,7 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="row ">
-            <div class="col-md-16">
+            <div class="col-md-12">
                 <p class="lead" style="color:black">
                     MQTT is a light weight publish/subscribe messaging protocol, originally created by IBM and Arcom (later to become part of Eurotech) around 1998. The <a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html">MQTT 3.1.1 specification</a> has now been standardised by the <a href="https://www.oasis-open.org/committees/mqtt/charter.php">OASIS consortium</a>. The standard is available in a variety of <a href="https://www.oasis-open.org/standards#mqttv3.1.1">formats</a>.
                 </p>
@@ -101,9 +93,15 @@
                     There is a publically accessible sandbox server for the Eclipse IoT projects available at <code>mqtt.eclipse.org</code>, port <code>1883</code>.
                 </p>
             </div>
-            <div class="col-md-4">
-                <div class="span3" style="padding-top: 100px;"><img src="https://mqtt.org/assets/img/mqtt-logo.svg" />
-                </div>
+            <div class="col-md-12">
+            <?php 
+                if ($Theme->hasCookieConsent()) {
+                    //Insert widgets from a 3rd party
+                    print '<a class="twitter-timeline" data-width="600" data-height="600" href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw">Tweets by eclipsepaho</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+                } else {
+                    print '<div class="span3" style="padding-top: 100px;"><img src="https://mqtt.org/assets/img/mqtt-logo.svg"/></div>';
+                }
+                ?>
             </div>
         </div>
     </div>
