@@ -1,4 +1,4 @@
-<h2>MQTT Client Comparison</h2>
+<h2 style="text-align:center">MQTT Client Comparison</h2>
 
 <div class="panel panel-default">
   <div class="panel-body">
@@ -196,3 +196,6 @@
 
   </div>
 </div>
+
+<script src="https://eclipse.org/paho/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://eclipse.org/paho/js/bootstrap.min.js" type="text/javascript"></script>

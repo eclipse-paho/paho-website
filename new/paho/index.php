@@ -97,7 +97,7 @@
             <?php 
                 if ($Theme->hasCookieConsent()) {
                     //Insert widgets from a 3rd party
-                    print '<a class="twitter-timeline" data-width="600" data-height="600" href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw">Tweets by eclipsepaho</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+                    print '<a class="twitter-timeline" data-width="600" data-height="600" href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw">News from eclipsepaho</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
                 } else {
                     print '<div class="span3" style="padding-top: 100px;"><img src="https://mqtt.org/assets/img/mqtt-logo.svg"/></div>';
                 }
@@ -106,5 +106,5 @@
         </div>
     </div>
 
-    <script src="/paho/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/paho/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://eclipse.org/paho/js/jquery.min.js" type="text/javascript"></script>
+    <script src="https://eclipse.org/paho/js/bootstrap.min.js" type="text/javascript"></script>
