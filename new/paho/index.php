@@ -1,3 +1,5 @@
+<?php?>
+
 <div class="jumbotron jumbotron-fluid">
     <div class="text-center">
         <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports, 
@@ -105,6 +107,3 @@
             </div>
         </div>
     </div>
-
-    <script src="https://eclipse.org/paho/js/jquery.min.js" type="text/javascript"></script>
-    <script src="https://eclipse.org/paho/js/bootstrap.min.js" type="text/javascript"></script>
