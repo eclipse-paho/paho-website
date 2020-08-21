@@ -117,8 +117,8 @@ if ($page === null) {
   $page = $App->getScriptName();
 }
 
-print 
-'<script src="js/jquery.min.js"></script><script src="js/bootstrap.min.js"></script>';
+//print 
+//'<script src="js/jquery.min.js"></script><script src="js/bootstrap.min.js"></script>';
 
 // Place your html content in a file called content/en_pagename.php
 ob_start();
