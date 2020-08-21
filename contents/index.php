@@ -4,7 +4,7 @@
     <div class="text-center">
      <div class="row">
         <div class="col-md-4">
-    	<h4 class="lead" style="color:black"><a href="https://iot.eclipse.org/">Paho is an<img src="https://iot.eclipse.org/assets/images/iot_logo.svg"></a>
+    	<h4 class="lead" style="color:black">Paho is an<a href="https://iot.eclipse.org/"><img src="https://iot.eclipse.org/assets/images/iot_logo.svg"></a>
     	  project</h4>
         </div>
         <div class="col">
@@ -71,7 +71,7 @@
                     <div class="col-md-10 article-box">
                         <p class="lead"><span class="quote lquote">&ldquo;</span>How would you connect the information from a temperature sensor on a BeagleBone Black to an LED display on a Raspberry Pi and would your solution scale up to many sensors and displays? In this article we’ll show how MQTT and the Eclipse Paho project can let you answer that challenge.<span class="quote rquote">&rdquo;</span>
                         </p>
-                        <p class="article-link"><a href="http://www.eclipse.org/paho/articles/talkingsmall/">Talking Small: Using Eclipse Paho's MQTT on BeagleBone Black and Raspberry Pi &raquo;</a>
+                        <p class="article-link"><a href="index.php?page=articles/talkingsmall/index.php">Talking Small: Using Eclipse Paho's MQTT on BeagleBone Black and Raspberry Pi &raquo;</a>
                         </p>
                     </div>
             </div>
