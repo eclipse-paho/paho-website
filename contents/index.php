@@ -31,7 +31,7 @@
                     <!-- Feature Row -->
                     <div class="row">
                         <div class="col-md-8 align-self-center">
-                            <h2 align="center"><i><img src="paho/images/communication.png"></i></h2>
+                            <h2 align="center"><i><img src="images/communication.png"></i></h2>
                             <div>
                                 <h2>&nbsp;</h2>
                             </div>
@@ -40,7 +40,7 @@
 
                         </div>
                         <div class="col-md-8">
-                            <h2 align="center"><i><img src="paho/images/chip.png"></i></h2>
+                            <h2 align="center"><i><img src="images/chip.png"></i></h2>
                             <div>
                                 <h2>&nbsp;</h2>
                             </div>
@@ -49,7 +49,7 @@
 
                         </div>
                         <div class="col-md-8">
-                            <h2 align="center"><i><img src="paho/images/scale.png"></i></h2>
+                            <h2 align="center"><i><img src="images/scale.png"></i></h2>
                             <div>
                                 <h2>&nbsp;</h2>
                             </div>
