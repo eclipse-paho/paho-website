@@ -94,7 +94,7 @@ $variables['header_nav'] = array(
   'links' => $links, // Required
   'logo' => array( // Required
     'src' => 'images/paho_logo_400.png', // Required
-    'alt' => 'The Eclipse Paho Project', // Optional
+    'alt' => 'pāho (verb) to broadcast, make widely known, announce, disseminate, transmit (via the Maori dictionary) ', // Optional
     'url' => 'https://www.eclipse.org/paho' // Optional
     // 'target' => '_blank' // Optional
   )
@@ -116,6 +116,9 @@ $page = $_GET['page'];
 if ($page === null) {
   $page = $App->getScriptName();
 }
+
+print 
+'<script src="js/jquery.min.js"></script><script src="js/bootstrap.min.js"></script>';
 
 // Place your html content in a file called content/en_pagename.php
 ob_start();
