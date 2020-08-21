@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AsyncClientBuilder` struct in crate `paho_mqtt`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AsyncClientBuilder">
+
+    <title>paho_mqtt::async_client::AsyncClientBuilder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct AsyncClientBuilder</p><div class="block items"><ul><li><a href="#methods">Methods</a></li></ul></div><p class='location'><a href='../index.html'>paho_mqtt</a>::<wbr><a href='index.html'>async_client</a></p><script>window.sidebarCurrent = {name: 'AsyncClientBuilder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>paho_mqtt</a>::<wbr><a href='index.html'>async_client</a>::<wbr><a class="struct" href=''>AsyncClientBuilder</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/paho_mqtt/async_client.rs.html#871-877' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct AsyncClientBuilder { /* fields omitted */ }</pre><div class='docblock'><p>Builder to collect the MQTT asynchronous client creation options.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/paho_mqtt/async_client.rs.html#879-1003' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<h4 id='method.server_uri' class="method"><span id='server_uri.v' class='invisible'><code>fn <a href='#method.server_uri' class='fnname'>server_uri</a>(&amp;mut self, server_uri: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; &amp;mut <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<div class='docblock'><p>Sets the address for the MQTT broker/server.</p>
+
+<h1 id='arguments' class='section-header'><a href='#arguments'>Arguments</a></h1>
+<p><code>server_uri</code> The address of the MQTT broker. It takes the form
+             <i>protocol://host:port</i>, where <i>protocol</i> must
+             be <i>tcp</i> or <i>ssl</i>. For <i>host</i>, you can
+             specify either an IP address or a host name. For instance,
+             to connect to a server running on the local machines with
+             the default MQTT port, specify <i>tcp://localhost:1883</i>.</p>
+</div><h4 id='method.client_id' class="method"><span id='client_id.v' class='invisible'><code>fn <a href='#method.client_id' class='fnname'>client_id</a>(&amp;mut self, client_id: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; &amp;mut <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<div class='docblock'><p>Sets the client identifier for connection to the broker.</p>
+
+<h1 id='arguments-1' class='section-header'><a href='#arguments-1'>Arguments</a></h1>
+<p><code>client_id</code> A unique identifier string to be passed to the broker
+            when the connection is made. This must be a UTF-8 encoded
+            string. If it is empty, the broker will create and assign
+            a unique name for the client.</p>
+</div><h4 id='method.persistence' class="method"><span id='persistence.v' class='invisible'><code>fn <a href='#method.persistence' class='fnname'>persistence</a>(&amp;mut self, on: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; &amp;mut <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<div class='docblock'><p>Turns default file persistence on or off.
+When turned on, the client will use the default, file-based,
+persistence mechanism. This stores information about in-flight
+messages in persistent storage on the file system, and provides
+some protection against message loss in the case of unexpected
+failure.
+When turned off, the client uses in-memory persistence. If the
+client crashes or system power fails, the client could lose
+messages.</p>
+
+<h1 id='arguments-2' class='section-header'><a href='#arguments-2'>Arguments</a></h1>
+<p><code>on</code> Whether to turn on file-based message persistence.</p>
+</div><h4 id='method.offline_buffering' class="method"><span id='offline_buffering.v' class='invisible'><code>fn <a href='#method.offline_buffering' class='fnname'>offline_buffering</a>(&amp;mut self, on: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; &amp;mut <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<div class='docblock'><p>Enables or disables off-line buffering of out-going messages when
+the client is disconnected.</p>
+
+<h1 id='arguments-3' class='section-header'><a href='#arguments-3'>Arguments</a></h1>
+<p><code>on</code> Whether or not the application is allowed to publish messages
+     if the client is off-line.</p>
+</div><h4 id='method.max_buffered_messages' class="method"><span id='max_buffered_messages.v' class='invisible'><code>fn <a href='#method.max_buffered_messages' class='fnname'>max_buffered_messages</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;max_buffered_messages: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a><br>) -&gt; &amp;mut <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClientBuilder.html" title="struct paho_mqtt::async_client::AsyncClientBuilder">AsyncClientBuilder</a></code></span></h4>
+<div class='docblock'><p>Enables off-line buffering of out-going messages when the client is
+disconnected and sets the maximum number of messages that can be
+buffered.</p>
+
+<h1 id='arguments-4' class='section-header'><a href='#arguments-4'>Arguments</a></h1>
+<p><code>max_buffered_msgs</code> The maximum number of messages that the client
+                    will buffer while off-line.</p>
+</div><h4 id='method.finalize' class="method"><span id='finalize.v' class='invisible'><code>fn <a href='#method.finalize' class='fnname'>finalize</a>(&amp;self) -&gt; <a class="struct" href="../../paho_mqtt/async_client/struct.AsyncClient.html" title="struct paho_mqtt::async_client::AsyncClient">AsyncClient</a></code></span></h4>
+<div class='docblock'><p>Finalize the builder and create an asynchronous client.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "paho_mqtt";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

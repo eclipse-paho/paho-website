@@ -1,0 +1,3052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `paho_mqtt3as_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, paho_mqtt3as_sys">
+
+    <title>paho_mqtt3as_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate paho_mqtt3as_sys</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#constants">Constants</a></li><li><a href="#statics">Statics</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li><li><a href="#unions">Unions</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'paho_mqtt3as_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>paho_mqtt3as_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/paho_mqtt3as_sys/lib.rs.html#6-162' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_SSLOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_SSLOptions'>MQTTAsync_SSLOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>MQTTAsync_sslProperties defines the settings to establish an SSL/TLS connection using the
+OpenSSL library. It covers the following scenarios:
+- Server authentication: The client needs the digital certificate of the server. It is included
+in a store containting trusted material (also known as &quot;trust store&quot;).
+- Mutual authentication: Both client and server are authenticated during the SSL handshake. In
+addition to the digital certificate of the server in a trust store, the client will need its own
+digital certificate and the private key used to sign its digital certificate stored in a &quot;key store&quot;.
+- Anonymous connection: Both client and server do not get authenticated and no credentials are needed
+to establish an SSL connection. Note that this scenario is not fully secure since it is subject to
+man-in-the-middle attacks.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_connectOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_connectOptions'>MQTTAsync_connectOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>MQTTAsync_connectOptions defines several settings that control the way the
+client connects to an MQTT server.  Default values are set in
+MQTTAsync_connectOptions_initializer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_connectOptions__bindgen_ty_1.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_connectOptions__bindgen_ty_1'>MQTTAsync_connectOptions__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                <p>Optional binary password.  Only checked and used if the password option is NULL</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_createOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_createOptions'>MQTTAsync_createOptions</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_disconnectOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_disconnectOptions'>MQTTAsync_disconnectOptions</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_failureData.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_failureData'>MQTTAsync_failureData</a></td>
+                           <td class='docblock-short'>
+                                <p>The data returned on completion of an unsuccessful API call in the response callback onFailure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_init_options.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_init_options'>MQTTAsync_init_options</a></td>
+                           <td class='docblock-short'>
+                                <p>Initialization options</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_message.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_message'>MQTTAsync_message</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure representing the payload and attributes of an MQTT message. The
+message topic is not part of this structure (see MQTTAsync_publishMessage(),
+MQTTAsync_publish(), MQTTAsync_receive(), MQTTAsync_freeMessage()
+and MQTTAsync_messageArrived()).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_nameValue.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_nameValue'>MQTTAsync_nameValue</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_responseOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_responseOptions'>MQTTAsync_responseOptions</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_successData.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_successData'>MQTTAsync_successData</a></td>
+                           <td class='docblock-short'>
+                                <p>The data returned on completion of a successful API call in the response callback onSuccess.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_successData__bindgen_ty_1__bindgen_ty_1.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_successData__bindgen_ty_1__bindgen_ty_1'>MQTTAsync_successData__bindgen_ty_1__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                <p>For publish, the message being sent to the server.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_successData__bindgen_ty_1__bindgen_ty_2.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_successData__bindgen_ty_1__bindgen_ty_2'>MQTTAsync_successData__bindgen_ty_1__bindgen_ty_2</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_willOptions.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_willOptions'>MQTTAsync_willOptions</a></td>
+                           <td class='docblock-short'>
+                                <p>MQTTAsync_willOptions defines the MQTT &quot;Last Will and Testament&quot; (LWT) settings for
+the client. In the event that a client unexpectedly loses its connection to
+the server, the server publishes the LWT message to the LWT topic on
+behalf of the client. This allows other clients (subscribed to the LWT topic)
+to be made aware that the client has disconnected. To enable the LWT
+function for a specific client, a valid pointer to an MQTTAsync_willOptions
+structure is passed in the MQTTAsync_connectOptions structure used in the
+MQTTAsync_connect() call that connects the client to the server. The pointer
+to MQTTAsync_willOptions can be set to NULL if the LWT function is not
+required.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTAsync_willOptions__bindgen_ty_1.html"
+                                  title='struct paho_mqtt3as_sys::MQTTAsync_willOptions__bindgen_ty_1'>MQTTAsync_willOptions__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                <p>The LWT payload in binary form. This is only checked and used if the message option is NULL</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MQTTClient_persistence.html"
+                                  title='struct paho_mqtt3as_sys::MQTTClient_persistence'>MQTTClient_persistence</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief A structure containing the function pointers to a persistence
+implementation and the context or state that will be shared across all
+the persistence functions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._G_fpos64_t.html"
+                                  title='struct paho_mqtt3as_sys::_G_fpos64_t'>_G_fpos64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._G_fpos_t.html"
+                                  title='struct paho_mqtt3as_sys::_G_fpos_t'>_G_fpos_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._IO_FILE.html"
+                                  title='struct paho_mqtt3as_sys::_IO_FILE'>_IO_FILE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._IO_FILE_plus.html"
+                                  title='struct paho_mqtt3as_sys::_IO_FILE_plus'>_IO_FILE_plus</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._IO_jump_t.html"
+                                  title='struct paho_mqtt3as_sys::_IO_jump_t'>_IO_jump_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct._IO_marker.html"
+                                  title='struct paho_mqtt3as_sys::_IO_marker'>_IO_marker</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.__fsid_t.html"
+                                  title='struct paho_mqtt3as_sys::__fsid_t'>__fsid_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.__mbstate_t.html"
+                                  title='struct paho_mqtt3as_sys::__mbstate_t'>__mbstate_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.__va_list_tag.html"
+                                  title='struct paho_mqtt3as_sys::__va_list_tag'>__va_list_tag</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.MQTTASYNC_TRACE_LEVELS.html"
+                                  title='enum paho_mqtt3as_sys::MQTTASYNC_TRACE_LEVELS'>MQTTASYNC_TRACE_LEVELS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.__codecvt_result.html"
+                                  title='enum paho_mqtt3as_sys::__codecvt_result'>__codecvt_result</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.BUFSIZ.html"
+                                  title='constant paho_mqtt3as_sys::BUFSIZ'>BUFSIZ</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.EOF.html"
+                                  title='constant paho_mqtt3as_sys::EOF'>EOF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.FILENAME_MAX.html"
+                                  title='constant paho_mqtt3as_sys::FILENAME_MAX'>FILENAME_MAX</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.FOPEN_MAX.html"
+                                  title='constant paho_mqtt3as_sys::FOPEN_MAX'>FOPEN_MAX</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.L_ctermid.html"
+                                  title='constant paho_mqtt3as_sys::L_ctermid'>L_ctermid</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.L_tmpnam.html"
+                                  title='constant paho_mqtt3as_sys::L_tmpnam'>L_tmpnam</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_BAD_QOS.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_BAD_QOS'>MQTTASYNC_BAD_QOS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_BAD_STRUCTURE.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_BAD_STRUCTURE'>MQTTASYNC_BAD_STRUCTURE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_BAD_UTF8_STRING.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_BAD_UTF8_STRING'>MQTTASYNC_BAD_UTF8_STRING</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_DISCONNECTED.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_DISCONNECTED'>MQTTASYNC_DISCONNECTED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_FAILURE.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_FAILURE'>MQTTASYNC_FAILURE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_MAX_BUFFERED_MESSAGES.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_MAX_BUFFERED_MESSAGES'>MQTTASYNC_MAX_BUFFERED_MESSAGES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_MAX_MESSAGES_INFLIGHT.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_MAX_MESSAGES_INFLIGHT'>MQTTASYNC_MAX_MESSAGES_INFLIGHT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_NO_MORE_MSGIDS.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_NO_MORE_MSGIDS'>MQTTASYNC_NO_MORE_MSGIDS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_NULL_PARAMETER.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_NULL_PARAMETER'>MQTTASYNC_NULL_PARAMETER</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_OPERATION_INCOMPLETE.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_OPERATION_INCOMPLETE'>MQTTASYNC_OPERATION_INCOMPLETE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_PERSISTENCE_ERROR.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_PERSISTENCE_ERROR'>MQTTASYNC_PERSISTENCE_ERROR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_SSL_NOT_SUPPORTED.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_SSL_NOT_SUPPORTED'>MQTTASYNC_SSL_NOT_SUPPORTED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_SUCCESS.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_SUCCESS'>MQTTASYNC_SUCCESS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_TOPICNAME_TRUNCATED.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_TOPICNAME_TRUNCATED'>MQTTASYNC_TOPICNAME_TRUNCATED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTASYNC_TRUE.html"
+                                  title='constant paho_mqtt3as_sys::MQTTASYNC_TRUE'>MQTTASYNC_TRUE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTCLIENT_PERSISTENCE_DEFAULT.html"
+                                  title='constant paho_mqtt3as_sys::MQTTCLIENT_PERSISTENCE_DEFAULT'>MQTTCLIENT_PERSISTENCE_DEFAULT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTCLIENT_PERSISTENCE_ERROR.html"
+                                  title='constant paho_mqtt3as_sys::MQTTCLIENT_PERSISTENCE_ERROR'>MQTTCLIENT_PERSISTENCE_ERROR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTCLIENT_PERSISTENCE_NONE.html"
+                                  title='constant paho_mqtt3as_sys::MQTTCLIENT_PERSISTENCE_NONE'>MQTTCLIENT_PERSISTENCE_NONE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTCLIENT_PERSISTENCE_USER.html"
+                                  title='constant paho_mqtt3as_sys::MQTTCLIENT_PERSISTENCE_USER'>MQTTCLIENT_PERSISTENCE_USER</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTVERSION_3_1.html"
+                                  title='constant paho_mqtt3as_sys::MQTTVERSION_3_1'>MQTTVERSION_3_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTVERSION_3_1_1.html"
+                                  title='constant paho_mqtt3as_sys::MQTTVERSION_3_1_1'>MQTTVERSION_3_1_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTTVERSION_DEFAULT.html"
+                                  title='constant paho_mqtt3as_sys::MQTTVERSION_DEFAULT'>MQTTVERSION_DEFAULT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MQTT_BAD_SUBSCRIBE.html"
+                                  title='constant paho_mqtt3as_sys::MQTT_BAD_SUBSCRIBE'>MQTT_BAD_SUBSCRIBE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.P_tmpdir.html"
+                                  title='constant paho_mqtt3as_sys::P_tmpdir'>P_tmpdir</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SEEK_CUR.html"
+                                  title='constant paho_mqtt3as_sys::SEEK_CUR'>SEEK_CUR</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SEEK_END.html"
+                                  title='constant paho_mqtt3as_sys::SEEK_END'>SEEK_END</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.SEEK_SET.html"
+                                  title='constant paho_mqtt3as_sys::SEEK_SET'>SEEK_SET</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.TMP_MAX.html"
+                                  title='constant paho_mqtt3as_sys::TMP_MAX'>TMP_MAX</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._ATFILE_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_ATFILE_SOURCE'>_ATFILE_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._BITS_TYPESIZES_H.html"
+                                  title='constant paho_mqtt3as_sys::_BITS_TYPESIZES_H'>_BITS_TYPESIZES_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._BITS_TYPES_H.html"
+                                  title='constant paho_mqtt3as_sys::_BITS_TYPES_H'>_BITS_TYPES_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._BSD_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_BSD_SOURCE'>_BSD_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._DEFAULT_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_DEFAULT_SOURCE'>_DEFAULT_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._FEATURES_H.html"
+                                  title='constant paho_mqtt3as_sys::_FEATURES_H'>_FEATURES_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._G_BUFSIZ.html"
+                                  title='constant paho_mqtt3as_sys::_G_BUFSIZ'>_G_BUFSIZ</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._G_HAVE_MMAP.html"
+                                  title='constant paho_mqtt3as_sys::_G_HAVE_MMAP'>_G_HAVE_MMAP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._G_HAVE_MREMAP.html"
+                                  title='constant paho_mqtt3as_sys::_G_HAVE_MREMAP'>_G_HAVE_MREMAP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._G_IO_IO_FILE_VERSION.html"
+                                  title='constant paho_mqtt3as_sys::_G_IO_IO_FILE_VERSION'>_G_IO_IO_FILE_VERSION</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._G_config_h.html"
+                                  title='constant paho_mqtt3as_sys::_G_config_h'>_G_config_h</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOFBF.html"
+                                  title='constant paho_mqtt3as_sys::_IOFBF'>_IOFBF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOLBF.html"
+                                  title='constant paho_mqtt3as_sys::_IOLBF'>_IOLBF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IONBF.html"
+                                  title='constant paho_mqtt3as_sys::_IONBF'>_IONBF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_APPEND.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_APPEND'>_IOS_APPEND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_ATEND.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_ATEND'>_IOS_ATEND</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_BIN.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_BIN'>_IOS_BIN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_INPUT.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_INPUT'>_IOS_INPUT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_NOCREATE.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_NOCREATE'>_IOS_NOCREATE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_NOREPLACE.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_NOREPLACE'>_IOS_NOREPLACE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_OUTPUT.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_OUTPUT'>_IOS_OUTPUT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IOS_TRUNC.html"
+                                  title='constant paho_mqtt3as_sys::_IOS_TRUNC'>_IOS_TRUNC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_BAD_SEEN.html"
+                                  title='constant paho_mqtt3as_sys::_IO_BAD_SEEN'>_IO_BAD_SEEN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_BOOLALPHA.html"
+                                  title='constant paho_mqtt3as_sys::_IO_BOOLALPHA'>_IO_BOOLALPHA</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_BUFSIZ.html"
+                                  title='constant paho_mqtt3as_sys::_IO_BUFSIZ'>_IO_BUFSIZ</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_CURRENTLY_PUTTING.html"
+                                  title='constant paho_mqtt3as_sys::_IO_CURRENTLY_PUTTING'>_IO_CURRENTLY_PUTTING</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_DEC.html"
+                                  title='constant paho_mqtt3as_sys::_IO_DEC'>_IO_DEC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_DELETE_DONT_CLOSE.html"
+                                  title='constant paho_mqtt3as_sys::_IO_DELETE_DONT_CLOSE'>_IO_DELETE_DONT_CLOSE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_DONT_CLOSE.html"
+                                  title='constant paho_mqtt3as_sys::_IO_DONT_CLOSE'>_IO_DONT_CLOSE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_EOF_SEEN.html"
+                                  title='constant paho_mqtt3as_sys::_IO_EOF_SEEN'>_IO_EOF_SEEN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_ERR_SEEN.html"
+                                  title='constant paho_mqtt3as_sys::_IO_ERR_SEEN'>_IO_ERR_SEEN</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_FIXED.html"
+                                  title='constant paho_mqtt3as_sys::_IO_FIXED'>_IO_FIXED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_FLAGS2_MMAP.html"
+                                  title='constant paho_mqtt3as_sys::_IO_FLAGS2_MMAP'>_IO_FLAGS2_MMAP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_FLAGS2_NOTCANCEL.html"
+                                  title='constant paho_mqtt3as_sys::_IO_FLAGS2_NOTCANCEL'>_IO_FLAGS2_NOTCANCEL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_FLAGS2_USER_WBUF.html"
+                                  title='constant paho_mqtt3as_sys::_IO_FLAGS2_USER_WBUF'>_IO_FLAGS2_USER_WBUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_HEX.html"
+                                  title='constant paho_mqtt3as_sys::_IO_HEX'>_IO_HEX</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_INTERNAL.html"
+                                  title='constant paho_mqtt3as_sys::_IO_INTERNAL'>_IO_INTERNAL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_IN_BACKUP.html"
+                                  title='constant paho_mqtt3as_sys::_IO_IN_BACKUP'>_IO_IN_BACKUP</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_IS_APPENDING.html"
+                                  title='constant paho_mqtt3as_sys::_IO_IS_APPENDING'>_IO_IS_APPENDING</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_IS_FILEBUF.html"
+                                  title='constant paho_mqtt3as_sys::_IO_IS_FILEBUF'>_IO_IS_FILEBUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_LEFT.html"
+                                  title='constant paho_mqtt3as_sys::_IO_LEFT'>_IO_LEFT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_LINE_BUF.html"
+                                  title='constant paho_mqtt3as_sys::_IO_LINE_BUF'>_IO_LINE_BUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_LINKED.html"
+                                  title='constant paho_mqtt3as_sys::_IO_LINKED'>_IO_LINKED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_MAGIC.html"
+                                  title='constant paho_mqtt3as_sys::_IO_MAGIC'>_IO_MAGIC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_MAGIC_MASK.html"
+                                  title='constant paho_mqtt3as_sys::_IO_MAGIC_MASK'>_IO_MAGIC_MASK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_NO_READS.html"
+                                  title='constant paho_mqtt3as_sys::_IO_NO_READS'>_IO_NO_READS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_NO_WRITES.html"
+                                  title='constant paho_mqtt3as_sys::_IO_NO_WRITES'>_IO_NO_WRITES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_OCT.html"
+                                  title='constant paho_mqtt3as_sys::_IO_OCT'>_IO_OCT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_RIGHT.html"
+                                  title='constant paho_mqtt3as_sys::_IO_RIGHT'>_IO_RIGHT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_SCIENTIFIC.html"
+                                  title='constant paho_mqtt3as_sys::_IO_SCIENTIFIC'>_IO_SCIENTIFIC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_SHOWBASE.html"
+                                  title='constant paho_mqtt3as_sys::_IO_SHOWBASE'>_IO_SHOWBASE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_SHOWPOINT.html"
+                                  title='constant paho_mqtt3as_sys::_IO_SHOWPOINT'>_IO_SHOWPOINT</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_SHOWPOS.html"
+                                  title='constant paho_mqtt3as_sys::_IO_SHOWPOS'>_IO_SHOWPOS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_SKIPWS.html"
+                                  title='constant paho_mqtt3as_sys::_IO_SKIPWS'>_IO_SKIPWS</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_STDIO.html"
+                                  title='constant paho_mqtt3as_sys::_IO_STDIO'>_IO_STDIO</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_TIED_PUT_GET.html"
+                                  title='constant paho_mqtt3as_sys::_IO_TIED_PUT_GET'>_IO_TIED_PUT_GET</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_UNBUFFERED.html"
+                                  title='constant paho_mqtt3as_sys::_IO_UNBUFFERED'>_IO_UNBUFFERED</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_UNIFIED_JUMPTABLES.html"
+                                  title='constant paho_mqtt3as_sys::_IO_UNIFIED_JUMPTABLES'>_IO_UNIFIED_JUMPTABLES</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_UNITBUF.html"
+                                  title='constant paho_mqtt3as_sys::_IO_UNITBUF'>_IO_UNITBUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_UPPERCASE.html"
+                                  title='constant paho_mqtt3as_sys::_IO_UPPERCASE'>_IO_UPPERCASE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_USER_BUF.html"
+                                  title='constant paho_mqtt3as_sys::_IO_USER_BUF'>_IO_USER_BUF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._IO_USER_LOCK.html"
+                                  title='constant paho_mqtt3as_sys::_IO_USER_LOCK'>_IO_USER_LOCK</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._OLD_STDIO_MAGIC.html"
+                                  title='constant paho_mqtt3as_sys::_OLD_STDIO_MAGIC'>_OLD_STDIO_MAGIC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._POSIX_C_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_POSIX_C_SOURCE'>_POSIX_C_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._POSIX_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_POSIX_SOURCE'>_POSIX_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._STDC_PREDEF_H.html"
+                                  title='constant paho_mqtt3as_sys::_STDC_PREDEF_H'>_STDC_PREDEF_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._STDIO_H.html"
+                                  title='constant paho_mqtt3as_sys::_STDIO_H'>_STDIO_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._SVID_SOURCE.html"
+                                  title='constant paho_mqtt3as_sys::_SVID_SOURCE'>_SVID_SOURCE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant._SYS_CDEFS_H.html"
+                                  title='constant paho_mqtt3as_sys::_SYS_CDEFS_H'>_SYS_CDEFS_H</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__FD_SETSIZE.html"
+                                  title='constant paho_mqtt3as_sys::__FD_SETSIZE'>__FD_SETSIZE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__FILE_defined.html"
+                                  title='constant paho_mqtt3as_sys::__FILE_defined'>__FILE_defined</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__GLIBC_MINOR__.html"
+                                  title='constant paho_mqtt3as_sys::__GLIBC_MINOR__'>__GLIBC_MINOR__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__GLIBC__.html"
+                                  title='constant paho_mqtt3as_sys::__GLIBC__'>__GLIBC__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__GNUC_VA_LIST.html"
+                                  title='constant paho_mqtt3as_sys::__GNUC_VA_LIST'>__GNUC_VA_LIST</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__GNU_LIBRARY__.html"
+                                  title='constant paho_mqtt3as_sys::__GNU_LIBRARY__'>__GNU_LIBRARY__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__INO_T_MATCHES_INO64_T.html"
+                                  title='constant paho_mqtt3as_sys::__INO_T_MATCHES_INO64_T'>__INO_T_MATCHES_INO64_T</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__OFF_T_MATCHES_OFF64_T.html"
+                                  title='constant paho_mqtt3as_sys::__OFF_T_MATCHES_OFF64_T'>__OFF_T_MATCHES_OFF64_T</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__STDC_IEC_559_COMPLEX__.html"
+                                  title='constant paho_mqtt3as_sys::__STDC_IEC_559_COMPLEX__'>__STDC_IEC_559_COMPLEX__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__STDC_IEC_559__.html"
+                                  title='constant paho_mqtt3as_sys::__STDC_IEC_559__'>__STDC_IEC_559__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__STDC_ISO_10646__.html"
+                                  title='constant paho_mqtt3as_sys::__STDC_ISO_10646__'>__STDC_ISO_10646__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__STDC_NO_THREADS__.html"
+                                  title='constant paho_mqtt3as_sys::__STDC_NO_THREADS__'>__STDC_NO_THREADS__</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__SYSCALL_WORDSIZE.html"
+                                  title='constant paho_mqtt3as_sys::__SYSCALL_WORDSIZE'>__SYSCALL_WORDSIZE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_ATFILE.html"
+                                  title='constant paho_mqtt3as_sys::__USE_ATFILE'>__USE_ATFILE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_BSD.html"
+                                  title='constant paho_mqtt3as_sys::__USE_BSD'>__USE_BSD</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_FORTIFY_LEVEL.html"
+                                  title='constant paho_mqtt3as_sys::__USE_FORTIFY_LEVEL'>__USE_FORTIFY_LEVEL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_ISOC11.html"
+                                  title='constant paho_mqtt3as_sys::__USE_ISOC11'>__USE_ISOC11</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_ISOC95.html"
+                                  title='constant paho_mqtt3as_sys::__USE_ISOC95'>__USE_ISOC95</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_ISOC99.html"
+                                  title='constant paho_mqtt3as_sys::__USE_ISOC99'>__USE_ISOC99</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_MISC.html"
+                                  title='constant paho_mqtt3as_sys::__USE_MISC'>__USE_MISC</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_POSIX.html"
+                                  title='constant paho_mqtt3as_sys::__USE_POSIX'>__USE_POSIX</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_POSIX2.html"
+                                  title='constant paho_mqtt3as_sys::__USE_POSIX2'>__USE_POSIX2</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_POSIX199309.html"
+                                  title='constant paho_mqtt3as_sys::__USE_POSIX199309'>__USE_POSIX199309</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_POSIX199506.html"
+                                  title='constant paho_mqtt3as_sys::__USE_POSIX199506'>__USE_POSIX199506</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_POSIX_IMPLICITLY.html"
+                                  title='constant paho_mqtt3as_sys::__USE_POSIX_IMPLICITLY'>__USE_POSIX_IMPLICITLY</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_SVID.html"
+                                  title='constant paho_mqtt3as_sys::__USE_SVID'>__USE_SVID</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_XOPEN2K.html"
+                                  title='constant paho_mqtt3as_sys::__USE_XOPEN2K'>__USE_XOPEN2K</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__USE_XOPEN2K8.html"
+                                  title='constant paho_mqtt3as_sys::__USE_XOPEN2K8'>__USE_XOPEN2K8</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__WORDSIZE.html"
+                                  title='constant paho_mqtt3as_sys::__WORDSIZE'>__WORDSIZE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.__WORDSIZE_TIME64_COMPAT32.html"
+                                  title='constant paho_mqtt3as_sys::__WORDSIZE_TIME64_COMPAT32'>__WORDSIZE_TIME64_COMPAT32</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.____FILE_defined.html"
+                                  title='constant paho_mqtt3as_sys::____FILE_defined'>____FILE_defined</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.____mbstate_t_defined.html"
+                                  title='constant paho_mqtt3as_sys::____mbstate_t_defined'>____mbstate_t_defined</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='statics' class='section-header'><a href="#statics">Statics</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static._IO_2_1_stderr_.html"
+                                  title='static paho_mqtt3as_sys::_IO_2_1_stderr_'>_IO_2_1_stderr_</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static._IO_2_1_stdin_.html"
+                                  title='static paho_mqtt3as_sys::_IO_2_1_stdin_'>_IO_2_1_stdin_</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static._IO_2_1_stdout_.html"
+                                  title='static paho_mqtt3as_sys::_IO_2_1_stdout_'>_IO_2_1_stdout_</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.stderr.html"
+                                  title='static paho_mqtt3as_sys::stderr'>stderr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.stdin.html"
+                                  title='static paho_mqtt3as_sys::stdin'>stdin</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.stdout.html"
+                                  title='static paho_mqtt3as_sys::stdout'>stdout</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.sys_errlist.html"
+                                  title='static paho_mqtt3as_sys::sys_errlist'>sys_errlist</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.sys_nerr.html"
+                                  title='static paho_mqtt3as_sys::sys_nerr'>sys_nerr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_connect.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_connect'>MQTTAsync_connect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to connect a previously-created client (see
+MQTTAsync_create()) to an MQTT server using the specified options. If you
+want to enable asynchronous message and status notifications, you must call
+MQTTAsync_setCallbacks() prior to MQTTAsync_connect().
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param options A pointer to a valid MQTTAsync_connectOptions
+structure.
+@return ::MQTTASYNC_SUCCESS if the client connect request was accepted.
+If the client was unable to connect to the server, an error code is
+returned via the onFailure callback, if set.
+Error codes greater than 0 are returned by the MQTT protocol:<br><br>
+<b>1</b>: Connection refused: Unacceptable protocol version<br>
+<b>2</b>: Connection refused: Identifier rejected<br>
+<b>3</b>: Connection refused: Server unavailable<br>
+<b>4</b>: Connection refused: Bad user name or password<br>
+<b>5</b>: Connection refused: Not authorized<br>
+<b>6-255</b>: Reserved for future use<br></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_create.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_create'>MQTTAsync_create</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function creates an MQTT client ready for connection to the
+specified server and using the specified persistent storage (see
+MQTTAsync_persistence). See also MQTTAsync_destroy().
+@param handle A pointer to an ::MQTTAsync handle. The handle is
+populated with a valid client reference following a successful return from
+this function.
+@param serverURI A null-terminated string specifying the server to
+which the client will connect. It takes the form <i>protocol://host:port</i>.
+<i>protocol</i> must be <i>tcp</i> or <i>ssl</i>. For <i>host</i>, you can
+specify either an IP address or a host name. For instance, to connect to
+a server running on the local machines with the default MQTT port, specify
+<i>tcp://localhost:1883</i>.
+@param clientId The client identifier passed to the server when the
+client connects to it. It is a null-terminated UTF-8 encoded string.
+@param persistence_type The type of persistence to be used by the client:
+<br>
+::MQTTCLIENT_PERSISTENCE_NONE: Use in-memory persistence. If the device or
+system on which the client is running fails or is switched off, the current
+state of any in-flight messages is lost and some messages may not be
+delivered even at QoS1 and QoS2.
+<br>
+::MQTTCLIENT_PERSISTENCE_DEFAULT: Use the default (file system-based)
+persistence mechanism. Status about in-flight messages is held in persistent
+storage and provides some protection against message loss in the case of
+unexpected failure.
+<br>
+::MQTTCLIENT_PERSISTENCE_USER: Use an application-specific persistence
+implementation. Using this type of persistence gives control of the
+persistence mechanism to the application. The application has to implement
+the MQTTClient_persistence interface.
+@param persistence_context If the application uses
+::MQTTCLIENT_PERSISTENCE_NONE persistence, this argument is unused and should
+be set to NULL. For ::MQTTCLIENT_PERSISTENCE_DEFAULT persistence, it
+should be set to the location of the persistence directory (if set
+to NULL, the persistence directory used is the working directory).
+Applications that use ::MQTTCLIENT_PERSISTENCE_USER persistence set this
+argument to point to a valid MQTTClient_persistence structure.
+@return ::MQTTASYNC_SUCCESS if the client is successfully created, otherwise
+an error code is returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_createWithOptions.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_createWithOptions'>MQTTAsync_createWithOptions</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_destroy.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_destroy'>MQTTAsync_destroy</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function frees the memory allocated to an MQTT client (see
+MQTTAsync_create()). It should be called when the client is no longer
+required.
+@param handle A pointer to the handle referring to the ::MQTTAsync
+structure to be freed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_disconnect.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_disconnect'>MQTTAsync_disconnect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to disconnect the client from the MQTT
+server. In order to allow the client time to complete handling of messages
+that are in-flight when this function is called, a timeout period is
+specified. When the timeout period has expired, the client disconnects even
+if there are still outstanding message acknowledgements.
+The next time the client connects to the same server, any QoS 1 or 2
+messages which have not completed will be retried depending on the
+cleansession settings for both the previous and the new connection (see
+MQTTAsync_connectOptions.cleansession and MQTTAsync_connect()).
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param options The client delays disconnection for up to this time (in
+milliseconds) in order to allow in-flight message transfers to complete.
+@return ::MQTTASYNC_SUCCESS if the client successfully disconnects from
+the server. An error code is returned if the client was unable to disconnect
+from the server</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_free.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_free'>MQTTAsync_free</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function frees memory allocated by the MQTT C client library, especially the
+topic name. This is needed on Windows when the client libary and application
+program have been compiled with different versions of the C compiler.  It is
+thus good policy to always use this function when freeing any MQTT C client-
+allocated memory.
+@param ptr The pointer to the client library storage to be freed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_freeMessage.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_freeMessage'>MQTTAsync_freeMessage</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function frees memory allocated to an MQTT message, including the
+additional memory allocated to the message payload. The client application
+calls this function when the message has been fully processed. <b>Important
+note:</b> This function does not free the memory allocated to a message
+topic string. It is the responsibility of the client application to free
+this memory using the MQTTAsync_free() library function.
+@param msg The address of a pointer to the ::MQTTAsync_message structure
+to be freed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_getPendingTokens.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_getPendingTokens'>MQTTAsync_getPendingTokens</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function sets a pointer to an array of tokens for
+messages that are currently in-flight (pending completion).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_getVersionInfo.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_getVersionInfo'>MQTTAsync_getVersionInfo</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function returns version information about the library.
+no trace information will be returned.  The default trace level is
+MQTTASYNC_TRACE_MINIMUM
+@return an array of strings describing the library.  The last entry is a NULL pointer.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_global_init.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_global_init'>MQTTAsync_global_init</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Global init of mqtt library. Call once on program start to set global behaviour.
+handle_openssl_init - if mqtt library should handle openssl init (1) or rely on the caller to init it before using mqtt (0)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_isComplete.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_isComplete'>MQTTAsync_isComplete</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_isConnected.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_isConnected'>MQTTAsync_isConnected</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function allows the client application to test whether or not a
+client is currently connected to the MQTT server.
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@return Boolean true if the client is connected, otherwise false.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_reconnect.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_reconnect'>MQTTAsync_reconnect</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Reconnects a client with the previously used connect options.  Connect
+must have previously been called for this to work.
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@return ::MQTTASYNC_SUCCESS if the callbacks were correctly set,
+::MQTTASYNC_FAILURE if an error occurred.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_send.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_send'>MQTTAsync_send</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to publish a message to a given topic (see also
+::MQTTAsync_sendMessage()). An ::MQTTAsync_token is issued when
+this function returns successfully. If the client application needs to
+test for successful delivery of messages, a callback should be set
+(see ::MQTTAsync_onSuccess() and ::MQTTAsync_deliveryComplete()).
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param destinationName The topic associated with this message.
+@param payloadlen The length of the payload in bytes.
+@param payload A pointer to the byte array payload of the message.
+@param qos The @ref qos of the message.
+@param retained The retained flag for the message.
+@param response A pointer to an ::MQTTAsync_responseOptions structure. Used to set callback functions.
+This is optional and can be set to NULL.
+@return ::MQTTASYNC_SUCCESS if the message is accepted for publication.
+An error code is returned if there was a problem accepting the message.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_sendMessage.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_sendMessage'>MQTTAsync_sendMessage</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to publish a message to a given topic (see also
+MQTTAsync_publish()). An ::MQTTAsync_token is issued when
+this function returns successfully. If the client application needs to
+test for successful delivery of messages, a callback should be set
+(see ::MQTTAsync_onSuccess() and ::MQTTAsync_deliveryComplete()).
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param destinationName The topic associated with this message.
+@param msg A pointer to a valid MQTTAsync_message structure containing
+the payload and attributes of the message to be published.
+@param response A pointer to an ::MQTTAsync_responseOptions structure. Used to set callback functions.
+@return ::MQTTASYNC_SUCCESS if the message is accepted for publication.
+An error code is returned if there was a problem accepting the message.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_setCallbacks.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_setCallbacks'>MQTTAsync_setCallbacks</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function sets the global callback functions for a specific client.
+If your client application doesn&#39;t use a particular callback, set the
+relevant parameter to NULL. Any necessary message acknowledgements and
+status communications are handled in the background without any intervention
+from the client application.  If you do not set a messageArrived callback
+function, you will not be notified of the receipt of any messages as a
+result of a subscription.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_setConnected.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_setConnected'>MQTTAsync_setConnected</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Sets the MQTTAsync_connected() callback function for a client.
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param context A pointer to any application-specific context. The
+the <i>context</i> pointer is passed to each of the callback functions to
+provide access to the context information in the callback.
+@param co A pointer to an MQTTAsync_connected() callback
+function.  NULL removes the callback setting.
+@return ::MQTTASYNC_SUCCESS if the callbacks were correctly set,
+::MQTTASYNC_FAILURE if an error occurred.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_setTraceCallback.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_setTraceCallback'>MQTTAsync_setTraceCallback</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function sets the trace callback if needed.  If set to NULL,
+no trace information will be returned.  The default trace level is
+MQTTASYNC_TRACE_MINIMUM.
+@param callback a pointer to the function which will handle the trace information</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_setTraceLevel.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_setTraceLevel'>MQTTAsync_setTraceLevel</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function sets the level of trace information which will be
+returned in the trace callback.
+@param level the trace level required</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_subscribe.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_subscribe'>MQTTAsync_subscribe</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to subscribe a client to a single topic, which may
+contain wildcards (see @ref wildcard). This call also specifies the
+@ref qos requested for the subscription
+(see also MQTTAsync_subscribeMany()).
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param topic The subscription topic, which may include wildcards.
+@param qos The requested quality of service for the subscription.
+@param response A pointer to a response options structure. Used to set callback functions.
+@return ::MQTTASYNC_SUCCESS if the subscription request is successful.
+An error code is returned if there was a problem registering the
+subscription.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_subscribeMany.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_subscribeMany'>MQTTAsync_subscribeMany</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to subscribe a client to a list of topics, which may
+contain wildcards (see @ref wildcard). This call also specifies the
+@ref qos requested for each topic (see also MQTTAsync_subscribe()).
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param count The number of topics for which the client is requesting
+subscriptions.
+@param topic An array (of length <i>count</i>) of pointers to
+topics, each of which may include wildcards.
+@param qos An array (of length <i>count</i>) of @ref qos
+values. qos[n] is the requested QoS for topic[n].
+@param response A pointer to a response options structure. Used to set callback functions.
+@return ::MQTTASYNC_SUCCESS if the subscription request is successful.
+An error code is returned if there was a problem registering the
+subscriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_unsubscribe.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_unsubscribe'>MQTTAsync_unsubscribe</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to remove an existing subscription made by the
+specified client.
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param topic The topic for the subscription to be removed, which may
+include wildcards (see @ref wildcard).
+@param response A pointer to a response options structure. Used to set callback functions.
+@return ::MQTTASYNC_SUCCESS if the subscription is removed.
+An error code is returned if there was a problem removing the
+subscription.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_unsubscribeMany.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_unsubscribeMany'>MQTTAsync_unsubscribeMany</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>This function attempts to remove existing subscriptions to a list of topics
+made by the specified client.
+@param handle A valid client handle from a successful call to
+MQTTAsync_create().
+@param count The number subscriptions to be removed.
+@param topic An array (of length <i>count</i>) of pointers to the topics of
+the subscriptions to be removed, each of which may include wildcards.
+@param response A pointer to a response options structure. Used to set callback functions.
+@return ::MQTTASYNC_SUCCESS if the subscriptions are removed.
+An error code is returned if there was a problem removing the subscriptions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MQTTAsync_waitForCompletion.html"
+                                  title='fn paho_mqtt3as_sys::MQTTAsync_waitForCompletion'>MQTTAsync_waitForCompletion</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Waits for a request corresponding to a token to complete.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_feof.html"
+                                  title='fn paho_mqtt3as_sys::_IO_feof'>_IO_feof</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_ferror.html"
+                                  title='fn paho_mqtt3as_sys::_IO_ferror'>_IO_ferror</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_flockfile.html"
+                                  title='fn paho_mqtt3as_sys::_IO_flockfile'>_IO_flockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_free_backup_area.html"
+                                  title='fn paho_mqtt3as_sys::_IO_free_backup_area'>_IO_free_backup_area</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_ftrylockfile.html"
+                                  title='fn paho_mqtt3as_sys::_IO_ftrylockfile'>_IO_ftrylockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_funlockfile.html"
+                                  title='fn paho_mqtt3as_sys::_IO_funlockfile'>_IO_funlockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_getc.html"
+                                  title='fn paho_mqtt3as_sys::_IO_getc'>_IO_getc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_padn.html"
+                                  title='fn paho_mqtt3as_sys::_IO_padn'>_IO_padn</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_peekc_locked.html"
+                                  title='fn paho_mqtt3as_sys::_IO_peekc_locked'>_IO_peekc_locked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_putc.html"
+                                  title='fn paho_mqtt3as_sys::_IO_putc'>_IO_putc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_seekoff.html"
+                                  title='fn paho_mqtt3as_sys::_IO_seekoff'>_IO_seekoff</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_seekpos.html"
+                                  title='fn paho_mqtt3as_sys::_IO_seekpos'>_IO_seekpos</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_sgetn.html"
+                                  title='fn paho_mqtt3as_sys::_IO_sgetn'>_IO_sgetn</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_vfprintf.html"
+                                  title='fn paho_mqtt3as_sys::_IO_vfprintf'>_IO_vfprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn._IO_vfscanf.html"
+                                  title='fn paho_mqtt3as_sys::_IO_vfscanf'>_IO_vfscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.__getdelim.html"
+                                  title='fn paho_mqtt3as_sys::__getdelim'>__getdelim</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.__overflow.html"
+                                  title='fn paho_mqtt3as_sys::__overflow'>__overflow</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.__uflow.html"
+                                  title='fn paho_mqtt3as_sys::__uflow'>__uflow</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.__underflow.html"
+                                  title='fn paho_mqtt3as_sys::__underflow'>__underflow</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.clearerr.html"
+                                  title='fn paho_mqtt3as_sys::clearerr'>clearerr</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.clearerr_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::clearerr_unlocked'>clearerr_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ctermid.html"
+                                  title='fn paho_mqtt3as_sys::ctermid'>ctermid</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.dprintf.html"
+                                  title='fn paho_mqtt3as_sys::dprintf'>dprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fclose.html"
+                                  title='fn paho_mqtt3as_sys::fclose'>fclose</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fdopen.html"
+                                  title='fn paho_mqtt3as_sys::fdopen'>fdopen</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.feof.html"
+                                  title='fn paho_mqtt3as_sys::feof'>feof</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.feof_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::feof_unlocked'>feof_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ferror.html"
+                                  title='fn paho_mqtt3as_sys::ferror'>ferror</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ferror_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::ferror_unlocked'>ferror_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fflush.html"
+                                  title='fn paho_mqtt3as_sys::fflush'>fflush</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fflush_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fflush_unlocked'>fflush_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fgetc.html"
+                                  title='fn paho_mqtt3as_sys::fgetc'>fgetc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fgetc_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fgetc_unlocked'>fgetc_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fgetpos.html"
+                                  title='fn paho_mqtt3as_sys::fgetpos'>fgetpos</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fgets.html"
+                                  title='fn paho_mqtt3as_sys::fgets'>fgets</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fileno.html"
+                                  title='fn paho_mqtt3as_sys::fileno'>fileno</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fileno_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fileno_unlocked'>fileno_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.flockfile.html"
+                                  title='fn paho_mqtt3as_sys::flockfile'>flockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fmemopen.html"
+                                  title='fn paho_mqtt3as_sys::fmemopen'>fmemopen</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fopen.html"
+                                  title='fn paho_mqtt3as_sys::fopen'>fopen</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fprintf.html"
+                                  title='fn paho_mqtt3as_sys::fprintf'>fprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fputc.html"
+                                  title='fn paho_mqtt3as_sys::fputc'>fputc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fputc_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fputc_unlocked'>fputc_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fputs.html"
+                                  title='fn paho_mqtt3as_sys::fputs'>fputs</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fread.html"
+                                  title='fn paho_mqtt3as_sys::fread'>fread</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fread_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fread_unlocked'>fread_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.freopen.html"
+                                  title='fn paho_mqtt3as_sys::freopen'>freopen</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fscanf.html"
+                                  title='fn paho_mqtt3as_sys::fscanf'>fscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fseek.html"
+                                  title='fn paho_mqtt3as_sys::fseek'>fseek</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fseeko.html"
+                                  title='fn paho_mqtt3as_sys::fseeko'>fseeko</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fsetpos.html"
+                                  title='fn paho_mqtt3as_sys::fsetpos'>fsetpos</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ftell.html"
+                                  title='fn paho_mqtt3as_sys::ftell'>ftell</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ftello.html"
+                                  title='fn paho_mqtt3as_sys::ftello'>ftello</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ftrylockfile.html"
+                                  title='fn paho_mqtt3as_sys::ftrylockfile'>ftrylockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.funlockfile.html"
+                                  title='fn paho_mqtt3as_sys::funlockfile'>funlockfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fwrite.html"
+                                  title='fn paho_mqtt3as_sys::fwrite'>fwrite</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.fwrite_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::fwrite_unlocked'>fwrite_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getc.html"
+                                  title='fn paho_mqtt3as_sys::getc'>getc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getc_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::getc_unlocked'>getc_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getchar.html"
+                                  title='fn paho_mqtt3as_sys::getchar'>getchar</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getchar_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::getchar_unlocked'>getchar_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getdelim.html"
+                                  title='fn paho_mqtt3as_sys::getdelim'>getdelim</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getline.html"
+                                  title='fn paho_mqtt3as_sys::getline'>getline</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.getw.html"
+                                  title='fn paho_mqtt3as_sys::getw'>getw</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.open_memstream.html"
+                                  title='fn paho_mqtt3as_sys::open_memstream'>open_memstream</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.pclose.html"
+                                  title='fn paho_mqtt3as_sys::pclose'>pclose</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.perror.html"
+                                  title='fn paho_mqtt3as_sys::perror'>perror</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.popen.html"
+                                  title='fn paho_mqtt3as_sys::popen'>popen</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.printf.html"
+                                  title='fn paho_mqtt3as_sys::printf'>printf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.putc.html"
+                                  title='fn paho_mqtt3as_sys::putc'>putc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.putc_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::putc_unlocked'>putc_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.putchar.html"
+                                  title='fn paho_mqtt3as_sys::putchar'>putchar</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.putchar_unlocked.html"
+                                  title='fn paho_mqtt3as_sys::putchar_unlocked'>putchar_unlocked</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.puts.html"
+                                  title='fn paho_mqtt3as_sys::puts'>puts</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.putw.html"
+                                  title='fn paho_mqtt3as_sys::putw'>putw</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.remove.html"
+                                  title='fn paho_mqtt3as_sys::remove'>remove</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.rename.html"
+                                  title='fn paho_mqtt3as_sys::rename'>rename</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.renameat.html"
+                                  title='fn paho_mqtt3as_sys::renameat'>renameat</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.rewind.html"
+                                  title='fn paho_mqtt3as_sys::rewind'>rewind</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.scanf.html"
+                                  title='fn paho_mqtt3as_sys::scanf'>scanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.setbuf.html"
+                                  title='fn paho_mqtt3as_sys::setbuf'>setbuf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.setbuffer.html"
+                                  title='fn paho_mqtt3as_sys::setbuffer'>setbuffer</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.setlinebuf.html"
+                                  title='fn paho_mqtt3as_sys::setlinebuf'>setlinebuf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.setvbuf.html"
+                                  title='fn paho_mqtt3as_sys::setvbuf'>setvbuf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.snprintf.html"
+                                  title='fn paho_mqtt3as_sys::snprintf'>snprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.sprintf.html"
+                                  title='fn paho_mqtt3as_sys::sprintf'>sprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.sscanf.html"
+                                  title='fn paho_mqtt3as_sys::sscanf'>sscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.tempnam.html"
+                                  title='fn paho_mqtt3as_sys::tempnam'>tempnam</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.tmpfile.html"
+                                  title='fn paho_mqtt3as_sys::tmpfile'>tmpfile</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.tmpnam.html"
+                                  title='fn paho_mqtt3as_sys::tmpnam'>tmpnam</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.tmpnam_r.html"
+                                  title='fn paho_mqtt3as_sys::tmpnam_r'>tmpnam_r</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.ungetc.html"
+                                  title='fn paho_mqtt3as_sys::ungetc'>ungetc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vdprintf.html"
+                                  title='fn paho_mqtt3as_sys::vdprintf'>vdprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vfprintf.html"
+                                  title='fn paho_mqtt3as_sys::vfprintf'>vfprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vfscanf.html"
+                                  title='fn paho_mqtt3as_sys::vfscanf'>vfscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vprintf.html"
+                                  title='fn paho_mqtt3as_sys::vprintf'>vprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vscanf.html"
+                                  title='fn paho_mqtt3as_sys::vscanf'>vscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vsnprintf.html"
+                                  title='fn paho_mqtt3as_sys::vsnprintf'>vsnprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vsprintf.html"
+                                  title='fn paho_mqtt3as_sys::vsprintf'>vsprintf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.vsscanf.html"
+                                  title='fn paho_mqtt3as_sys::vsscanf'>vsscanf</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.FILE.html"
+                                  title='type paho_mqtt3as_sys::FILE'>FILE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync'>MQTTAsync</a></td>
+                           <td class='docblock-short'>
+                                <p>A handle representing an MQTT client. A valid client handle is available
+following a successful call to MQTTAsync_create().</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_connected.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_connected'>MQTTAsync_connected</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function, which will be called when the client
+library successfully connects.  This is superfluous when the connection
+is made in response to a MQTTAsync_connect call, because the onSuccess
+callback can be used.  It is intended for use when automatic reconnect
+is enabled, so that when a reconnection attempt succeeds in the background,
+the application is notified and can take any required actions.
+@param context A pointer to the <i>context</i> value originally passed to
+MQTTAsync_setCallbacks(), which contains any application-specific context.
+@param cause The reason for the disconnection.
+Currently, <i>cause</i> is always set to NULL.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_connectionLost.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_connectionLost'>MQTTAsync_connectionLost</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function. The client application
+must provide an implementation of this function to enable asynchronous
+notification of the loss of connection to the server. The function is
+registered with the client library by passing it as an argument to
+MQTTAsync_setCallbacks(). It is called by the client library if the client
+loses its connection to the server. The client application must take
+appropriate action, such as trying to reconnect or reporting the problem.
+This function is executed on a separate thread to the one on which the
+client application is running.
+@param context A pointer to the <i>context</i> value originally passed to
+MQTTAsync_setCallbacks(), which contains any application-specific context.
+@param cause The reason for the disconnection.
+Currently, <i>cause</i> is always set to NULL.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_deliveryComplete.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_deliveryComplete'>MQTTAsync_deliveryComplete</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function. The client application
+must provide an implementation of this function to enable asynchronous
+notification of delivery of messages to the server. The function is
+registered with the client library by passing it as an argument to MQTTAsync_setCallbacks().
+It is called by the client library after the client application has
+published a message to the server. It indicates that the necessary
+handshaking and acknowledgements for the requested quality of service (see
+MQTTAsync_message.qos) have been completed. This function is executed on a
+separate thread to the one on which the client application is running.
+@param context A pointer to the <i>context</i> value originally passed to
+MQTTAsync_setCallbacks(), which contains any application-specific context.
+@param token The ::MQTTAsync_token associated with
+the published message. Applications can check that all messages have been
+correctly published by matching the tokens returned from calls to
+MQTTAsync_send() and MQTTAsync_sendMessage() with the tokens passed
+to this callback.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_messageArrived.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_messageArrived'>MQTTAsync_messageArrived</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function. The client application
+must provide an implementation of this function to enable asynchronous
+receipt of messages. The function is registered with the client library by
+passing it as an argument to MQTTAsync_setCallbacks(). It is
+called by the client library when a new message that matches a client
+subscription has been received from the server. This function is executed on
+a separate thread to the one on which the client application is running.
+@param context A pointer to the <i>context</i> value originally passed to
+MQTTAsync_setCallbacks(), which contains any application-specific context.
+@param topicName The topic associated with the received message.
+@param topicLen The length of the topic if there are one
+more NULL characters embedded in <i>topicName</i>, otherwise <i>topicLen</i>
+is 0. If <i>topicLen</i> is 0, the value returned by <i>strlen(topicName)</i>
+can be trusted. If <i>topicLen</i> is greater than 0, the full topic name
+can be retrieved by accessing <i>topicName</i> as a byte array of length
+<i>topicLen</i>.
+@param message The MQTTAsync_message structure for the received message.
+This structure contains the message payload and attributes.
+@return This function must return a boolean value indicating whether or not
+the message has been safely received by the client application. Returning
+true indicates that the message has been successfully handled.
+Returning false indicates that there was a problem. In this
+case, the client library will reinvoke MQTTAsync_messageArrived() to
+attempt to deliver the message to the application again.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_onFailure.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_onFailure'>MQTTAsync_onFailure</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function. The client application
+must provide an implementation of this function to enable asynchronous
+notification of the unsuccessful completion of an API call. The function is
+registered with the client library by passing it as an argument in
+::MQTTAsync_responseOptions.
+@param context A pointer to the <i>context</i> value originally passed to
+::MQTTAsync_responseOptions, which contains any application-specific context.
+@param response Any failure data associated with the API completion.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_onSuccess.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_onSuccess'>MQTTAsync_onSuccess</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function. The client application
+must provide an implementation of this function to enable asynchronous
+notification of the successful completion of an API call. The function is
+registered with the client library by passing it as an argument in
+::MQTTAsync_responseOptions.
+@param context A pointer to the <i>context</i> value originally passed to
+::MQTTAsync_responseOptions, which contains any application-specific context.
+@param response Any success data associated with the API completion.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_token.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_token'>MQTTAsync_token</a></td>
+                           <td class='docblock-short'>
+                                <p>A value representing an MQTT message. A token is returned to the
+client application when a message is published. The token can then be used to
+check that the message was successfully delivered to its destination (see
+MQTTAsync_publish(),
+MQTTAsync_publishMessage(),
+MQTTAsync_deliveryComplete(), and
+MQTTAsync_getPendingTokens()).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.MQTTAsync_traceCallback.html"
+                                  title='type paho_mqtt3as_sys::MQTTAsync_traceCallback'>MQTTAsync_traceCallback</a></td>
+                           <td class='docblock-short'>
+                                <p>This is a callback function prototype which must be implemented if you want
+to receive trace information.
+@param level the trace level of the message returned
+@param meesage the trace message.  This is a pointer to a static buffer which
+will be overwritten on each call.  You must copy the data if you want to keep
+it for later.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_clear.html"
+                                  title='type paho_mqtt3as_sys::Persistence_clear'>Persistence_clear</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Clears the persistence store, so that it no longer contains any
+persisted data.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_close.html"
+                                  title='type paho_mqtt3as_sys::Persistence_close'>Persistence_close</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Close the persistent store referred to by the handle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_containskey.html"
+                                  title='type paho_mqtt3as_sys::Persistence_containskey'>Persistence_containskey</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Returns whether any data has been persisted using the specified key.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_get.html"
+                                  title='type paho_mqtt3as_sys::Persistence_get'>Persistence_get</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Retrieve the specified data from the persistent store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_keys.html"
+                                  title='type paho_mqtt3as_sys::Persistence_keys'>Persistence_keys</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Returns the keys in this persistent data store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_open.html"
+                                  title='type paho_mqtt3as_sys::Persistence_open'>Persistence_open</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Initialize the persistent store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_put.html"
+                                  title='type paho_mqtt3as_sys::Persistence_put'>Persistence_put</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Put the specified data into the persistent store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.Persistence_remove.html"
+                                  title='type paho_mqtt3as_sys::Persistence_remove'>Persistence_remove</a></td>
+                           <td class='docblock-short'>
+                                <p>@brief Remove the data for the specified key from the store.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type._IO_lock_t.html"
+                                  title='type paho_mqtt3as_sys::_IO_lock_t'>_IO_lock_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__FILE.html"
+                                  title='type paho_mqtt3as_sys::__FILE'>__FILE</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__blkcnt64_t.html"
+                                  title='type paho_mqtt3as_sys::__blkcnt64_t'>__blkcnt64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__blkcnt_t.html"
+                                  title='type paho_mqtt3as_sys::__blkcnt_t'>__blkcnt_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__blksize_t.html"
+                                  title='type paho_mqtt3as_sys::__blksize_t'>__blksize_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__builtin_va_list.html"
+                                  title='type paho_mqtt3as_sys::__builtin_va_list'>__builtin_va_list</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__caddr_t.html"
+                                  title='type paho_mqtt3as_sys::__caddr_t'>__caddr_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__clock_t.html"
+                                  title='type paho_mqtt3as_sys::__clock_t'>__clock_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__clockid_t.html"
+                                  title='type paho_mqtt3as_sys::__clockid_t'>__clockid_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__daddr_t.html"
+                                  title='type paho_mqtt3as_sys::__daddr_t'>__daddr_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__dev_t.html"
+                                  title='type paho_mqtt3as_sys::__dev_t'>__dev_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__fsblkcnt64_t.html"
+                                  title='type paho_mqtt3as_sys::__fsblkcnt64_t'>__fsblkcnt64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__fsblkcnt_t.html"
+                                  title='type paho_mqtt3as_sys::__fsblkcnt_t'>__fsblkcnt_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__fsfilcnt64_t.html"
+                                  title='type paho_mqtt3as_sys::__fsfilcnt64_t'>__fsfilcnt64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__fsfilcnt_t.html"
+                                  title='type paho_mqtt3as_sys::__fsfilcnt_t'>__fsfilcnt_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__fsword_t.html"
+                                  title='type paho_mqtt3as_sys::__fsword_t'>__fsword_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__gid_t.html"
+                                  title='type paho_mqtt3as_sys::__gid_t'>__gid_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__gnuc_va_list.html"
+                                  title='type paho_mqtt3as_sys::__gnuc_va_list'>__gnuc_va_list</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__id_t.html"
+                                  title='type paho_mqtt3as_sys::__id_t'>__id_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__ino64_t.html"
+                                  title='type paho_mqtt3as_sys::__ino64_t'>__ino64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__ino_t.html"
+                                  title='type paho_mqtt3as_sys::__ino_t'>__ino_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__int16_t.html"
+                                  title='type paho_mqtt3as_sys::__int16_t'>__int16_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__int32_t.html"
+                                  title='type paho_mqtt3as_sys::__int32_t'>__int32_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__int64_t.html"
+                                  title='type paho_mqtt3as_sys::__int64_t'>__int64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__int8_t.html"
+                                  title='type paho_mqtt3as_sys::__int8_t'>__int8_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__intptr_t.html"
+                                  title='type paho_mqtt3as_sys::__intptr_t'>__intptr_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__io_close_fn.html"
+                                  title='type paho_mqtt3as_sys::__io_close_fn'>__io_close_fn</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__io_read_fn.html"
+                                  title='type paho_mqtt3as_sys::__io_read_fn'>__io_read_fn</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__io_seek_fn.html"
+                                  title='type paho_mqtt3as_sys::__io_seek_fn'>__io_seek_fn</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__io_write_fn.html"
+                                  title='type paho_mqtt3as_sys::__io_write_fn'>__io_write_fn</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__key_t.html"
+                                  title='type paho_mqtt3as_sys::__key_t'>__key_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__loff_t.html"
+                                  title='type paho_mqtt3as_sys::__loff_t'>__loff_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__mode_t.html"
+                                  title='type paho_mqtt3as_sys::__mode_t'>__mode_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__nlink_t.html"
+                                  title='type paho_mqtt3as_sys::__nlink_t'>__nlink_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__off64_t.html"
+                                  title='type paho_mqtt3as_sys::__off64_t'>__off64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__off_t.html"
+                                  title='type paho_mqtt3as_sys::__off_t'>__off_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__pid_t.html"
+                                  title='type paho_mqtt3as_sys::__pid_t'>__pid_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__qaddr_t.html"
+                                  title='type paho_mqtt3as_sys::__qaddr_t'>__qaddr_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__quad_t.html"
+                                  title='type paho_mqtt3as_sys::__quad_t'>__quad_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__rlim64_t.html"
+                                  title='type paho_mqtt3as_sys::__rlim64_t'>__rlim64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__rlim_t.html"
+                                  title='type paho_mqtt3as_sys::__rlim_t'>__rlim_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__socklen_t.html"
+                                  title='type paho_mqtt3as_sys::__socklen_t'>__socklen_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__ssize_t.html"
+                                  title='type paho_mqtt3as_sys::__ssize_t'>__ssize_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__suseconds_t.html"
+                                  title='type paho_mqtt3as_sys::__suseconds_t'>__suseconds_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__syscall_slong_t.html"
+                                  title='type paho_mqtt3as_sys::__syscall_slong_t'>__syscall_slong_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__syscall_ulong_t.html"
+                                  title='type paho_mqtt3as_sys::__syscall_ulong_t'>__syscall_ulong_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__time_t.html"
+                                  title='type paho_mqtt3as_sys::__time_t'>__time_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__timer_t.html"
+                                  title='type paho_mqtt3as_sys::__timer_t'>__timer_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__u_char.html"
+                                  title='type paho_mqtt3as_sys::__u_char'>__u_char</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__u_int.html"
+                                  title='type paho_mqtt3as_sys::__u_int'>__u_int</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__u_long.html"
+                                  title='type paho_mqtt3as_sys::__u_long'>__u_long</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__u_quad_t.html"
+                                  title='type paho_mqtt3as_sys::__u_quad_t'>__u_quad_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__u_short.html"
+                                  title='type paho_mqtt3as_sys::__u_short'>__u_short</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__uid_t.html"
+                                  title='type paho_mqtt3as_sys::__uid_t'>__uid_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__uint16_t.html"
+                                  title='type paho_mqtt3as_sys::__uint16_t'>__uint16_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__uint32_t.html"
+                                  title='type paho_mqtt3as_sys::__uint32_t'>__uint32_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__uint64_t.html"
+                                  title='type paho_mqtt3as_sys::__uint64_t'>__uint64_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__uint8_t.html"
+                                  title='type paho_mqtt3as_sys::__uint8_t'>__uint8_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.__useconds_t.html"
+                                  title='type paho_mqtt3as_sys::__useconds_t'>__useconds_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.fpos_t.html"
+                                  title='type paho_mqtt3as_sys::fpos_t'>fpos_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.off_t.html"
+                                  title='type paho_mqtt3as_sys::off_t'>off_t</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.va_list.html"
+                                  title='type paho_mqtt3as_sys::va_list'>va_list</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='unions' class='section-header'><a href="#unions">Unions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="union" href="union.MQTTAsync_successData__bindgen_ty_1.html"
+                                  title='union paho_mqtt3as_sys::MQTTAsync_successData__bindgen_ty_1'>MQTTAsync_successData__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                <p>A union of the different values that can be returned for subscribe, unsubscribe and publish.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="union" href="union.__mbstate_t__bindgen_ty_1.html"
+                                  title='union paho_mqtt3as_sys::__mbstate_t__bindgen_ty_1'>__mbstate_t__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "paho_mqtt3as_sys";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
