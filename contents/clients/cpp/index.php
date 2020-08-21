@@ -23,7 +23,7 @@ the <a href="../c">Paho MQTT C client</a> library.</p>
         "sync" => true,
         "ha" => true
     );
-    include 'paho/_includes/features_list.php';
+    include 'contents/_includes/features_list.php';
     getFeatures($features);
 
 

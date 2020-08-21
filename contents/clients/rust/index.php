@@ -24,7 +24,7 @@
         "sync" => true,
         "ha" => true
     );
-    include 'paho/_includes/features_list.php';
+    include 'contents/_includes/features_list.php';
     getFeatures($features);
 
 
