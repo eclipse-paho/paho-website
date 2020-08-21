@@ -1,4 +1,4 @@
-<?php include '../_includes/header.php' ?>
+<?php  ?>
 
 <h1>Who is using Paho?</h1>
 
@@ -19,5 +19,4 @@ Anyhow, great job, and thanks again for all your collective work.</p>
 
 <p>Currently we are working in the Eyes of Things project funded by the <a href="http://eyesofthings.eu">Horizon 2020 program of the EU</a>. In this project we are using Paho and the MQTT protocol as a way to control and configure the device we are working on.  You could read more in this <a href="http://eyesofthings.eu/wp-content/uploads/2015/08/SPC15.pdf">paper</a>.</p>
 
-<?php include '../_includes/footer.php' ?>
 

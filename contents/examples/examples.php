@@ -1,5 +1,4 @@
 <?php
-include '../_includes/header.php';
 
 $markDownPath = $_GET['path'];
 if(empty($markDownPath)){
@@ -19,7 +18,4 @@ if(empty($markDownPath)){
     </div>
     <?php
 }
-include '../_includes/footer.php';
-
-
   ?>
