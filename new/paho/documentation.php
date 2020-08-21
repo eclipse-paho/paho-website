@@ -4,8 +4,9 @@
 <h2 style="color:black">Specifications</h2>
 
 <ul style="color:black">
-<li><a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html">MQTT 5.0</a>: the latest MQTT standard</li>
-<li><a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">MQTT 3.1.1</a>: the first MQTT standard</li>
+<li><a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html">MQTT 5.0</a>: the latest OASIS MQTT standard</li>
+<li><a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html">MQTT 3.1.1</a>: the first OASIS MQTT standard</li>
+<li><a href="https://www.iso.org/standard/69466.html">ISO/IEC MQTT 3.1.1</a></li>
 <li><a href="https://www.oasis-open.org/committees/download.php/66091/MQTT-SN_spec_v1.2.pdf">MQTT-SN</a>: MQTT for Sensor Networks. 
 Standardization in process.</li>
 </ul>
