@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["WillOptions","The options for the Last Will and Testament (LWT)"],["WillOptionsBuilder",""]]});

@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["MQTT_VERSION_3_1",""],["MQTT_VERSION_3_1_1",""],["MQTT_VERSION_DEFAULT",""]],"struct":[["ConnectOptions","The collection of options for connecting to a broker."],["ConnectOptionsBuilder",""]]});
