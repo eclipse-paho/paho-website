@@ -24,7 +24,7 @@
              </thead>
              <tbody>
                  <tr>
-                    <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/java/index.php">Java</a></th>
+                    <th scope="row"><a href="index.php?page=clients/java/index.php">Java</a></th>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -40,7 +40,7 @@
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
-                   <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/python/index.php">Python</a></th>
+                   <th scope="row"><a href="index.php?page=clients/python/index.php">Python</a></th>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                    <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -56,7 +56,7 @@
                    <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
                </tr>
                <tr>
-                  <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/js/index.php">JavaScript</a></th>
+                  <th scope="row"><a href="index.php?page=clients/js/index.php">JavaScript</a></th>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                   <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -72,7 +72,7 @@
                   <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
-                 <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/golang/index.php">GoLang</a></th>
+                 <th scope="row"><a href="index.php?page=clients/golang/index.php">GoLang</a></th>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                  <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -88,7 +88,7 @@
                  <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              </tr>
              <tr>
-                <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/c/index.php">C</a></th>
+                <th scope="row"><a href="index.php?page=clients/c/index.php">C</a></th>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -104,7 +104,7 @@
                 <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
             </tr>
             <tr>
-               <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/cpp/index.php">C++</a></th>
+               <th scope="row"><a href="index.php?page=clients/cpp/index.php">C++</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -120,7 +120,7 @@
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
            </tr>
             <tr>
-               <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/rust/index.php">Rust</a></th>
+               <th scope="row"><a href="index.php?page=clients/rust/index.php">Rust</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -136,7 +136,7 @@
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
            </tr>
             <tr>
-               <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/dotnet/index.php">.Net (C#)</a></th>
+               <th scope="row"><a href="index.php?page=clients/dotnet/index.php">.Net (C#)</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -152,7 +152,7 @@
                <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
            </tr>
            <tr>
-              <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/android/index.php">Android Service</a></th>
+              <th scope="row"><a href="index.php?page=clients/android/index.php">Android Service</a></th>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
@@ -168,7 +168,7 @@
               <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
           </tr>
           <tr>
-             <th scope="row"><a href="https://www.eclipse.org/paho/new/index.php?page=clients/c/embedded/index.php">Embedded C/C++</a></th>
+             <th scope="row"><a href="index.php?page=clients/c/embedded/index.php">Embedded C/C++</a></th>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
              <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
