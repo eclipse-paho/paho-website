@@ -66,8 +66,7 @@
                         <p class="article-link"><a href="http://www.infoq.com/articles/practical-mqtt-with-paho">Practical MQTT with Paho &raquo;</a>
                         </p>
                     </div>
-                    <div class="col-md-4 article-box">
-                    </div>
+
                     <div class="col-md-10 article-box">
                         <p class="lead"><span class="quote lquote">&ldquo;</span>How would you connect the information from a temperature sensor on a BeagleBone Black to an LED display on a Raspberry Pi and would your solution scale up to many sensors and displays? In this article we’ll show how MQTT and the Eclipse Paho project can let you answer that challenge.<span class="quote rquote">&rdquo;</span>
                         </p>
@@ -91,16 +90,17 @@
         <div class="row ">
             <div class="col-md-12">
                 <p class="lead" style="color:black">
-                    MQTT is a light weight publish/subscribe messaging protocol, originally created by IBM and Arcom (later to become part of Eurotech) around 1998. The <a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html">MQTT 3.1.1 specification</a> has now been standardised by the <a href="https://www.oasis-open.org/committees/mqtt/charter.php">OASIS consortium</a>. The standard is available in a variety of <a href="https://www.oasis-open.org/standards#mqttv3.1.1">formats</a>.
+                    MQTT is a light weight publish/subscribe messaging protocol, originally created by IBM and Arcom (later to become part of Eurotech) around 1998. 
+                    MQTT is an <a href="https://www.oasis-open.org/">OASIS</a> standard.  The latest version is 5.0 and is available in a variety of <a href="https://www.oasis-open.org/standards#mqtt-v5.0-os">formats</a>.
                 </p>
                 <p class="lead" style="color:black">
-                    As of 2016, MQTT is now an ISO standard <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466">(ISO/IEC 20922)</a>
+                    MQTT 3.1.1 is also an ISO standard <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=69466">(ISO/IEC 20922)</a>.
                 </p>
                 <p class="lead" style="color:black">
-                    More information about the protocol can be found on the <a href="https://mqtt.org">MQTT.org community site</a>.
+                    More information about the protocols can be found on <a href="https://mqtt.org">MQTT.org</a>.
                 </p>
                 <p class="lead" style="color:black">
-                    There is a publically accessible sandbox server for the Eclipse IoT projects available at <code>mqtt.eclipse.org</code>, port <code>1883</code>.
+                    There is an Eclipse IoT sandbox MQTT server available at <a href="https://mqtt.eclipse.org/">mqtt.eclipse.org</a>.
                 </p>
             </div>
             <div class="col-md-12">
@@ -109,6 +109,7 @@
                     //Insert widgets from a 3rd party
                     print '<a class="twitter-timeline" data-width="600" data-height="600" href="https://twitter.com/eclipsepaho?ref_src=twsrc%5Etfw">News from eclipsepaho</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
                 } else {
+                    print '<h2 class="lead" style="text-align:center; color:black">Get the latest Paho news from <a href="https://twitter.com/eclipsepaho">Twitter</a></h2>';
                     print '<div class="span3" style="padding-top: 100px;"><img src="https://mqtt.org/assets/img/mqtt-logo.svg"/></div>';
                 }
                 ?>
