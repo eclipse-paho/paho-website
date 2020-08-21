@@ -2,12 +2,19 @@
 
 <div class="jumbotron jumbotron-fluid">
     <div class="text-center">
-    	<h4 class="lead" style="color:black">Paho is an <a href="https://iot.eclipse.org/">Eclipse IoT</a> project</h4>
+     <div class="row">
+        <div class="col-md-4">
+    	<h4 class="lead" style="color:black"><a href="https://iot.eclipse.org/">Paho is an<img src="https://iot.eclipse.org/assets/images/iot_logo.svg"></a>
+    	  project</h4>
+        </div>
+        <div class="col">
         <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports, 
           for TCP/IP and connectionless protocols (such as UDP) respectively.</p>
 
         <p class="lead" style="color:black">The Eclipse Paho project provides open source, mainly client side, implementations of 
         MQTT and MQTT-SN in a variety of programming languages.</p>
+        </div>
+        </div>
     </div>
 </div>
 
@@ -108,4 +115,4 @@
             </div>
         </div>
     </div>
-
+  
