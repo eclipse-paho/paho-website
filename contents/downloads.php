@@ -4,7 +4,7 @@
 
 <h4>Latest Paho Project Release: <a href="https://projects.eclipse.org/projects/iot.paho/releases/1.4.0-photon">1.4 (Photon)</a></h4>
 
-<?php include 'paho/comparison.php' ?>
+<?php include 'contents/_includes/comparison.php' ?>
 
 <h2>Stable</h2>
 <div class="panel panel-default">
