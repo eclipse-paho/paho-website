@@ -44,7 +44,7 @@ python setup.py install
 <p>The final step may need to be run with <code>sudo</code> if you are using Linux or similar system.</p>
 
 <h2 id="documentation">Documentation</h2>
-<p> Full client documentation is available <a href="docs/">here</a>.</p>
+<p> Full client documentation is available <a href="index.php?page=clients/python/docs/index.php/">here</a>.</p>
 <h3 id="getting-started">Getting Started</h3>
 <p>There are example clients in the <a href="https://github.com/eclipse/paho.mqtt.python/tree/master/examples">examples</a> directory of the repository.</p>
 <p>Here is a very simple example that subscribes to the broker $SYS topic tree and prints out the resulting messages:</p>
