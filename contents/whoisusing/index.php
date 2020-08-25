@@ -1,4 +1,4 @@
-<?php  ?>
+<?php?>
 
 <h1>Who is using Paho?</h1>
 

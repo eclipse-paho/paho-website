@@ -63,7 +63,7 @@ $links[] = array(
   'url' => 'index.php?page=downloads.php', // Required
   'title' => 'Download', // Required
   // 'target' => '_blank', // Optional
-  'text' => 'Eclipse Paho Components' // Optional
+  'text' => 'Details and comparison of all Paho components' // Optional
 );
 
 $links[] = array(
