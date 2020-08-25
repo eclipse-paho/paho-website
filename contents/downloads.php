@@ -165,7 +165,7 @@
              </thead>
              <tbody>
              <tr>
-                 <th scope="row">MQTT client testing and interoperability tools</th>
+                 <th scope="row"><a href="index.php?page=components/testing/index.php">MQTT client testing and interoperability tools</a></th>
                  <td><i>N/A</i></td>
                  <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.testing">https://github.com/eclipse/paho.mqtt.testing</a></td>
              </tr>
