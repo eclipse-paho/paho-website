@@ -1,4 +1,3 @@
-<?php include '../../../_includes/header.php' ?>
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>Using the Android MQTT client sample</h1>
@@ -36,10 +35,10 @@
 <p>Use the MQTT Android application to connect to MQTT server, subscribe, and publish to a topic.</p>
 <ul>
      <li>Open the MQTT sample application.
-    	<p><img src="./sample/img/1.png" alt="" style="width: 293px; height: 44px;" align="middle"></p>
+    	<p><img src="contents/clients/android/sample/img/1.png" alt="" style="width: 293px; height: 44px;" align="middle"></p>
      </li>
      <li>Connect to an MQTT server.
-    	<p><img src="./sample/img/2.png" style="width: 266px; height: 255px;" align="middle"></p>
+    	<p><img src="contents/clients/android/sample/img/2.png" style="width: 266px; height: 255px;" align="middle"></p>
     	<p>
     	  	<ul>
     	      	<li>Click the plus sign (+) to open a new MQTT connection </li>
@@ -54,14 +53,14 @@
     	<p>
     	  	<ul>
     	      	<li>Click the Connected message. The Connection Details window opens with the history listed:
-    	      		<p><img src="./sample/img/3.png" style="width: 295px; height: 161px;" align="middle"></p>
+    	      		<p><img src="contents/clients/android/sample/img/3.png" style="width: 295px; height: 161px;" align="middle"></p>
     	      	</li>
     	      	<li>Click the Subscribe tab, and enter a topic string.
-    	      		<p><img src="./sample/img/4.png" style="width: 293px; height: 155px;" align="middle"></p>
+    	      		<p><img src="contents/clients/android/sample/img/4.png" style="width: 293px; height: 155px;" align="middle"></p>
     	      	</li>
 				<li>Click the Subscribe action. A Subscribed message appears for a short time.</li>
 				<li>Click the History tab. The history now includes the subscription:
-					<p><img src="./sample/img/5.png" style="width: 294px; height: 201px;" align="middle"></p>
+					<p><img src="contents/clients/android/sample/img/5.png" style="width: 294px; height: 201px;" align="middle"></p>
 				</li>
     	   </ul>
     	</p>
@@ -70,14 +69,14 @@
     	<p>
     	  	<ul>
     	      	<li>Click the Publish tab, and enter the same topic string as you did for subscribing. Enter a message.
-    	      		<p><img src="./sample/img/6.png" style="width: 295px; height: 319px;" align="middle"></p>
+    	      		<p><img src="contents/clients/android/sample/img/6.png" style="width: 295px; height: 319px;" align="middle"></p>
     	      	</li>
     	      	<li>Click the Publish action. Two messages are displayed for a short time, Published followed by Subscribed.
     	      	    The publication is displayed in the status area (pull the separator bar down to open the status window).
-    	      		<p><img src="./sample/img/7.png" style="width: 303px; height: 119px;" align="middle"></p>
+    	      		<p><img src="contents/clients/android/sample/img/7.png" style="width: 303px; height: 119px;" align="middle"></p>
     	      	</li>
 				<li>Click the History tab to view the full history.
-					<p><img src="./sample/img/8.png" style="width: 294px; height: 321px;" align="middle"></p>
+					<p><img src="contents/clients/android/sample/img/8.png" style="width: 294px; height: 321px;" align="middle"></p>
 				</li>
     	   </ul>
     	</p>
@@ -87,7 +86,7 @@
     	  	<ul>
     	      	<li>Click the menu icon in the action bar. The MQTT client sample application adds a Disconnect button to the MQTT Connection Details window.</li>
     	      	<li>Click Disconnect. The connected status changes to disconnected:
-    	      		<p><img src="./sample/img/9.png" style="width: 296px; height: 201px;"  align="middle"></p>
+    	      		<p><img src="contents/clients/android/sample/img/9.png" style="width: 296px; height: 201px;"  align="middle"></p>
     	      	</li>
     	   </ul>
     	</p>
@@ -109,4 +108,3 @@
 
 </div>
 </div>
-<?php include '../../../_includes/footer.php' ?>
