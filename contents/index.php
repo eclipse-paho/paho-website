@@ -1,22 +1,26 @@
 <?php?>
 
 <div class="jumbotron jumbotron-fluid">
-    <div class="text-center">
+  <div class="text-left">
      <div class="row">
+     
         <div class="col-md-4">
-    	<h4 class="lead" style="color:black">Paho is an<a href="https://iot.eclipse.org/"><img src="https://iot.eclipse.org/assets/images/iot_logo.svg"></a>
-    	  project</h4>
+    	<h4 class="lead" style="color:black">Paho is an</h4><a href="https://iot.eclipse.org/"><img src="https://iot.eclipse.org/assets/images/iot_logo.svg"></a>
+    	    <h4 class="lead" style="color:black">project</h4>
         </div>
+        
         <div class="col">
-        <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports, 
-          for TCP/IP and connectionless protocols (such as UDP) respectively.</p>
-
-        <p class="lead" style="color:black">The Eclipse Paho project provides open source, mainly client side, 
-        <a href="index.php?page=downloads.php">implementations</a> of 
-        MQTT and MQTT-SN in a variety of programming languages.</p>
-        </div>
-        </div>
-    </div>
+          <p class="lead" style="color:black">MQTT and MQTT-SN are lightweight publish/subscribe messaging transports 
+          for TCP/IP and connectionless protocols (such as UDP) respectively. 
+          The Eclipse Paho project provides open source, mainly client side, 
+          <a href="index.php?page=downloads.php">implementations</a> of 
+          MQTT and MQTT-SN in a variety of programming languages.</p>
+        
+          <h2 class="lead" style="color:black">Find out all about Paho components, compare features and download them <a href="index.php?page=downloads.php">here</a>.</h2>
+         </div>
+         
+      </div>
+  </div>
 </div>
 
 <div class="jumbotron jumbotron-fluid">
@@ -34,7 +38,8 @@ stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
         <p class="lead" style="color:black">We are sure that there are many of you who are using Paho components in projects, and we'd like
         to hear from you.</p>
 
-        <p class="lead" style="color:black">If you are using Paho, please tell us your story by sending an <a href="mailto: paho-success@eclipse.org">email</a></p>
+        <p class="lead" style="color:black">If you are using Paho, please tell us your story by sending an <a href="mailto: paho-success@eclipse.org">email</a>
+        to <a href="mailto: paho-success@eclipse.org">paho-success@eclipse.org</a>.</p>
         </div>
         </div>
     </div>
