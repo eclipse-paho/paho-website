@@ -3,7 +3,7 @@
         <h1>Eclipse Paho JavaScript Client</h1>
         <p>The Paho JavaScript Client is an MQTT browser-based client library written in Javascript that uses WebSockets to connect to an MQTT Broker.
             <p>
-                <p>A simple utility to demonstrate it is included, and available <a href="./utility/">online</a>.</p>
+                <p>A simple utility to demonstrate it is included, and available <a href="index.php?page=clients/js/utility/index.php">online</a>.</p>
 
 
                 <h2>Features</h2>
