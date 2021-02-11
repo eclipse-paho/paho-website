@@ -27,7 +27,7 @@
                     <th scope="row"><a href="index.php?page=clients/java/index.php">Java</a></th>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-                    <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+                    <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                     <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
@@ -107,13 +107,13 @@
                <th scope="row"><a href="index.php?page=clients/cpp/index.php">C++</a></th>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
-               <td class="text-center warning"><i class="fa fa-times" aria-hidden="true"></i></td>
+               <td class="text-center warning"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
                <td class="text-center success"><i class="fa fa-check" aria-hidden="true"></i></td>
