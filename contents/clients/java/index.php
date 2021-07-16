@@ -16,6 +16,7 @@
                 $features = array(
                     "mqtt-31" => true,
                     "mqtt-311" => true,
+                    "mqtt-50" => true,
                     "lwt" => true,
                     "tls" => true,
                     "persistence" => true,
