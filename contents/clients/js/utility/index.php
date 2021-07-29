@@ -39,7 +39,7 @@
               <div class="col-lg-5">
                 <div class="form-group">
                   <label for="hostInput">Host</label>
-                  <input type="text" class="form-control" id="hostInput" value="mqtt.eclipse.org">
+                  <input type="text" class="form-control" id="hostInput" value="mqtt.eclipseprojects.io">
                 </div>
               </div>
               <div class="col-lg-1">
