@@ -5,7 +5,7 @@
 
 <p style="color:black">The main means of getting involved is to use Github, issues, pull requests and documentation. The set of Paho Github repositories can be found with this query: <a href="https://github.com/orgs/eclipse/repositories?language=&q=paho&sort=&type=">https://github.com/orgs/eclipse/repositories?language=&q=paho&sort=&type=</a>. </p>
 
-<p style="color:black">More details about all the components, including about the Github repositories, can be found on the <a href="https://index.php?page=downloads.php">downloads</a> page.</p>
+<p style="color:black">More details about all the components, including about the Github repositories, can be found on the <a href="index.php?page=downloads.php">downloads</a> page.</p>
 
 
 <ul style="color:black">
