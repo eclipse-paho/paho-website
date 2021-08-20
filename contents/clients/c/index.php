@@ -108,14 +108,14 @@ To start the publishing program, connecting to the Eclipse IoT sandbox:
 </p>
 
 <pre>
-paho_c_pub -t my_topic --connection mqtt.eclipse.org:1883
+paho_c_pub -t my_topic --connection mqtt.eclipseprojects.io:1883
 </pre>
 
 <p>Then each line you type will be sent as a message.  To receive messages, in a similar way:
 </p>
 
 <pre>
-paho_c_sub -t my_topic --connection mqtt.eclipse.org:1883
+paho_c_sub -t my_topic --connection mqtt.eclipseprojects.io:1883
 </pre>
 
 <p>To see the full list of options, type the utility name without any options.</p>

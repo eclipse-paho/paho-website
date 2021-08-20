@@ -1,7 +1,10 @@
 <div class="panel panel-default">
 <div class="panel-body">
 <h1>Python Client</h1>
-<p>The Paho Python Client provides a client class with support for both MQTT v3.1 and v3.1.1 on Python 2.7 or 3.x. It also provides some helper functions to make publishing one off messages to an MQTT server very straightforward. </p>
+<p>The Paho Python Client provides a client class with support for MQTT v5.0,
+MQTT v3.1.1, and v3.1 on Python 2.7 or 3.x. It also provides some helper
+functions to make publishing one off messages to an MQTT server very
+straightforward.</p>
 
 <h2>Features</h2>
 <?php
@@ -9,6 +12,7 @@
     $features = array(
         "mqtt-31" => true,
         "mqtt-311" => true,
+        "mqtt-50" => true,
         "lwt" => true,
         "tls" => true,
         "persistence" => false,
@@ -51,7 +55,7 @@ python setup.py install
 <pre>import paho.mqtt.client as mqtt
 
 # The callback for when the client receives a CONNACK response from the server.
-def on_connect(client, userdata, rc):
+def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
@@ -65,7 +69,7 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("mqtt.eclipse.org", 1883, 60)
+client.connect("mqtt.eclipseprojects.io", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.

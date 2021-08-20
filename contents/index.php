@@ -127,7 +127,7 @@ stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
                     More information about the protocols can be found on <a href="https://mqtt.org">MQTT.org</a>.
                 </p>
                 <p class="lead" style="color:black">
-                    There is an Eclipse IoT sandbox MQTT server available at <a href="https://mqtt.eclipse.org/">mqtt.eclipse.org</a>.
+                    There is an Eclipse IoT sandbox MQTT server available at <a href="https://mqtt.eclipseprojects.io/">mqtt.eclipseprojects.io</a>.
                 </p>
             </div>
             <div class="col-md-12">

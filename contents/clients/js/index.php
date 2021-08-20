@@ -82,7 +82,7 @@
                 <p>The client uses the <a href="http://jasmine.github.io/">Jasmine</a> test framework, the tests for the client are in: <code>src/tests</code></p>
 
                 <p>To run the tests with maven, use the following command:</p>
-                <pre>$ mvn test -Dtest.server=mqtt.eclipse.org -Dtest.server.port=80 -Dtest.server.path=/mqtt</pre>
+                <pre>$ mvn test -Dtest.server=mqtt.eclipseprojects.io -Dtest.server.port=80 -Dtest.server.path=/mqtt</pre>
 
                 <h3>Documentation</h3>
                 <p>Reference documentation is online at: <a href="http://www.eclipse.org/paho/files/jsdoc/index.html">http://www.eclipse.org/paho/files/jsdoc/index.html</a></p>

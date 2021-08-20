@@ -157,7 +157,7 @@ int main(int argc, char* argv[])
 
     MQTT::Client<IPStack, Countdown> client = MQTT::Client<IPStack, Countdown>(ipstack);
 
-    const char* hostname = "mqtt.eclipse.org";
+    const char* hostname = "mqtt.eclipseprojects.io";
     int port = 1883;
     printf("Connecting to %s:%d\n", hostname, port);
     int rc = ipstack.connect(hostname, port);
