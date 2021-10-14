@@ -45,9 +45,9 @@ Alternatively, once you have downloaded the src via <code>go get</code> you can 
 <p>The client can connect to a broker using TCP, TLS or a WebSocket connection. Ensure the broker you're using supports the connection type you wish to use.</p>
 <p>The type of connection required is specified by the scheme of the connection URL set in the ClientOptions struct, for example:
 <ul>
-<li><code>tcp://mqtt.eclipse.org:1883</code> - connect to mqtt.eclipse.org on port 1883 using plain TCP</li>
-<li><code>ws://mqtt.eclipse.org:1883</code> - connect to mqtt.eclipse.org on port 1883 using WebSockets</li>
-<li><code>tls://mqtt.eclipse.org:8883</code> - connect to mqtt.eclipse.org on port 8883 using TLS (ssl:// and tcps:// are synonyms for tls://)</li>
+<li><code>tcp://mqtt.eclipseprojects.io:1883</code> - connect to mqtt.eclipseprojects.io on port 1883 using plain TCP</li>
+<li><code>ws://mqtt.eclipseprojects.io:1883</code> - connect to mqtt.eclipseprojects.io on port 1883 using WebSockets</li>
+<li><code>tls://mqtt.eclipseprojects.io:8883</code> - connect to mqtt.eclipseprojects.io on port 8883 using TLS (ssl:// and tcps:// are synonyms for tls://)</li>
 </ul>
 
 
@@ -72,7 +72,7 @@ var f MQTT.MessageHandler = func(client MQTT.Client, msg MQTT.Message) {
 func main() {
   //create a ClientOptions struct setting the broker address, clientid, turn
   //off trace output and set the default message handler
-  opts := MQTT.NewClientOptions().AddBroker("tcp://mqtt.eclipse.org:1883")
+  opts := MQTT.NewClientOptions().AddBroker("tcp://mqtt.eclipseprojects.io:1883")
   opts.SetClientID("go-simple")
   opts.SetDefaultPublishHandler(f)
 

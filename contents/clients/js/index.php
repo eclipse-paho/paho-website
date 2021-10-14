@@ -3,7 +3,7 @@
         <h1>Eclipse Paho JavaScript Client</h1>
         <p>The Paho JavaScript Client is an MQTT browser-based client library written in Javascript that uses WebSockets to connect to an MQTT Broker.
             <p>
-                <p>A simple utility to demonstrate it is included, and available <a href="./utility/">online</a>.</p>
+                <p>A simple utility to demonstrate it is included, and available <a href="index.php?page=clients/js/utility/index.php">online</a>.</p>
 
 
                 <h2>Features</h2>
@@ -82,7 +82,7 @@
                 <p>The client uses the <a href="http://jasmine.github.io/">Jasmine</a> test framework, the tests for the client are in: <code>src/tests</code></p>
 
                 <p>To run the tests with maven, use the following command:</p>
-                <pre>$ mvn test -Dtest.server=mqtt.eclipse.org -Dtest.server.port=80 -Dtest.server.path=/mqtt</pre>
+                <pre>$ mvn test -Dtest.server=mqtt.eclipseprojects.io -Dtest.server.port=80 -Dtest.server.path=/mqtt</pre>
 
                 <h3>Documentation</h3>
                 <p>Reference documentation is online at: <a href="http://www.eclipse.org/paho/files/jsdoc/index.html">http://www.eclipse.org/paho/files/jsdoc/index.html</a></p>

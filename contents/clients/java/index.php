@@ -16,6 +16,7 @@
                 $features = array(
                     "mqtt-31" => true,
                     "mqtt-311" => true,
+                    "mqtt-50" => true,
                     "lwt" => true,
                     "tls" => true,
                     "persistence" => true,
@@ -140,7 +141,7 @@
             String topic        = &quot;MQTT Examples&quot;;
             String content      = &quot;Message from MqttPublishSample&quot;;
             int qos             = 2;
-            String broker       = &quot;tcp://mqtt.eclipse.org:1883&quot;;
+            String broker       = &quot;tcp://mqtt.eclipseprojects.io:1883&quot;;
             String clientId     = &quot;JavaSample&quot;;
             MemoryPersistence persistence = new MemoryPersistence();
 
