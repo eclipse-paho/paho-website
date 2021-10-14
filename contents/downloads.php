@@ -80,7 +80,7 @@
                </tr>
                <tr>
                    <th scope="row"><a href="index.php?page=clients/c/index.php">C</a></th>
-                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/releases/tag/v1.3.5">1.3.5</a></td>
+                   <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/releases/tag/v1.3.9">1.3.9</a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c/tree/master"><i>Build from master branch</i></a></td>
                    <td><a target="_blank" href="https://github.com/eclipse/paho.mqtt.c">https://github.com/eclipse/paho.mqtt.c</a></td>
                </tr>
