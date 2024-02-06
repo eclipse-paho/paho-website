@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Changelog &#8212; Eclipse paho-mqtt  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Migrations" href="migrations.html" />
+    <link rel="prev" title="Types and enums" href="types.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<section id="v2-0-0rc2-2024-01-21">
+<h2>v2.0.0rc2 - 2024-01-21<a class="headerlink" href="#v2-0-0rc2-2024-01-21" title="Link to this heading">¶</a></h2>
+<p>This release include breaking change. See <a class="reference external" href="https://eclipse.dev/paho/files/paho.mqtt.python/html/migrations.html">migrations</a> for more details on how to upgrade.</p>
+<ul class="simple">
+<li><p><strong>BREAKING</strong> Added callback_api_version. This break <em>ALL</em> users of paho-mqtt Client class.
+See migrations.md for details on how to upgrade.
+tl; dr; add CallbackAPIVersion.VERSION1 to first argument of Client()</p></li>
+<li><p><strong>BREAKING</strong> Drop support for Python 2.7, Python 3.5 and Python 3.6
+Minimum tested version is Python 3.7
+Python version up to Python 3.12 are tested.</p></li>
+<li><p><strong>BREAKING</strong> connect_srv changed it signature to take an additional bind_port parameter.
+This is a breaking change, but in previous version connect_srv was broken anyway.
+Closes #493.</p></li>
+<li><p><strong>BREAKING</strong> Remove some deprecated argument and method:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_packets</span></code> argument in loop(), loop_write() and loop_forever() is removed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">force</span></code> argument in loop_stop() is removed</p></li>
+<li><p>method <code class="docutils literal notranslate"><span class="pre">message_retry_set()</span></code> is removed</p></li>
+</ul>
+</li>
+<li><p><strong>BREAKING</strong> Remove the base62, WebsocketWrapper and ConnectionState, as user shouldn’t directly use them.</p></li>
+<li><p>Possible breaking change: Add properties to access most Client attribute. Closes #764.
+Since this add new properties like <a class="reference internal" href="client.html#paho.mqtt.client.Client.logger" title="paho.mqtt.client.Client.logger"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">logger</span></code></a>, if a sub-class defined <a class="reference internal" href="client.html#paho.mqtt.client.Client.logger" title="paho.mqtt.client.Client.logger"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">logger</span></code></a>, the two <a class="reference internal" href="client.html#paho.mqtt.client.Client.logger" title="paho.mqtt.client.Client.logger"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">logger</span></code></a>
+will conflict.</p></li>
+<li><p>Add version 2 of user-callback which allow to access MQTTv5 reason code &amp; properties that were
+missing from on_publish callback. Also it’s more consistent in parameter order or between
+MQTTv3 and MQTTv5.</p></li>
+<li><p>Add types to Client class, which caused few change which should be compatible.
+Known risk of breaking changes:</p>
+<ul>
+<li><p>Use enum for returned error code (like MQTT_ERR_SUCCESS). It use an IntEnum
+which should be a drop-in replacement. Excepted if someone is doing “rc is 0” instead of “rc == 0”.</p></li>
+<li><p>reason in on_connect callback when using MQTTv5 is now always a ReasonCode object. It used to possibly be
+an integer with the value 132.</p></li>
+<li><p>MQTTMessage field “dup” and “retain” used to be integer with value 0 and 1. They are now boolean.</p></li>
+</ul>
+</li>
+<li><p>Add support for ALPN protocols on TLS connection. Closes #790 &amp; #648.</p></li>
+<li><p>Add on_pre_connect() callback, which is called immediately before a
+connection attempt is made.</p></li>
+<li><p>Fix subscribe.simple with MQTTv5. Closes #707.</p></li>
+<li><p>Use better name for thread started by loop_start. Closes #617.</p></li>
+<li><p>Fix possible bug during disconnection where self._sock is unexpectedly None. Closes #686 &amp; #505.</p></li>
+<li><p>Fix loading too weak TLS CA file but setting allowed ciphers before loading CA. Closes #676.</p></li>
+<li><p>Allow to manually ack QoS &gt; 0 messages. Closes #753 &amp; #348.</p></li>
+<li><p>Improve tests &amp; linters. Modernize build (drop setup.py, use pyproject.toml)</p></li>
+<li><p>Fix is_connected property to correctly return False when connection is lost
+and loop_start/loop_forever isn’t used. Closes #525.</p></li>
+<li><p>Fix wait_for_publish that could hang with QoS == 0 message on reconnection
+or publish during connection. Closes #549.</p></li>
+<li><p>Correctly mark connection as broken on SSL error and don’t crash loop_forever.
+Closes #750.</p></li>
+<li><p>Fix handling of MQTT v5.0 PUBREL messages with remaining length not equal to
+2. Closes #696.</p></li>
+<li><p>Raise error on <code class="docutils literal notranslate"><span class="pre">subscribe()</span></code> when <a class="reference internal" href="client.html#paho.mqtt.client.MQTTMessage.topic" title="paho.mqtt.client.MQTTMessage.topic"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">topic</span></code></a> is an empty list. Closes #690.</p></li>
+<li><p>Raise error on <a class="reference internal" href="helpers.html#paho.mqtt.publish.multiple" title="paho.mqtt.publish.multiple"><code class="xref any py py-func docutils literal notranslate"><span class="pre">publish.multiple()</span></code></a> when <code class="docutils literal notranslate"><span class="pre">msgs</span></code> is an empty list. Closes #684.</p></li>
+<li><p>Don’t add port to Host: header for websockets connections when the port if the default port. Closes #666.</p></li>
+</ul>
+</section>
+<section id="v1-6-1-2021-10-21">
+<h2>v1.6.1 - 2021-10-21<a class="headerlink" href="#v1-6-1-2021-10-21" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix Python 2.7 compatibility.</p></li>
+</ul>
+</section>
+<section id="v1-6-0-2021-10-20">
+<h2>v1.6.0 - 2021-10-20<a class="headerlink" href="#v1-6-0-2021-10-20" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Changed default TLS version to 1.2 instead of 1.0.</p></li>
+<li><p>MQTT connection attempts now use a timeout of 5 seconds rather than the
+configured keepalive interval</p></li>
+<li><p>Fix incoming MQTT v5 messages with overall property length &gt; 127 bytes being
+incorrectly decoded. Closes #541.</p></li>
+<li><p>MQTTMessageInfo.wait_for_publish() and MQTTMessageInfo.is_published() will
+now raise exceptions if called when the publish call produced an error.
+Closes #550.</p></li>
+<li><p>Remove periodic retry checks for outgoing messages with QoS&gt;0. This means
+that outgoing messages will only be retried on the client reconnecting to
+the server. They will <em>not</em> be retried when the client is still connected.</p></li>
+<li><p>The <a class="reference internal" href="client.html#paho.mqtt.client.MQTTMessageInfo.rc" title="paho.mqtt.client.MQTTMessageInfo.rc"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">rc</span></code></a> parameter in the <a class="reference internal" href="client.html#paho.mqtt.client.Client.on_disconnect" title="paho.mqtt.client.Client.on_disconnect"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">on_disconnect</span></code></a> callback now has meaningful values
+in the case of an error. Closes #441.</p></li>
+<li><p>Callbacks can now be applied to client instances using decorators.</p></li>
+<li><p>PUBACK messages are now sent to the broker only after the on_message
+callback has returned.</p></li>
+<li><p>Raise exceptions when attempting to set MQTT v5 properties to forbidden
+values. Closes #586.</p></li>
+<li><p>Callbacks can now be updated from within a callback.</p></li>
+<li><p>Remove _out_packet_mutex and _current_out_packet_mutex and convert the
+_out_packet queue use to thread safe.</p></li>
+<li><p>Add basic MQTT v5 support to the subscribe and publish helper functions.
+Closes #575.</p></li>
+<li><p>Fix on_disconnect() sometimes calling the MQTT v3.x callback when it should
+call the MQTT v5 callback. Closes #570.</p></li>
+<li><p>Big performance improvement when receiving large payloads, particularly for
+SSL. Closes #571,</p></li>
+<li><p>Fix connecting with MQTT v5 to a broker that doesn’t support MQTT v5.
+Closes #566.</p></li>
+<li><p>Removed ancient Mosquitto compatibility class.</p></li>
+<li><p>Fix exception on calling Client(client_id=””, clean_session=False).
+Closes #520.</p></li>
+<li><p>Experimental support for Websockets continuation frames. Closes #500.
+Closes #89.</p></li>
+<li><p><a class="reference internal" href="types.html#paho.mqtt.properties.Properties.json" title="paho.mqtt.properties.Properties.json"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Properties.json()</span></code></a> now converts Correlation Data bytes() objects to hex.
+Closes #555.</p></li>
+<li><p>Only use the internal sockpair wakeup when running with loop_start() or
+loop(). This removes problems when running with an external event loop.</p></li>
+<li><p>Drain all of sockpairR bytes to avoid unnecessary wakeups and possible
+timeouts. Closes #563.</p></li>
+<li><p>Add timeout to MQTTMessageInfo:wait_for_publish().</p></li>
+</ul>
+</section>
+<section id="v1-5-1-2020-09-22">
+<h2>v1.5.1 - 2020-09-22<a class="headerlink" href="#v1-5-1-2020-09-22" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Exceptions that occur in callbacks are no longer suppressed by default. They
+can optionally be suppressed by setting <code class="docutils literal notranslate"><span class="pre">client.suppress_exceptions</span> <span class="pre">=</span> <span class="pre">True</span></code>.
+Closes #365.</p></li>
+<li><p>Fix PUBREL remaining length of &gt; 2 not being accepted for MQTT v5 message
+flows. Closes #481.</p></li>
+<li><p>Fix MQTT v5 properties not being sent on retried or queued messages.</p></li>
+<li><p>Fix errors related to detection of MQTT v5 first connections.</p></li>
+<li><p>Fix for changes related to Python 3.9.</p></li>
+</ul>
+</section>
+<section id="v1-5-0-2019-10-30">
+<h2>v1.5.0 - 2019-10-30<a class="headerlink" href="#v1-5-0-2019-10-30" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add support for clean_session on subscribe helper. Closes #219</p></li>
+<li><p>Add support for non-standard bridge connection. Closes #282</p></li>
+<li><p>Fix hang with QoS 2 message and clean_session = False. The fix replace hang
+with message DROP. See README for known limitation. Closes #284 and #286</p></li>
+<li><p>Fix connection establishement timeout. Closes #291 and #288</p></li>
+<li><p>Add support for connecting through a proxy. Closes #315</p></li>
+<li><p>Add MQTT v5 support. Closes #334</p></li>
+<li><p>Improve error message when sending queue is full. Closes #378</p></li>
+<li><p>Improve error handling during initialization on edge case. Closes #387 and #388</p></li>
+<li><p>Allow to specify local client port used (similar to bind_address). Closes #390</p></li>
+<li><p>Add method is_connected to know if MQTT connection is established. Closes #414</p></li>
+<li><p>Set connection timeout to keepalive. Closes #425</p></li>
+</ul>
+</section>
+<section id="v1-4-0-2018-09-02">
+<h2>v1.4.0 - 2018-09-02<a class="headerlink" href="#v1-4-0-2018-09-02" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix hang when client restarted and broker resumed a session with Qos2
+message. Closes #284.
+Note: this change replace the hang by a message lost ! See README for
+current limitation of paho-mqtt.</p></li>
+<li><p>Fix reconnection loop when a clean_session=True client reconnect while Qos2
+message are being sent.
+Note: this change replace the infinite reconnection loop by a possible
+duplicate QoS2 message. Only clean_session=True client are affected, see
+README for current limitation of paho-mqtt.</p></li>
+<li><p>Catch and log any exception raised by user callback. Closes #294.</p></li>
+<li><p>Improve support for external event loop (like asyncio). Closes #235.</p></li>
+<li><p>Fix order of message with publish.multiple helper. Closes #87.</p></li>
+<li><p>Fix hang on wait_for_published() on bad network. Closes #309.</p></li>
+<li><p>Fix an issue with Websocket that seems to happen only on Windows.
+Closes #268.</p></li>
+<li><p>Fix issue with Websocket payload size between 127 and 65536. Closes #267.</p></li>
+<li><p>Closes socket in client destructor to avoid FD leak. Closes #170.</p></li>
+<li><p>Fix uncaught timeout exception during connection. Closes #288.</p></li>
+<li><p>Remove dup flag on PUBREL packet. Closes #298.</p></li>
+<li><p>Use secure entropy source for Websocket mask_key (urandom). Closes #305.</p></li>
+<li><p>Fix mid generation that was not thread-safe.</p></li>
+<li><p>Replace print() statements with proper logging. Closes #214.</p></li>
+<li><p>Allow insecure TLS on publish and subscribe helpers. Closes #299.</p></li>
+<li><p>Allow to remove authentication (reset username to None). Closes #259.</p></li>
+<li><p>Add support for the non-standard bridge mode. Closes #282.</p></li>
+</ul>
+</section>
+<section id="v1-3-1-2017-10-09">
+<h2>v1.3.1 - 2017-10-09<a class="headerlink" href="#v1-3-1-2017-10-09" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix reconnect_delay_set which ignored the max_delay. Closes #218.</p></li>
+<li><p>Fix crash when connection is lost while trying to send message. Closes #208.</p></li>
+<li><p>Fix issue with unicode topic when some character were multi-bytes UTF-8.</p></li>
+<li><p>Fix issue with empty Client ID with broker that don’t support them. Closes #209.</p></li>
+<li><p>Fix issue with tls_set that did not allowed cert_reqs=ssl.CERT_NONE.
+Closes #123.</p></li>
+<li><p>Relax requirement on pytest-runner, it’s now only required for tests. Closes
+#207, #227.</p></li>
+</ul>
+</section>
+<section id="v1-3-0-2017-06-20">
+<h2>v1.3.0 - 2017-06-20<a class="headerlink" href="#v1-3-0-2017-06-20" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>BREAKING</strong> Requires Python 2.7 or 3.4+. Closes #163.</p></li>
+<li><p><strong>BREAKING</strong> Remove support for SSL without SSLContext (Requires Python 2.7.9+ or 3.2+).
+Closes #115.</p></li>
+<li><p><strong>BREAKING</strong> on_connect callback is now always called flags. Previously this
+callback could accepts 3 OR 4 arguments, now it must accepts 4. Closes #197.</p></li>
+<li><p><strong>BREAKING</strong> tls_insecure_set() must now be called <em>after</em> tls_set()</p></li>
+<li><p>Allow username and password to be zero length (as opposed to not being
+present). Closes #80.</p></li>
+<li><p>Allow zero length client ids when using MQTT v3.1.1.</p></li>
+<li><p>Add SSLContext support, including SNI. Closes #11.</p></li>
+<li><p>Improved support for unicode topic and binary payload.
+Closes #15, #16.</p></li>
+<li><p>Allow arbitrary Websocket headers and path.
+Closes #169.</p></li>
+<li><p>Fix issue with large inbound payload over Websocket. Closes #107.</p></li>
+<li><p>Add exponential delay for reconnection. Closes #195.</p></li>
+<li><p>Move unit tests to pytest (#164) and tox (#187)</p></li>
+<li><p>Add support for standard Python logging. Closes #95.</p></li>
+<li><p>Fix duplicate incoming QoS==2 message. Closes #194.</p></li>
+</ul>
+</section>
+<section id="v1-2-3-2017-04-20">
+<h2>v1.2.3 - 2017-04-20<a class="headerlink" href="#v1-2-3-2017-04-20" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix possible hang of TLS connection during handshake.
+Closes #3.</p></li>
+<li><p>Fix issue with publish helper with TLS connection.
+Closes #180.</p></li>
+<li><p>Fix installation issue on non-UTF-8 system.
+Closes #181.</p></li>
+<li><p>Fix non-working Websocket over TLS connection.
+Closes #182.</p></li>
+</ul>
+</section>
+<section id="v1-2-2-2017-04-11">
+<h2>v1.2.2 - 2017-04-11<a class="headerlink" href="#v1-2-2-2017-04-11" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix message lost when using paho.mqtt.publish helper with QoS=0 message.
+Closes #172.</p></li>
+</ul>
+</section>
+<section id="v1-2-1-2017-04-03">
+<h2>v1.2.1 - 2017-04-03<a class="headerlink" href="#v1-2-1-2017-04-03" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Handle unicode username and passwords correctly. Closes #79.</p></li>
+<li><p>Fix handling of invalid UTF-8 topics on incoming messages - the library now
+does not attempt to decode the topic - this will happen when the user
+accesses msg.topic in the on_message callback. If the topic is not valid
+UTF-8, an exception will be raised. Closes #75.</p></li>
+<li><p>Fix issue with WebSocket connection in case of network issue (timeout or
+connection broken). Closes #105.</p></li>
+<li><p>Fix issue with SSL connection, where latest incoming message may be delayed
+or never processed. Closes #131.</p></li>
+<li><p>Fix possible message lost with publish.single and publish.multiple. Closes
+#119.</p></li>
+</ul>
+</section>
+<section id="v1-2-2016-06-03">
+<h2>v1.2 - 2016-06-03<a class="headerlink" href="#v1-2-2016-06-03" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Client.publish() now returns an MQTTMessageInfo object. The MQTTMessageInfo
+object behaves like a tuple of (rc, mid) for backwards compatibility but
+also provides two functions: is_published() and wait_for_published().
+This allows a client to determine whether any given message has been
+published without need for a callback, and also allows the client to block
+waiting until the message has been sent.</p></li>
+<li><p>Further fix for Client constructor for the case where “localhost” is
+unresolvable.</p></li>
+<li><p>Add paho.mqtt.subscribe module, with simple() and callback() helper
+functions.</p></li>
+<li><p>Allow ^C to interrupt client loop.</p></li>
+<li><p>Fix for keepalive=0 causing an infinite disconnect/reconnect loop. Closes
+#42.</p></li>
+<li><p>Modify callbacks definition/structure to allow classical inheritance. Closes
+#53, #54.</p></li>
+<li><p>Add websockets support.</p></li>
+<li><p>Default MQTT version is again changed to v3.1.1.</p></li>
+<li><p>Client.subscribe() now accepts unicode type topic inputs on Python 2. Closes
+#16.</p></li>
+<li><p>paho.mqtt.publish() now raises an MQTTException on a CONNECT failure, rather
+than blindly continuing. Closes #6.</p></li>
+<li><p>Don’t block on TLS sockets on Python 3. Closes #2.</p></li>
+<li><p>Client.publish() now accepts bytes() payloads on Python 3. Closes #1.</p></li>
+<li><p>Don’t attempt to join() own thread. Closes #14.</p></li>
+<li><p>Allow the use of Client.message_callback_add() from inside callbacks. Closes
+#12.</p></li>
+<li><p>Use a monotonic time source for keeping track of time, if available. Closes
+#56.</p></li>
+</ul>
+</section>
+<section id="v1-1-2015-01-30">
+<h2>v1.1 - 2015-01-30<a class="headerlink" href="#v1-1-2015-01-30" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add support for wildcard certificates. Closes #440547.</p></li>
+<li><p>Default connection behaviour has been reverted to MQTT v3.1 instead of
+v3.1.1. There is as yet insufficient support for v3.1.1 to rely on, and
+current v3.1 implementations do not return the correct CONNACK code to allow
+detection of the fault. Closes #451735.</p></li>
+<li><p>Fix incorrect handling of queued messages after reconnecting. Closes
+#452672.</p></li>
+<li><p>Fix possible race condition if the connection in loop_start() does not
+complete before loop_stop() is called, meaning the network thread never
+ends. Closes #448428. Thanks to Kees Bakker.</p></li>
+</ul>
+</section>
+<section id="v1-0-2-2014-09-13">
+<h2>v1.0.2 - 2014-09-13<a class="headerlink" href="#v1-0-2-2014-09-13" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix “protocol” not being used in publish.single()</p></li>
+<li><p>Fix Client constructor for the case where “localhost” is unresolvable.
+Closes #439277.</p></li>
+<li><p>Don’t attempt to encode topic to utf-8 twice. Thanks to Luc Milland.</p></li>
+<li><p>Handle “unicode” type payloads on Python 2.7. Thanks to Luc Milland.</p></li>
+<li><p>Fix reconnecting after sending more QoS&gt;0 messages than inflight messages is
+set to, whilst connecting.  Closes #443935. Thanks to Hiram van Paassen.</p></li>
+<li><p>Fix possible race condition when connecting with TLS and publishing at the
+same time, which could lead to PUBLISH data being sent before any other
+messages and unencrypted. Closes #443964. Thanks to Hiram van Paassen.</p></li>
+<li><p>Handle exceptions from select() in client loop() function. Closes #443881.
+Thanks to Jeff Jasper.</p></li>
+</ul>
+</section>
+<section id="v1-0-1">
+<h2>v1.0.1<a class="headerlink" href="#v1-0-1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix incorrect reconnect that occurred if calling loop_stop() before
+disconnect().</p></li>
+</ul>
+</section>
+<section id="v1-0">
+<h2>v1.0<a class="headerlink" href="#v1-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Default protocol is now MQTT v3.1.1.</p></li>
+<li><p>Client will reconnect using MQTT v3.1 if a v3.1.1 connection fails due to
+the incorrect protocol version number.</p></li>
+<li><p>All strings are now correctly encoded as utf-8.</p></li>
+<li><p>Add support for “session present” flag in on_connect callback.</p></li>
+</ul>
+</section>
+<section id="v0-9-1">
+<h2>v0.9.1<a class="headerlink" href="#v0-9-1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fix CONNECT packet for MQTT v3.1.1.</p></li>
+<li><p>Fix potential lockup when publishing from on_publish callback.</p></li>
+<li><p>Add version information to paho.mqtt.__version__</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Eclipse paho-mqtt</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="client.html">client module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">Types and enums</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-0-0rc2-2024-01-21">v2.0.0rc2 - 2024-01-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-6-1-2021-10-21">v1.6.1 - 2021-10-21</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-6-0-2021-10-20">v1.6.0 - 2021-10-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-5-1-2020-09-22">v1.5.1 - 2020-09-22</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-5-0-2019-10-30">v1.5.0 - 2019-10-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-4-0-2018-09-02">v1.4.0 - 2018-09-02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-3-1-2017-10-09">v1.3.1 - 2017-10-09</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-3-0-2017-06-20">v1.3.0 - 2017-06-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-2-3-2017-04-20">v1.2.3 - 2017-04-20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-2-2-2017-04-11">v1.2.2 - 2017-04-11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-2-1-2017-04-03">v1.2.1 - 2017-04-03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-2-2016-06-03">v1.2 - 2016-06-03</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-1-2015-01-30">v1.1 - 2015-01-30</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-2-2014-09-13">v1.0.2 - 2014-09-13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0-1">v1.0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v1-0">v1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-9-1">v0.9.1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="migrations.html">Migrations</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="types.html" title="previous chapter">Types and enums</a></li>
+      <li>Next: <a href="migrations.html" title="next chapter">Migrations</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Eclipse.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/changelog.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

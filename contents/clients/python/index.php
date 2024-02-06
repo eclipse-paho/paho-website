@@ -2,7 +2,7 @@
 <div class="panel-body">
 <h1>Python Client</h1>
 <p>The Paho Python Client provides a client class with support for MQTT v5.0,
-MQTT v3.1.1, and v3.1 on Python 2.7 or 3.x. It also provides some helper
+MQTT v3.1.1, and v3.1 on Python 3.7+. It also provides some helper
 functions to make publishing one off messages to an MQTT server very
 straightforward.</p>
 
@@ -43,20 +43,20 @@ straightforward.</p>
 <p>The project can be installed from the repository as well. To do this:</p>
 <pre>git clone https://github.com/eclipse/paho.mqtt.python.git
 cd paho.mqtt.python
-python setup.py install
+pip install -e .
 </pre>
-<p>The final step may need to be run with <code>sudo</code> if you are using Linux or similar system.</p>
 
 <h2 id="documentation">Documentation</h2>
-<p> Full client documentation is available <a href="index.php?page=clients/python/docs/index.php">here</a>.</p>
+<p>Reference documentation is online <a href="http://www.eclipse.org/paho/files/paho.mqtt.python/html/index.html">here</a>.</p>
+
 <h3 id="getting-started">Getting Started</h3>
 <p>There are example clients in the <a href="https://github.com/eclipse/paho.mqtt.python/tree/master/examples">examples</a> directory of the repository.</p>
 <p>Here is a very simple example that subscribes to the broker $SYS topic tree and prints out the resulting messages:</p>
 <pre>import paho.mqtt.client as mqtt
 
 # The callback for when the client receives a CONNACK response from the server.
-def on_connect(client, userdata, flags, rc):
-    print("Connected with result code "+str(rc))
+def on_connect(client, userdata, flags, reason_code, properties):
+    print(f"Connected with result code {reason_code}")
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe("$SYS/#")
@@ -65,17 +65,17 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
 
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
+mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+mqttc.on_connect = on_connect
+mqttc.on_message = on_message
 
-client.connect("mqtt.eclipseprojects.io", 1883, 60)
+mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
 # Other loop*() functions are available that give a threaded interface and a
 # manual interface.
-client.loop_forever()
+mqttc.loop_forever()
 </pre>
 </div>
 </div>
