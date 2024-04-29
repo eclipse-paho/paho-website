@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -34,12 +34,25 @@
             
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<section id="v2-1-0-2024-04-29">
+<h2>v2.1.0 - 2024-04-29<a class="headerlink" href="#v2-1-0-2024-04-29" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Make transition from 1.x to 2.x version smoother (Closes #831)</p></li>
+<li><p>Fix “protocol” property (Closes #820)</p></li>
+<li><p>Fix publish() a bytearray payload (Closes #833)</p></li>
+<li><p>Fix some type annotations (Closes #828)</p></li>
+<li><p>Fix loop_stop() not stopping thread when called from callback (Closes #809)</p></li>
+<li><p>Fix some documentation errors (Closes #817, #823, #832, #838)</p></li>
+<li><p>Add support for Unix socket (Closes #829)</p></li>
+<li><p>Fix flaky test (Closes #789)</p></li>
+</ul>
+</section>
 <section id="v2-0-0-2024-02-10">
 <h2>v2.0.0 - 2024-02-10<a class="headerlink" href="#v2-0-0-2024-02-10" title="Link to this heading">¶</a></h2>
 <p>This release include breaking change. See <a class="reference external" href="https://eclipse.dev/paho/files/paho.mqtt.python/html/migrations.html">migrations</a> for more details on how to upgrade.</p>
 <ul class="simple">
 <li><p><strong>BREAKING</strong> Added callback_api_version. This break <em>ALL</em> users of paho-mqtt Client class.
-See migrations.md for details on how to upgrade.
+See docs/migrations.rst or <a class="reference external" href="https://eclipse.dev/paho/files/paho.mqtt.python/html/migrations.html">online version</a> for details on how to upgrade.
 tl; dr; add CallbackAPIVersion.VERSION1 to first argument of Client()</p></li>
 <li><p><strong>BREAKING</strong> Drop support for Python 2.7, Python 3.5 and Python 3.6
 Minimum tested version is Python 3.7
@@ -392,6 +405,7 @@ the incorrect protocol version number.</p></li>
 <li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types.html">Types and enums</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v2-1-0-2024-04-29">v2.1.0 - 2024-04-29</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v2-0-0-2024-02-10">v2.0.0 - 2024-02-10</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-6-1-2021-10-21">v1.6.1 - 2021-10-21</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v1-6-0-2021-10-20">v1.6.0 - 2021-10-20</a></li>
@@ -423,7 +437,7 @@ the incorrect protocol version number.</p></li>
   </ul></li>
 </ul>
 </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -431,7 +445,7 @@ the incorrect protocol version number.</p></li>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
 
 
@@ -449,7 +463,7 @@ the incorrect protocol version number.</p></li>
       &#169;2024, Eclipse.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
