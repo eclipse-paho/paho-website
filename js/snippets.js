@@ -1,6 +1,6 @@
 var languages = {
-    "java" : "https://github.com/eclipse/paho.mqtt.java",
-    "python" : "https://github.com/eclipse/paho.mqtt.python"
+    "java" : "https://github.com/eclipse-paho/paho.mqtt.java",
+    "python" : "https://github.com/eclipse-paho/paho.mqtt.python"
 }
 
 

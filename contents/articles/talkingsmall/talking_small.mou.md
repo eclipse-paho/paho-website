@@ -36,7 +36,7 @@ To attach a temperature sensor to a BeagleBone Black, we have followed the [tuto
 
 So now we have a source of temperature data. Now we can MQTT enable this program. Our first stop is the Eclipse Paho project where MQTT client libraries for various languages have been assembled. There you can find the Paho Python library, but as it is yet to be formally packaged and released, we will need to build it. To build it for the BeagleBone Black’s Angstrom Linux distribution we first need to download the source code using git:
 
-    git clone https://github.com/eclipse/paho.mqtt.python.git org.eclipse.paho.mqtt.python.git
+    git clone https://github.com/eclipse-paho/paho.mqtt.python.git org.eclipse.paho.mqtt.python.git
 
 This will create a copy of the repository in the directory “org.eclipse.paho.mqtt.python”. If we now move into that directory we can get on with building the code:
 

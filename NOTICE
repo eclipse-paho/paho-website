@@ -27,23 +27,23 @@ SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
 
 The project maintains the following source code repositories:
 
-* https://github.com/eclipse/paho-website
-* https://github.com/eclipse/paho.golang
-* https://github.com/eclipse/paho.mqtt-sn.embedded-c
-* https://github.com/eclipse/paho.mqtt-spy
-* https://github.com/eclipse/paho.mqtt.android
-* https://github.com/eclipse/paho.mqtt.c
-* https://github.com/eclipse/paho.mqtt.cpp
-* https://github.com/eclipse/paho.mqtt.d
-* https://github.com/eclipse/paho.mqtt.embedded-c
-* https://github.com/eclipse/paho.mqtt.golang
-* https://github.com/eclipse/paho.mqtt.java
-* https://github.com/eclipse/paho.mqtt.javascript
-* https://github.com/eclipse/paho.mqtt.m2mqtt
-* https://github.com/eclipse/paho.mqtt.python
-* https://github.com/eclipse/paho.mqtt.ruby
-* https://github.com/eclipse/paho.mqtt.rust
-* https://github.com/eclipse/paho.mqtt.testing
+* https://github.com/eclipse-paho/paho-website
+* https://github.com/eclipse-paho/paho.golang
+* https://github.com/eclipse-paho/paho.mqtt-sn.embedded-c
+* https://github.com/eclipse-paho/paho.mqtt-spy
+* https://github.com/eclipse-paho/paho.mqtt.android
+* https://github.com/eclipse-paho/paho.mqtt.c
+* https://github.com/eclipse-paho/paho.mqtt.cpp
+* https://github.com/eclipse-paho/paho.mqtt.d
+* https://github.com/eclipse-paho/paho.mqtt.embedded-c
+* https://github.com/eclipse-paho/paho.mqtt.golang
+* https://github.com/eclipse-paho/paho.mqtt.java
+* https://github.com/eclipse-paho/paho.mqtt.javascript
+* https://github.com/eclipse-paho/paho.mqtt.m2mqtt
+* https://github.com/eclipse-paho/paho.mqtt.python
+* https://github.com/eclipse-paho/paho.mqtt.ruby
+* https://github.com/eclipse-paho/paho.mqtt.rust
+* https://github.com/eclipse-paho/paho.mqtt.testing
 
 ## Cryptography
 

@@ -20,7 +20,7 @@ Please read the [Eclipse Foundation policy on accepting contributions via Git](h
 
 ## Contributing a change
 
-1. [Fork the repository on GitHub](https://github.com/eclipse/paho.mqtt.c/fork)
+1. [Fork the repository on GitHub](https://github.com/eclipse-paho/paho.mqtt.c/fork)
 2. Clone the forked repository onto your computer: ``` git clone https://github.com/<your username>/paho.mqtt.c.git ```
 3. Create a new branch from the latest ```develop``` branch with ```git checkout -b YOUR_BRANCH_NAME origin/develop```
 4. Make your changes
@@ -29,7 +29,7 @@ Please read the [Eclipse Foundation policy on accepting contributions via Git](h
 7. Commit the changes into the branch: ``` git commit -s ``` Make sure that your commit message is meaningful and describes your changes correctly.
 8. If you have a lot of commits for the change, squash them into a single / few commits.
 9. Push the changes in your branch to your forked repository.
-10. Finally, go to [https://github.com/eclipse/paho.mqtt.c](https://github.com/eclipse/paho.mqtt.c) and create a pull request from your "YOUR_BRANCH_NAME" branch to the ```develop``` one to request review and merge of the commits in your pushed branch.
+10. Finally, go to [https://github.com/eclipse-paho/paho.mqtt.c](https://github.com/eclipse/paho.mqtt.c) and create a pull request from your "YOUR_BRANCH_NAME" branch to the ```develop``` one to request review and merge of the commits in your pushed branch.
 
 
 What happens next depends on the content of the patch. If it is 100% authored
@@ -56,11 +56,11 @@ Contact the project developers via the project's development
 Search for bugs:
 ----------------
 
-This project uses GitHub Issues here: [github.com/eclipse/paho.mqtt.c/issues](https://github.com/eclipse/paho.mqtt.c/issues) to track ongoing development and issues.
+This project uses GitHub Issues here: [github.com/eclipse-paho/paho.mqtt.c/issues](https://github.com/eclipse/paho.mqtt.c/issues) to track ongoing development and issues.
 
 Create a new bug:
 -----------------
 
 Be sure to search for existing bugs before you create another one. Remember that contributions are always welcome!
 
-- [Create new Paho bug](https://github.com/eclipse/paho.mqtt.c/issues/new)
+- [Create new Paho bug](https://github.com/eclipse-paho/paho.mqtt.c/issues/new)
